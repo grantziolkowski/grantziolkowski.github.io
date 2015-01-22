@@ -1,1 +1,18 @@
-class
+* {
+font-family: sans-serif;
+}
+
+#coverphoto {
+
+}
+
+table {
+
+}
+
+nav a {
+    display: block;
+    width: 60px;
+    padding: 10px;
+    text-decoration: none
+}
