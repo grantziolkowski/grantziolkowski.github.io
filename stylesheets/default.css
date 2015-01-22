@@ -12,11 +12,11 @@ h1 {
 
 table {
   left: 100px;
-  font-color: 6496BD; <!light gray>
+  color: 6496BD; <!light gray>
 }
 
 nav a {
-    display: block;
+    display: inline-block;
     width: 60px;
     padding: 10px;
     text-decoration: none;
@@ -37,5 +37,5 @@ h2 {
 }
 
 footer {
-  
+
 }
