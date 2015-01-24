@@ -20,9 +20,11 @@ table {
   margin-left: 200px;
   margin-top: -80px;
   margin-bottom: 10px;
- 
+
 }
 table a {
+  display:block;
+  display: absolute;
   left: 100px;
   margin-right: 15px;
   text-decoration: none;
