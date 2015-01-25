@@ -32,37 +32,45 @@
   <h4>January 25, 2015</h4>
 
   <section>
-   <p> - What is the difference between Margin, Border, and Padding?
-Margin > Border > Padding
+   <h2>Margin, Border, and Padding
+ </h2>
+<h3>
+  Margin > Border > Padding
+</h3>
+<p>
 Margin is the distance your text, block, or photo will be from an adjacent element, or the edge of the page. Use margin-left, margin-right, margin-top, margin-bottom to adjust the position.
-] margin-top: 10px;
+<li>margin-top: 10px;</li>
 </p>
 <p>
 Border creates a border around your element. It can be any width, any color, dashed or solid.
-] border: 2px solid black;
+<li>border: 2px solid black;</li>
 Padding is the distance between your element and the border
-] padding: 20 px;
+<li>padding: 20 px;</li>
 </p>
+<h2>Class vs. Id</h2>
 <p>
-- What are the best practices associated with using classes vs. ids?
 CLASS. A class is category. You will assign many things to this category. Style the category once, don't style each individual element.
-.class
+<li>Make it centered using class</li>
+<li> .class_name {text-align:center}</li>
 
 ID. An id is a nickname. You will assign one thing to this nickname. Name your id something logical so it stands out clearly on your CSS stylesheet.
 
-#id
+<li>Make it red using id.</li>
+<li> #id_name {color:red}</li>
+</p>
+<h2>position:absolute vs. relative vs. fixed</h2>
+<p>
+A relative block will take position attributes like margin, padding, left, right, top or bottom _in relation an another element with an absolute position.
 </p>
 <p>
-_position_:absolute vs. relative vs. fixed
-
-A relative block will take position attributes like margin, padding, left, right, top or bottom _in relation an another element with an absolute position_.
 
 A fixed block will stay glued to its position on the browser, even if you scroll up or down. Think of an old-school video game, where the background moves but the car you are driving stays put in the center of the screen, simulating movement.
 </p>
-<p>
-_display_: inline vs. display: inline-block
 
-Inline will place an item directly adjacent to another, "in line" with it.
+<h2>display: inline vs. display: inline-block</h2>
+<p>
+Inline will place an item directly adjacent to another, "in line" with it.</p>
+<p>
 Inline block will also place it on the same line, but you can specificy the height, width, position, and additional margins to "block it off" from the adjacent element.
 </p>
   </section>
