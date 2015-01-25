@@ -14,7 +14,7 @@ h1{
   display: block;
   position: relative;
   top: -60px;
-  background-color: #1A6171;
+
 }
 .previous_next {
   display: inline-block;
@@ -41,27 +41,27 @@ h1{
 h2 {
   display:block;
   position: relative;
-  top: -45px;
+  top: -90px;
   margin-left: 100px;
 }
 h3 {
   display:block;
   position: relative;
   margin-left: 100px;
-  top: -55px;
+  top: -110px;
 }
 h4 {
   display:block;
   position: relative;
   margin-left: 100px;
-  top: -60px;
+  top: -125px;
 }
 p {
   display: block;
   position:relative;
   width: 600px;
   text-align:left;
-  top: -60px;
+  top: -135px;
   margin-left: 100px;
   margin-right: 100px;
   font-style: sans-serif;
