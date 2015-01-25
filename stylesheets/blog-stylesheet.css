@@ -39,43 +39,39 @@ h1{
   font-style: bold;
   top: 210px
 }
-h2 {
+#posttitle {
   display:block;
   position: relative;
   top: -90px;
   margin-left: 100px;
 }
-h3 {
+#subtitle {
   display:block;
   position: relative;
   margin-left: 100px;
   top: -110px;
 }
-h4 {
+#date {
   display:block;
   position: relative;
   margin-left: 100px;
   top: -125px;
 }
 p {
-  display: block;
-  position:relative;
-  width: 600px;
-  text-align:left;
-  top: -135px;
-  margin-left: 100px;
-  margin-right: 100px;
-  font-style: sans-serif;
-  line-height: 1.1em
+
 }
-li {
-  margin-left: 100px;
-}
+
 .center {
   text-align:center;
 }
 section {
   display: block;
-  position: absolute;
-  margin-left: 100px;
+  position:absolute;
+  width: 600px;
+  text-align:left;
+  top: 320px;
+  left: 110px;
+  margin-right: 100px;
+  font-style: sans-serif;
+  line-height: 1.1em
 }
