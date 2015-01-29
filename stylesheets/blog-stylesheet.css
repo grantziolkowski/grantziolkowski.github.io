@@ -44,18 +44,21 @@ h1{
   position: relative;
   top: -90px;
   margin-left: 100px;
+   width: 400px;
 }
 #subtitle {
   display:block;
   position: relative;
   margin-left: 100px;
   top: -110px;
+  width: 400px;
 }
 #date {
   display:block;
   position: relative;
   margin-left: 100px;
   top: -125px;
+   width: 400px;
 }
 p {
 
@@ -69,7 +72,7 @@ section {
   position:absolute;
   width: 600px;
   text-align:left;
-  top: 320px;
+  top: 300px;
   left: 110px;
   margin-right: 100px;
   font-style: sans-serif;
