@@ -1,6 +1,6 @@
 #top {
 display:block;
-display: absolute;
+display: relative;
 background-color:;
 top: 120px;
 }
