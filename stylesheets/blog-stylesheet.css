@@ -44,19 +44,19 @@ h1{
   display:block;
   position: relative;
   width: 400px;
-  line-height: 20px;
+  height: 25px;
 }
 
 #subtitle {
   display:block;
   position: relative;
-  line-height: 10px;
+  height: 15px;
   width: 400px;
 }
 #date {
   display:block;
   position: relative;
-  line-height: 10px;
+  height: 15px;
   width: 400px;
 }
 p {
