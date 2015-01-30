@@ -1,3 +1,15 @@
-#top {
+  #top {
+display:block;
+position: absolute;
+top: 170px;
+}
+#second_from_top {
+display: block;
+position: relative;
+margin-top: 40px;
+
+
+
+
 
 }
