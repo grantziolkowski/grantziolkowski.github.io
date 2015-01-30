@@ -94,7 +94,7 @@ top: 210px;
 #footer {
    display: block;
    position: absolute;
-   margin-bottom: 0;
+   bottom: 0px;
    width: 100%;
    text-align: center;
 }
