@@ -29,48 +29,80 @@
      <li><a href="week8.html">Week 8</a></li>
   </ul>
   <section id="top">
-  <h2 id="posttitle">CSS</h1>
-  <h3 id="subtitle">Style</h2>
-  <h4 id="date">January 25, 2015</h4>
+    <h2 id="posttitle">CSS</h1>
+    <h3 id="subtitle">Style</h2>
+    <h4 id="date">January 25, 2015</h4>
 
-  <h2>Margin, Border, and Padding</h2>
-  <h3>Margin > Border > Padding</h3>
+    <h2>Margin, Border, and Padding</h2>
+    <h3>Margin > Border > Padding</h3>
+   <p>
+       Margin is the distance your text, block, or photo will be from an adjacent element, or the edge of the page. Use margin-left, margin-right, margin-top, margin-bottom to adjust the position.
+     <li>margin-top: 10px;</li>
+   </p>
+   <p>
+       Border creates a border around your element. It can be any width, any color, dashed or solid.
+     <li>border: 2px solid black;</li>
+       Padding is the distance between your element and the border
+     <li>padding: 20 px;</li>
+  </p>
+  <h2>Class vs. Id</h2>
   <p>
-    Margin is the distance your text, block, or photo will be from an adjacent element, or the edge of the page. Use margin-left, margin-right, margin-top, margin-bottom to adjust the position.
-  <li>margin-top: 10px;</li>
+    CLASS. A class is category. You will assign many things to this category. Style the category once, don't style each individual element.
+  <li>Make it centered using class</li>
+  <li> .class_name {text-align:center}</li>
+  <p>
+    ID. An id is a nickname. You will assign one thing to this nickname. Name your id something logical so it stands out clearly on your CSS stylesheet.
+  <li>Make it red using id.</li>
+  <li> #id_name {color:red}</li>
+    </p>
+  <h2>position:absolute vs. relative vs. fixed</h2>
+  <p>
+    A relative block will take position attributes like margin, padding, left, right, top or bottom _in relation an another element with an absolute position.
   </p>
   <p>
-    Border creates a border around your element. It can be any width, any color, dashed or solid.
-  <li>border: 2px solid black;</li>
-    Padding is the distance between your element and the border
-  <li>padding: 20 px;</li>
+  A fixed block will stay glued to its position on the browser, even if you scroll up or down. Think of an old-school video game, where the background moves but the car you are driving stays put in the center of the screen, simulating movement.
+ </p>
+   <h2>display: inline vs. display: inline-block</h2>
+  <p>
+   Inline will place an item directly adjacent to another, "in line" with it.
   </p>
-<h2>Class vs. Id</h2>
-<p>
-CLASS. A class is category. You will assign many things to this category. Style the category once, don't style each individual element.
-<li>Make it centered using class</li>
-<li> .class_name {text-align:center}</li>
-<p>
-ID. An id is a nickname. You will assign one thing to this nickname. Name your id something logical so it stands out clearly on your CSS stylesheet.
+  <p>
+    Inline block will also place it on the same line, but you can specificy the height, width, position, and additional margins to "block it off" from the adjacent element.
+  </p>
+</section>
+  
+    <section id="second_from_top">
+    <h2 id="posttitle">Week 1</h2>
+    <h3 id="subtitle">Version Control and Git</h3>
+    <h4 id="date">January 19, 2015 </h4>
+  <p>
+  • What are the benefits of version control?
+     Version Control allows you to keep track of changes in your work. This way, you can always go back to previous saved versions of document, file or project. If you make errors or are simply curious, you can "go back in time" to view a snapshot of your work or continue from a different point.
+    </p>
+    <p>
+  • How does git help you keep track of changes?
+ - Once you make changes to a file or piece of code, you can stage the changes to be saved using git add <FILENAME>. Then you can save or commit these changes using git commit <FILENAME> -m "Type your reference message here."
+    </p>
+    <p>
+   • Why use GitHub to store your code?
+   - Once you push your committed changes to a GitHub repository, they are saved on the internet remotely. Additionally, using GitHub your collaborators can see and edit your work without overwriting or potentially ruining it. Just like locally when you make branches using git, your collaborators can make branches from your work and eventually merge all these changes back to one master copy.
+    </p>
+ </section>
 
+  <section id="third_from_top">
+    <h2 id="posttitle">Week 1</h1>
+    <h3 id="subtitle">Introduction</h2>
+    <h4 id="date">January 19, 2014</h4>
+   <p>
+   This is a challenge. I'm not talking about the material, or the workload or the the looming insecurities of getting a job, paying off the $12K, etc. I'm not talking about feeling little and hopelessly ineffectual as a novice jumping into this ocean of developers- as a single foot traveler on a 1000 mile journey.
+  </p>
+  <p>
+    It's a personal challenge. DBC challenges you to challenge yourself, to dive in and dig deeper, past satisfactory competencies to a playful, creative flow, like musicians jamming or soccer players entering the zone of fast-paced intuitive collaboration. The Brazilians have their "beautiful game" and the Dutch have their "total football," where they relentlessly combine skill, speed, elegance and collaboration. This is exciting! The challenge is to not hold back, from your self, from your peers, from your instructors, from the community at large.
+  </p>
+  <p>
+    It would be much easier to just do the homework and learn the required material. That's what I've always done. It's time to step it up and focus more on this journey and not any one intended end goal!
+  </p>
+ </section>
 
-<li>Make it red using id.</li>
-<li> #id_name {color:red}</li>
-</p>
-<h2>position:absolute vs. relative vs. fixed</h2>
-<p>
-A relative block will take position attributes like margin, padding, left, right, top or bottom _in relation an another element with an absolute position.
-</p>
-<p>
-
-A fixed block will stay glued to its position on the browser, even if you scroll up or down. Think of an old-school video game, where the background moves but the car you are driving stays put in the center of the screen, simulating movement.
-</p>
-
-<h2>display: inline vs. display: inline-block</h2>
-<p>
-Inline will place an item directly adjacent to another, "in line" with it.</p>
-<p>
-Inline block will also place it on the same line, but you can specificy the height, width, position, and additional margins to "block it off" from the adjacent element.
-</p>
-  </section>
 </main>
+
