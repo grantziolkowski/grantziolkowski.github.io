@@ -86,7 +86,7 @@ top: 210px;
 	min-height:100%;
 	position:relative;
 }
-#footer {
+footer {
    display: block;
    position: absolute;
    bottom: 10px;
