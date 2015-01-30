@@ -2,7 +2,7 @@
 	display: block;
 	min-height:100%;
 	position:relative;
-	padding: 100px;
+	
 }
 a {
   text-decoration: none;
@@ -19,6 +19,7 @@ h1{
 main {
 	display:block;
 	height: 100%;
+	padding: 100px;
 }
 #blog_navbar{
   display: block;
