@@ -1,0 +1,13 @@
+#top {
+display:block;
+display: absolute;
+background-color:;
+top: 90px;
+}
+
+#second_from_top {
+display: block;
+position: relative;
+top: 300px;
+
+}
