@@ -82,10 +82,12 @@ position: absolute;
 top: 210px;
 }
 #wrapper {
+	display:block;
 	min-height:100%;
 	position:relative;
 }
 #footer {
+   display: block;
    position: absolute;
    bottom: 10px;
    text-align: center;
