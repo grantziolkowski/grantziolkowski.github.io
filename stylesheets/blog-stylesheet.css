@@ -43,20 +43,20 @@ h1{
 #posttitle {
   display:block;
   position: relative;
-  margin-left: 100px;
+  
    width: 400px;
 }
 
 #subtitle {
   display:block;
   position: relative;
-  margin-left: 100px;
+  
   width: 400px;
 }
 #date {
   display:block;
   position: relative;
-  margin-left: 100px;
+
   width: 400px;
 }
 p {
