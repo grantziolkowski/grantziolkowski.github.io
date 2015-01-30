@@ -83,6 +83,6 @@ top: 210px;
 }
 #footer {
    display:block;
-   position: fixed;
+   position: static;
    bottom: 10px;
 }
