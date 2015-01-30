@@ -1,12 +1,12 @@
 #top {
 display:block;
-
-background-color:;
+position: relative;
 top: 170px;
 }
 
 #second_from_top {
 display: block;
+position: relative;
 
 
 
