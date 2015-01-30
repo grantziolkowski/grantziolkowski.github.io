@@ -19,7 +19,7 @@ h1{
 main {
 	display:block;
 	height: 100%;
-	padding: 100px;
+	padding-bottom: 100px;
 }
 #blog_navbar{
   display: block;
