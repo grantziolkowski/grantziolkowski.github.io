@@ -1,4 +1,8 @@
-
+#wrapper {
+	display: block;
+	min-height:100%;
+	position:relative;
+}
 a {
   text-decoration: none;
   color: black;
@@ -12,7 +16,9 @@ h1{
   color: black;
 }
 main {
-	display:block;
+	display: block;
+	min-height:100%;
+	position:relative;
 	height: 100%;
 	padding-bottom: 850px;
 }
