@@ -29,45 +29,32 @@
      <li><a href="week8.html">Week 8</a></li>
   </ul>
   <section id="top">
-  <h2 id="posttitle">Week 3</h1>
-  <h3 id="subtitle">Subtitle</h2>
-  <h4 id="date">Date</h4>
-
-    <h3>Heading</h3>
+    <h2 id="posttitle">Ruby Arrays and Hashes</h2>
+    <h3 id="subtitle">Storing information in lists</h3>
+    <h4 id="date">January 30, 2015</h4>
+    
+    <h3 id="subtitle">Arrays</h3>
     <p>
-      Margin is the distance your text, block, or photo will be from an adjacent element, or the edge of the page. Use margin-left, margin-right, margin-top, margin-bottom to adjust the position.
-      <li>margin-top: 10px;</li>
+      Arrays allow you to store lists of information in Ruby. You can name your array any one word and write it like this:
+      <li></li>
+      my_array = [1, 2, 3, 4, 5]
+      <li></li>
+      another_array = ["tree","dog","cat"]
+      <li><li>
+      Arrays are very useful because you can run specific functions or methods that will act on or "iterate" over every element in the array. You only need to call these methods on your array name, rather than writing out all the information you've saved within it.
+      <li></li>
+      For example, you can add 1 to every number stored in your my_array variable by using the Array method "each".
+      <li><li>
     </p>
-    <p>
-       Border creates a border around your element. It can be any width, any color, dashed or solid.
-      <li>border: 2px solid black;</li>
-       Padding is the distance between your element and the border
-      <li>padding: 20 px;</li>
+    <p class="courier">
+      <li>my_array.each do |number|</li>
+      <li>  number + 1<li>
+      <li>end</li>
     </p>
-    <h3>Heading</h3>
+    <p>The result of this Ruby code will be <span class="courier">[2,3,4,5,6]</span></p>
+      
     <p>
-       CLASS. A class is category. You will assign many things to this category. Style the category once, don't style each individual element.
-      <li>Make it centered using class</li>
-      <li> .class_name {text-align:center}</li>
+        Lijit groupon ning stypi eskobo blyve ning shopify oooooc, meebo groupon prezi ebay voxy bitly diigo. Spock ifttt skype hipmunk movity whrrl bebo oooj empressr, disqus insala palantir bitly dropio zimbra zinch oooooc etsy, klout spock insala quora omgpop trulia jibjab.
     </p>
-    <p>
-      ID. An id is a nickname. You will assign one thing to this nickname. Name your id something logical so it stands out clearly on your CSS stylesheet.
-      <li>Make it red using id.</li>
-      <li> #id_name {color:red}</li>
-    </p>
-    <h3>Heading</h3>
-    <p>
-      A relative block will take position attributes like margin, padding, left, right, top or bottom _in relation an another element with an absolute position.
-    </p>
-    <p>
-     A fixed block will stay glued to its position on the browser, even if you scroll up or down. Think of an old-school video game, where the background moves but the car you are driving stays put in the center of the screen, simulating movement.
-    </p>
-    <h3>Heading</h3>
-    <p>
-     Inline will place an item directly adjacent to another, "in line" with it.
-   </p>
-   <p>
-    Inline block will also place it on the same line, but you can specificy the height, width, position, and additional margins to "block it off" from the adjacent element.
-   </p>
-</section>
+  </section>
 </main>
