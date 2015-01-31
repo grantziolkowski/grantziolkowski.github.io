@@ -94,7 +94,11 @@ section {
 	margin-left:30px;
 }
 
+#top {
+display:block;
+position: static;
 
+}
 #footer {
    display: block;
    position: absolute;
