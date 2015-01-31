@@ -86,6 +86,9 @@ section {
   font-style: sans-serif;
   line-height: 1.1em
 }
+.courier {
+	font-family: Courier;
+}
 #top {
 display:block;
 position: absolute;
