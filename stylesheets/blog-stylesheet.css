@@ -97,6 +97,7 @@ section {
 #top {
 display:block;
 position: relative;
+left: 100px;
 
 }
 #footer {
