@@ -89,6 +89,10 @@ section {
 .courier {
 	font-family: Courier;
 }
+.courier_indent {
+	font-family: Courier;
+	text-indent:30px;
+}
 #top {
 display:block;
 position: absolute;
