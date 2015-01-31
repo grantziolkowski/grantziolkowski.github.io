@@ -96,7 +96,7 @@ section {
 
 #top {
 display:block;
-position: static;
+position: relative;
 top:-100px;
 left: 110px;
 
