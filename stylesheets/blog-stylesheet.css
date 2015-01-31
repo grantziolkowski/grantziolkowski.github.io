@@ -91,7 +91,7 @@ section {
 }
 .courier_indent {
 	font-family: Courier;
-	text-indent:30px;
+	margin-left:30px;
 }
 #top {
 display:block;
