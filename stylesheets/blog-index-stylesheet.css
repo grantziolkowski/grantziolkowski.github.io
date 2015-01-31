@@ -6,10 +6,26 @@ top: 790px;
 left: 100px;
 }
 
+
 #third_from_top {
 display: block;
 position: relative;
 top: 800px;
+left: 100px;
+}
+
+#fourth_from_top {
+display: block;
+position: relative;
+top: 900px;
+left: 100px;
+}
+
+
+#fifth_from_top {
+display: block;
+position: relative;
+top: 1200px;
 left: 100px;
 }
 
