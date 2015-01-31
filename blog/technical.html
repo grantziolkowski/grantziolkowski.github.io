@@ -30,7 +30,63 @@
      <li><a href="week7.html">Week 7</a></li>
      <li><a href="week8.html">Week 8</a></li>
   </ul>
-<section id="top">
+  
+   <section id="top">
+    <h2 id="posttitle">Ruby Arrays and Hashes</h2>
+    <h3 id="subtitle">Storing information in lists</h3>
+    <h4 id="date">January 30, 2015</h4>
+    
+    <h3 id="subtitle">Arrays</h3>
+    <p>
+      Arrays allow you to store lists of information in Ruby. You can name your array any one word and write it like this:
+    </p>
+    <p class="courier_indent";>
+      my_array = [1, 2, 3, 4, 5]
+      <br>
+      another_array = ["tree","dog","cat"]
+    </p>
+    <p>
+      Arrays are very useful because you can run specific functions or methods that will act on or "iterate" over every element in the array. You only need to call these methods on your array name, rather than writing out all the information you've saved within it.
+    </p>
+    <p
+      For example, you can add 1 to every number stored in your my_array variable by using the Array method "each".
+    </p>
+    <p class="courier_indent";>
+      my_array.each do |number|
+      <br>
+        &nbsp&nbsp number + 1
+      <br>
+      end
+    </p>
+    <p>I use "number" here to name the element, which identifies the individual list items your method will be acting on within the array </p>
+    <p>The result of this Ruby code will be <span class="courier">[2,3,4,5,6]</span></p>
+      
+    <h3 id="subtitle">Hashes</h3>
+    <p>
+     A hash is similar to an array of arrays. Each element in a hash has a key and a corresponding value. The hash is the list of these key-value pairs.
+    </p>
+    <p>Hashes look like this:</p>
+    <p class="courier_indent">
+           my_hash = {"cat" => "feline", "dog" => "canine"}
+    </p>
+    <p>Or like this:</p>
+    <p class="courier_indent">
+           another_hash = {
+           "New_York": 8000000,
+           "Chicago": 3000000
+           }
+    </p>
+    <p>
+     Here, the <span class="courier">New York</span> key has corresponding value of <span class="courier">8000000</span>.
+    </p>
+    <p>
+       Here's how I would add another key-value pair to <span class="courier">my_hash</span>.
+    </p>
+    <p class="courier_indent">my_hash["fish"] = "piscine"</p>
+    <p>I've assigned the value <span class="courier">"piscine" </span>to the key<span class="courier"> "fish"</span>.</p>
+    <p>Now, <span class="courier">my_hash = {"cat" => "feline", "dog" => "canine", "fish" => "piscine"}</span></p>
+  </section>
+<section id="second_from_top">
     <h2 id="posttitle">CSS</h2>
     <h3 id="subtitle">Style</h3>
     <h4 id="date">January 25, 2015</h4>
@@ -76,7 +132,7 @@
   </p>
 </section>
   
-<section id="second_from_top">
+<section id="third_from_top">
   <h2 id="posttitle">Week 1</h2>
   <h3 id="subtitle">Version Control and Git</h3>
     <h4 id="date"> January 19, 2015 </h4>
