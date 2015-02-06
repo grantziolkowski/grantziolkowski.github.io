@@ -3,28 +3,52 @@
     <h2 id="posttitle">Ruby Enumerables</h2>
     <h3 id="subtitle">Iterating through a data structure</h3>
     <h4 id="date">February 6, 2015</h4>
-    
+    <p>Enumerables operate on data collections like hashes and arrays. They are all based on the #each method, iterating through each element of an array or hash.</p>
     <h3>Cycle</h3>
+    <p>
+      Here's the pseudocode for the Cycle Enumerable:
+    </p>
     <p class="courier_indent";>
-      my_array = [1, 2, 3, 4, 5]
-      <br>
-      another_array = ["tree","dog","cat"]
+      array.cycle(n) {|element| code block}
     </p>
     <p>
-      Arrays are very useful because you can run specific functions or methods that will act on or "iterate" over every element in the array. You only need to call these methods on your array name, rather than writing out all the information you've saved within it.
+      Just like the "each" method, cycle will run your code block on every element of your array. In addition to functioning like #each,
+      it will iterate through your array n amount of times, or forever in an infinite loop if you do not specify an n value.
     </p>
-    <p
-      For example, you can add 1 to every number stored in your my_array variable by using the Array method "each".
+    <p>
+      For example, let's create an array. <span class="courier">my array = ["apples","oranges","pears"]</span>
     </p>
     <p class="courier_indent";>
-      my_array.each do |number|
-      <br>
-       &nbsp&nbsp number + 1
-      <br>
-      end
+      my_array.cycle(2) {|fruit| p fruit}
     </p>
-    <p>I use "number" here to name the element, which identifies the individual list items your method will be acting on within the array </p>
-    <p>The result of this Ruby code will be <span class="courier">[2,3,4,5,6]</span></p>
+    <p>This will return:</p>
+     <p class="courier_indent";>
+      apples <br>
+      oranges <br>
+      pears <br>
+      apples <br>
+      oranges <br>
+      pears
+    </p>
+    <p>If you do not assign a code block to your cycle method, it will return an Enumerator, which basically catalogs the contents of your array or hash.</p>
+    <p>Let's give this enumeator a name.</p>  
+    <p class="courier_indent";>
+      my_enumerator = my_array.cycle
+    </p>
+    <p>Check this out:</p>
+    <p class="courier_indent";>
+       my_enumerator <br>
+       my_enumerator.next <br>
+       my_enumerator.next <br>
+       my_enumerator.next
+    </p>
+    <p>This will return:</p>
+    <p class="courier_indent";>
+     #<Enumerator: ["apples", "oranges", "pears"]:cycle> <br>
+      apples <br>
+      oranges <br>
+      pears 
+      </p> 
   </section>
 </main>
 </html>
