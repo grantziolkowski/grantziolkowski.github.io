@@ -1,3 +1,9 @@
+main {
+	display: block;
+	height: 100%;
+	padding-bottom: 400px;
+}
+
 
 #second_from_top {
 display: block;
@@ -6,9 +12,9 @@ left: 100px;
 top: 300px;
 }
 
-main {
-	display: block;
-	height: 100%;
-	padding-bottom: 400px;
-
+#third_from_top {
+display: block;
+position: relative;
+left: 100px;
+top: 300px;
 }
