@@ -15,12 +15,7 @@ img {
 h1{
   color: black;
 }
-main {
-	display: block;
-	height: 100%;
-	padding-bottom: 840px;
 
-}
 #blog_navbar{
   display: block;
   position: relative;
