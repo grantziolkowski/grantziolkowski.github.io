@@ -105,7 +105,6 @@ top: 210px;
    position: absolute;
    width: 100%;
    text-align: center;
-   bottom: 0px;
-   padding-top:30px;
+   bottom: -10px;
    
 }
