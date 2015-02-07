@@ -1,4 +1,12 @@
 
+#second_1 {
+display: block;
+position: relative;
+top: 500px;
+left: 100px;
+
+} 
+
 #second_3 {
 display: block;
 position: relative;
@@ -12,8 +20,5 @@ display: block;
 position: relative;
 top: 820px;
 left: 100px;
-
-
-
 
 }
