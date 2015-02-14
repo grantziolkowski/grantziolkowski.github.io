@@ -28,10 +28,44 @@
      <li><a href="week7.html">Week 7</a></li>
      <li><a href="week8.html">Week 8</a></li>
   </ul>
-  <section id="top">
-  <h2 id="posttitle">Week 5</h1>
-  <h3 id="subtitle">Subtitle</h2>
-  <h4 id="date">Date</h4>
+    <section id="top">>
+
+    <h2 id="posttitle">Ruby Classes</h2>
+    <h3 id="subtitle">Orient Your Objects</h3>
+    <h4 id="date">February 14, 2015</h4>
+    <h3></h3>
+    <p>
+      Classes are objects in Ruby that are essential to organizing your programs. They give you a way to assign variables and
+      methods to each individual subset of a program. It's essential to compartmentalize your Ruby programs using classes to prevent
+      creating confusing mess of variables and methods that apply to some parts of the program but not others.
+    <p>
+    <p>Create your class using All Caps like this:</p>
+    <p class="courier_indent";>
+      class WhatToDoToday
+      <br>
+      end
+    </p>
+    <p>Later on, we will create an instance of our class like this:<p>
+    <p class="courier_indent">relax = WhatToDoToday.new</p>
+    <p>Next we initialize by creating the initialize method in your class. Later on, every time we create an instance of
+    the class, we'll need to initialize it using the same number of arguments as you set for your initialize method.
+    For example, the top of your program will look like this:
+    </p>
+    <p class="courier_indent";>
+      class WhatToDoToday
+      <br>
+      <p class="courier_indent";>
+      def initialize(purpose, transportation=nil, location)
+      <p class="courier_indent";>
+        @purpose = purpose
+        <br>
+        @transportation = transportation
+        <br>
+        @location = location
+        </p>
+    end
+    </p>
+    </p>
   
   </section>
   </main>
