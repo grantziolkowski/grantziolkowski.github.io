@@ -15,25 +15,30 @@
       <br>
       end
     </p>
-    <p>Later on, we will create an instance of our class like this:<p>
+    <p>Later on, we will create an instance of our class like this:</p>
     <p class="courier_indent">relax = WhatToDoToday.new</p>
-    <p>Next we initialize by creating the initialize method in your class. Later on, every time we create an instance of
-    the class, we'll need to initialize it using the same number of arguments as you set for your initialize method.
-    For example, the top of your program will look like this:
-    </p>
+    <p>Next we initialize by creating the initialize method in your class.
+     For example, the top of your program will look like this:
+       
+     </p>
     <p class="courier_indent";>
       class WhatToDoToday
       <br>
-      <p class="courier_indent";>
-      def initialize(purpose, transportation=nil, location)
-      <p class="courier_indent";>
+      <p class="courier_indent2";>
+        def initialize(purpose, transportation=nil, location)
+      </p>
+      <p class="courier_3";>
         @purpose = purpose
         <br>
         @transportation = transportation
         <br>
         @location = location
-        </p>
-    end
+      </p>
+      <class="courier_indent2";>end</p>
+    <p>
+    Later on, every time we create an instance of
+    the class, we'll need to initialize it using the same number of arguments as you set for your initialize method.
+  
     </p>
     </p>
      attr_reader :transportation
