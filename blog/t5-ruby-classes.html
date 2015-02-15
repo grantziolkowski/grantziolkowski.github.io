@@ -7,7 +7,7 @@
     <p>
       Classes are objects in Ruby that are essential to organizing your programs. They give you a way to assign variables and
       methods to each individual subset of a program. It's essential to compartmentalize your Ruby programs using classes to prevent
-      creating confusing mess of variables and methods that apply to some parts of the program but not others.
+      creating a confusing mess of variables and methods that apply to some parts of the program but not to others.
     <p>
     <p>Create your class using All Caps like this:</p>
     <p class="courier_indent";>
@@ -19,37 +19,37 @@
     <p class="courier_indent">relax = WhatToDoToday.new</p>
     <p>Next we initialize by creating the initialize method in your class.
      For example, the top of your program will look like this:
-       
+
      </p>
-    <p class="courier_indent";>
+    <p class= "courier_indent";>
       class WhatToDoToday
       <br>
-      <p class="courier_indent2";>
+      <p class= "courier_indent2";>
         def initialize(purpose, transportation=nil, location)
       </p>
-      <p class="courier_3";>
+      <p class= "courier_indent3";>
         @purpose = purpose
         <br>
         @transportation = transportation
         <br>
         @location = location
       </p>
-      <class="courier_indent2";>end</p>
+      <class= "courier_indent2";>end</p>
     <p>
     Later on, every time we create an instance of
     the class, we'll need to initialize it using the same number of arguments as you set for your initialize method.
-  
+
     </p>
     </p>
      attr_reader :transportation
     def get_up_and_go
    if @purpose == "nothing"
-     p "Slow down and rest at #{@location}!" 
+     p "Slow down and rest at #{@location}!"
    elsif @purpose == "business"
-    p "Get up early go to #{@location}!" 
+    p "Get up early go to #{@location}!"
    elsif @purpose == "pleasure"
     p "Have fun at the #{@location}."
-   end   
+   end
   end
   def get_there
     return if @transportation == nil
@@ -67,10 +67,10 @@ rock_show = WhatToDoToday.new("pleasure", "taxi","club")
 rock_show.transportation
 rock_show.get_up_and_go
 rock_show.get_there
-    
+
     </p>
     <p>
-      Classes talk 
+      Classes talk
     </p>
     <p
       Classes talk
