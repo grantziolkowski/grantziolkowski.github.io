@@ -87,16 +87,16 @@ section {
 }
 .courier_indent {
 	font-family: Courier;
-	margin-left:30px;
+	margin-left: 30px;
 }
 
 .courier_indent_indent2 {
 	font-family: Courier;
-	margin-left:40px;
+	margin-left: 40px;
 }
 .courier_indent3 {
 	font-family: Courier;
-	margin-left:50px;
+	margin-left: 50px;
 }
 
 #top {
@@ -111,5 +111,5 @@ top: 210px;
    width: 100%;
    text-align: center;
    bottom: 5px;
-   
+
 }
