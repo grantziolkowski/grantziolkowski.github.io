@@ -1,4 +1,4 @@
-  <section id="top">>
+  <section id="top">
 
     <h2 id="posttitle">Ruby Classes</h2>
     <h3 id="subtitle">Orient Your Objects</h3>
@@ -7,7 +7,7 @@
     <p>
       Classes are objects in Ruby that are essential to organizing your programs. They give you a way to assign variables and
       methods to each individual subset of a program. It's essential to compartmentalize your Ruby programs using classes to prevent
-      creating a confusing mess of variables and methods that apply to some parts of the program but not to others.
+      creating confusing mess of variables and methods that apply to some parts of the program but not others.
     <p>
     <p>Create your class using All Caps like this:</p>
     <p class="courier_indent";>
@@ -15,75 +15,72 @@
       <br>
       end
     </p>
-    <p>Later on, we will create an instance of our class like this:</p>
+    <p>Later on, we will create an instance of our class like this:<p>
     <p class="courier_indent">relax = WhatToDoToday.new</p>
-    <p>Next we initialize by creating the initialize method in your class.
-     For example, the top of your program will look like this:
-
-     </p>
-    <p class= "courier_indent";>
-      class WhatToDoToday
-      <br>
-      <p class= "courier_indent2";>
-        def initialize(purpose, transportation=nil, location)
-      </p>
-      <p class= "courier_indent3";>
-        @purpose = purpose
-        <br>
-        @transportation = transportation
-        <br>
-        @location = location
-      </p>
-      <class= "courier_indent2";>end</p>
-    <p>
-    Later on, every time we create an instance of
+    <p>Next we initialize by creating the initialize method in your class. Later on, every time we create an instance of
     the class, we'll need to initialize it using the same number of arguments as you set for your initialize method.
-
+    For example, the top of your program will look like this:
     </p>
-    </p>
-     attr_reader :transportation
-    def get_up_and_go
-   if @purpose == "nothing"
-     p "Slow down and rest at #{@location}!"
-   elsif @purpose == "business"
-    p "Get up early go to #{@location}!"
-   elsif @purpose == "pleasure"
-    p "Have fun at the #{@location}."
-   end
-  end
-  def get_there
-    return if @transportation == nil
-    p "Get there safe in your #{@transportation}!"
-   end
-end
-
-relax = WhatToDoToday.new("nothing","home")
-relax.get_up_and_go
-relax.get_there
-work_hard = WhatToDoToday.new("business","train","work")
-work_hard.get_up_and_go
-work_hard.get_there
-rock_show = WhatToDoToday.new("pleasure", "taxi","club")
-rock_show.transportation
-rock_show.get_up_and_go
-rock_show.get_there
-
-    </p>
-    <p>
-      Classes talk
-    </p>
-    <p
-      Classes talk
-    </p>
-    <p class="courier_indent";>
-      my_array.each do |number|
-      <br>
-       &nbsp&nbsp number + 1
-      <br>
+    <p class="courier_indent";>class WhatToDoToday</p>
+    <p><span class="courier_indent2";>def initialize(purpose, location, transportation=nil)<span> <br>
+        <span class="courier_indent3";>@purpose = purpose</span> <br>
+        <span class="courier_indent3";>  @transportation = transportation</span> <br>
+        <span class="courier_indent3";>  @location = location </span> <br>
+        <span class="courier_indent2";>end</span></p>
+     <p>Later on when you create an instance of the class, it will look something like this:</p>
+     <p class="courier_indent";>work_hard = WhatToDoToday.new("business","work","train")
+     <p>Or like this, if you take advantange of the defaualt value of <span class="courier">transportation</span>
+       being <span class="courier">nil</span> or "nothing":
+    <p class="courier_indent";> relax = WhatToDoToday.new("nothing","home")</p>
+    <p>Within the initialize method, we create instance variables which you can reference from anywhere in the
+      class. We create them by using the <span class="courier">@</span> sign, so now we have three instance variables, which
+      take their values from whatever you give them when you you create an instance of the class and initialize it.</p>
+   <p>So in our instance <span class="courier">relax</span>, the instance variable <span class="courier">@purpose = "nothing"</span>.</p>  
+    <p>After the initialize method in your class, you'll want to give it some logic. In this case, we'll define an 
+      instance method which you will be able to call on any instance of the class. Let's continue with our class 
+      <span class="courier">WhatToDoToday</span> by defining an instance method <span class="courier">get_up_and_go</span>:</p>
+   <p class="courier_indent";>class WhatToDoToday</p>
+      <p class="courier_indent2";>def initialize(purpose, location, transportation=nil) <br>
+        <span class="courier_indent">...</span> <br>
       end
-    </p>
-    <p>I use "number" here to name the element, which identifies the individual list items your method will be acting on within the array </p>
-    <p>The result of this Ruby code will be <span class="courier">[2,3,4,5,6]</span></p>
-  </section>
+      </p>
+      <p>
+      <span class="courier_indent2";>def get_up_and_go</span> <br>
+        <span class="courier_indent3">if @purpose == "nothing"</span> <br>
+          <span class="courier_indent4">p "Slow down and rest at #{@location}!"</span> <br>
+       <span class="courier_indent3">elsif @purpose == "business"</span> <br>
+          <span class="courier_indent4">p "Get up early go to #{@location}!"</span> <br>
+       <span class="courier_indent3">elsif @purpose == "pleasure"</span> <br>
+          <span class="courier_indent4">p "Have fun at the #{@location}."</span> <br>
+       <span class="courier_indent3">end</span> <br>
+      <span class="courier_indent2">end</span> <br>
+      <span class="courier_indent">end</span>
+     </p>
+  <p>So we can create our instance of the class <span class="courier">WhatToDoToday</span> and tell it what to do
+  by calling the method <span class="courier">get_up_and_go</span>. The <span class="courier">=></span> sign just
+  shows you what the computer will return:</p>
+  <p><span class="courier_indent";>work_hard = WhatToDoToday.new("business","work","train")</span><br>
+     <span class="courier_indent";>work_hard.get_up_and_go</span><br>
+     <span class="courier_indent";>=> "Get up early go to work!"</span></p>
+  <p>The other main topic when talking about Ruby Classes is attributes. Creating attribute readers <span class="courier">
+  (attr_reader)<span> allows you to access the attributes of your class, namely the instance variables, 
+  from outside of the class. Attribute writers <span class="courier">(attr_writer)</span>can be set
+    from outside of the class, and attribute accessors <span class="courier">(attr_accessor)</span>can be read and set. 
+    You create these at the beginning of your class, before the initalize method:
+  </p>
+   <p><span class="courier_indent";>class WhatToDoToday</span><br>
+     <span class="courier_indent2";>attr_reader :transportation</span><br>
+      <span class="courier_indent2";>def initialize(purpose, location, transportation=nil) <br>
+      <span class="courier_indent2";> ...</span>
+<p>So then we can read a particular attribute of the class by calling it like an instance method. In fact, creating
+  <span class="courier">attr_reader :transportation</span> is just shorthand for:</p>
+<p><span class="courier_indent2";>def transportation</span> <br>
+    <span class="courier_indent3">@transportation</span> <br>
+    <span class="courier_indent2";>end</span> <br></p>
+<p>Let's try it:</p>
+<p><span class="courier_indent";>rock_show = WhatToDoToday.new("pleasure","club", "taxi")</span><br>
+    <span class="courier_indent";>rock_show.transportation</span><br>
+    <span class="courier_indent";>=> "taxi"</span></p>
+<section>
 </main>
 </html>
