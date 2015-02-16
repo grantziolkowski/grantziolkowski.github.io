@@ -69,16 +69,19 @@
     <p>Within the initialize method, we create instance variables which you can reference from anywhere in the
       class. We create them by using the <span class="courier">@</span> sign, so now we have three instance variables, which
       take their values from whatever you give them when you you create an instance of the class and initialize it.</p>
-   <p>So in our instance <span class="courier">relax</span>,the instance variable <span class="courier">@purpose = "nothing"</span>.</p>  
+   <p>So in our instance <span class="courier">relax</span> ,the instance variable <span class="courier">@purpose = "nothing"</span>.</p>  
     <p>After the initialize method in your class, you'll want to give it some logic. In this case, we'll define an 
       instance method which you will be able to call on any instance of the class. Let's continue with our class 
       <span class="courier">WhatToDoToday</span> by defining an instance method <span class="courier">get_up_and_go</span>:</p>
    <p class="courier_indent";>class WhatToDoToday</p>
-      <p class="courier_indent2";>def initialize(purpose, location, transportation=nil)</p> 
+      <p class="courier_indent2";>def initialize(purpose, location, transportation=nil) 
       <br>
       ...
       <br>
       <span class="courier_indent2";>end</span> <br>
+      </p>
+      <p>
+      <span class="courier_indent2";>def get_up_and_go
         <span class="courier_indent3">if @purpose == "nothing"</span> <br>
           <span class="courier_indent4">p "Slow down and rest at #{@location}!"</span> <br>
        <span class="courier_indent3">elsif @purpose == "business"</span> <br>
@@ -86,22 +89,18 @@
        <span class="courier_indent3">elsif @purpose == "pleasure"</span> <br>
           <span class="courier_indent4">p "Have fun at the #{@location}."</span> <br>
        <span class="courier_indent3">end</span> <br>
-      <span class="courier_indent2">end</span>
-       
-  
-work_hard.get_up_and_go
-    </p>
-    </p>
-     attr_reader :transportation
-    def get_up_and_go
-   if @purpose == "nothing"
-     p "Slow down and rest at #{@location}!"
-   elsif @purpose == "business"
-    p "Get up early go to #{@location}!"
-   elsif @purpose == "pleasure"
-    p "Have fun at the #{@location}."
-   end
-  end
+      <span class="courier_indent2">end</span> <br>
+      <span class="courier_indent">end</span>
+     </p>
+  <p>So we can create our instance of the class <span class="courier">WhatToDoToday</span> and tell it what to do
+  by calling the method <span class="courier">get_up_and_go</span>. The <span class="courier">=></span> sign just
+  shows you what the computer will return:</p>
+  <p class="courier_indent";>work_hard = WhatToDoToday.new("business","work","train")</p>
+  <p class="courier_indent";>work_hard.get_up_and_go</p>
+  <p class="courier_indent";>=></p>
+  <p class="courier_indent">"Get up early go to work!"</p>
+  <p>attr_reader :transportation
+   
   def get_there
     return if @transportation == nil
     p "Get there safe in your #{@transportation}!"
