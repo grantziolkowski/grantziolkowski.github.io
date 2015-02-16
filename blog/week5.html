@@ -92,18 +92,23 @@
   <p><span class="courier_indent";>work_hard = WhatToDoToday.new("business","work","train")</span><br>
      <span class="courier_indent";>work_hard.get_up_and_go</span><br>
      <span class="courier_indent";>=> "Get up early go to work!"</span></p>
-  <p>The other main topic when talking about Ruby Classes is attributes.</p>
+  <p>The other main topic when talking about Ruby Classes is attributes. Creating attribute readers <span class="courier">
+  (attr_reader)<span> allows you to access the attributes of your class, namely the instance variables, 
+  from outside of the class. Attribute writers <span class="courier">(attr_writer)</span>can be set
+    from outside of the class, and attribute accessors <span class="courier">(attr_accessor)</span>can be read and set. 
+    You create these at the beginning of your class, before the initalize method:
+  </p>
    <p><span class="courier_indent";>class WhatToDoToday</span><br>
-     <span class="courier_indent2";>attr_reader :transportation></span><br>
+     <span class="courier_indent2";>attr_reader :transportation</span><br>
       <span class="courier_indent2";>def initialize(purpose, location, transportation=nil) <br>
-      ...
+      <span class="courier_indent2";> ...</span>
 <p>So then we can read a particular attribute of the class by calling it like an instance method. In fact, creating
   <span class="courier">attr_reader :transportation</span> is just shorthand for:</p>
 <p><span class="courier_indent2";>def transportation</span> <br>
     <span class="courier_indent3">@transportation</span> <br>
     <span class="courier_indent2";>end</span> <br></p>
 <p>Let's try it:</p>
-<p span class="courier_indent";>rock_show = WhatToDoToday.new("pleasure","club", "taxi")</span><br>
+<p><span class="courier_indent";>rock_show = WhatToDoToday.new("pleasure","club", "taxi")</span><br>
     <span class="courier_indent";>rock_show.transportation</span><br>
     <span class="courier_indent";>=> "taxi"</span></p>
  <section>
