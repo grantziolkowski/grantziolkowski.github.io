@@ -56,12 +56,9 @@
       <span class="courier_indent2";>def initialize(purpose, location, transportation=nil)<span>
       <br>
         <span class="courier_indent3";>
-          @purpose = purpose
-          <br>
-          @transportation = transportation
-          <br>
-          @location = location
-          </span>
+          @purpose = purpose <br>
+          @transportation = transportation <br>
+          @location = location </span>
           <br>
         <span class="courier_indent2";>end</span>
      <p>Later on when you create an instance of the class, it will look something like this:</p>
@@ -81,16 +78,15 @@
       <br>
       ...
       <br>
-      <p class="courier_indent2";>end</p> 
-      <p class="courier_indent2";>def get_up_and_go</p>
-        <p class="courier_indent3">if @purpose == "nothing"</p>
-          <p class="courier_indent4">p "Slow down and rest at #{@location}!"</p>
-       <p class="courier_indent3">elsif @purpose == "business"</p>
-          <p class="courier_indent4">p "Get up early go to #{@location}!"</p>
-       <p class="courier_indent3">elsif @purpose == "pleasure"</p>
-          <p class="courier_indent4">p "Have fun at the #{@location}."</p>
-       <p class="courier_indent3">end</p>
-      <p class="courier_indent2">end</p>
+      <span class="courier_indent2";>end</span> <br>
+        <span class="courier_indent3">if @purpose == "nothing"</span> <br>
+          <span class="courier_indent4">p "Slow down and rest at #{@location}!"</span> <br>
+       <span class="courier_indent3">elsif @purpose == "business"</span> <br>
+          <span class="courier_indent4">p "Get up early go to #{@location}!"</span> <br>
+       <span class="courier_indent3">elsif @purpose == "pleasure"</span> <br>
+          <span class="courier_indent4">p "Have fun at the #{@location}."</span> <br>
+       <span class="courier_indent3">end</span> <br>
+      <span class="courier_indent2">end</span>
        
   
 work_hard.get_up_and_go
