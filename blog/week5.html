@@ -78,10 +78,10 @@
       <br>
       ...
       <br>
-      <span class="courier_indent2";>end</span> <br>
+      end
       </p>
       <p>
-      <span class="courier_indent2";>def get_up_and_go
+      <span class="courier_indent2";>def get_up_and_go</span> <br>
         <span class="courier_indent3">if @purpose == "nothing"</span> <br>
           <span class="courier_indent4">p "Slow down and rest at #{@location}!"</span> <br>
        <span class="courier_indent3">elsif @purpose == "business"</span> <br>
@@ -95,36 +95,24 @@
   <p>So we can create our instance of the class <span class="courier">WhatToDoToday</span> and tell it what to do
   by calling the method <span class="courier">get_up_and_go</span>. The <span class="courier">=></span> sign just
   shows you what the computer will return:</p>
-  <p class="courier_indent";>work_hard = WhatToDoToday.new("business","work","train")</p>
-  <p class="courier_indent";>work_hard.get_up_and_go</p>
-  <p class="courier_indent";>=></p>
-  <p class="courier_indent">"Get up early go to work!"</p>
-  <p>attr_reader :transportation
-   
-  def get_there
-    return if @transportation == nil
-    p "Get there safe in your #{@transportation}!"
-   end
-end
-
-relax = WhatToDoToday.new("nothing","home")
-relax.get_up_and_go
-relax.get_there
-work_hard = WhatToDoToday.new("business","work","train")
-work_hard.get_up_and_go
-work_hard.get_there
-rock_show = WhatToDoToday.new("pleasure", "club","taxi")
-rock_show.transportation
-rock_show.get_up_and_go
-rock_show.get_there
-
-    </p>
-    <p>
-      Classes talk
-    </p>
-    <p
-      Classes talk
-    </p>
+  <p><span class="courier_indent";>work_hard = WhatToDoToday.new("business","work","train")</span><br>
+     <span class="courier_indent";>work_hard.get_up_and_go</span><br>
+     <span class="courier_indent";>=> "Get up early go to work!"</span></p>
+  <p>The other main topic when talking about Ruby Classes is attributes.</p>
+   <p><span class="courier_indent";>class WhatToDoToday</span><br>
+     <span class="courier_indent2";>attr_reader :transportation></span><br>
+      <span class="courier_indent2";>def initialize(purpose, location, transportation=nil) <br>
+      ...
+<p>So then we can read a particular attribute of the class by calling it like an instance method. In fact, creating
+  <span class="courier">attr_reader :transportation</span> is just shorthand for:</p>
+<p><span class="courier_indent2";>def transportation</span> <br>
+    <span class="courier_indent3">@transportation</span> <br>
+    <span class="courier_indent2";>end</span> <br></p>
+<p>Let's try it:</p>
+<p span class="courier_indent";>rock_show = WhatToDoToday.new("pleasure","club", "taxi")</span><br>
+    <span class="courier_indent";>rock_show.transportation</span><br>
+    <span class="courier_indent";>=> "taxi"</span></p>
+ <section>
     <p class="courier_indent";>
       my_array.each do |number|
       <br>
