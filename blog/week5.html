@@ -69,13 +69,27 @@
     <p>Within the initialize method, we create instance variables which you can reference from anywhere in the
       class. We create them by using the <span class="courier">@</span> sign, so now we have three instance variables, which
       take their values from whatever you give them when you you create an instance of the class and initialize it.</p>
-   <p>So in our instance  <span class="courier">relax</span></p>, <span class="courier">@purpose = "nothing"</span>.</p>  
+   <p>So in our instance <span class="courier">relax</span>,the instance variable <span class="courier">@purpose = "nothing"</span>.</p>  
     <p>After the initialize method in your class, you'll want to give it some logic. In this case, we'll define an 
-      instance method which you will be able to call later on any instance of the class. Let's continue with our class
-      <span class="courier">WhatToDoToday</span>by defining an instance method <span class="courier">get_up_and_go</span>:</p>
-     
+      instance method which you will be able to call on any instance of the class. Let's continue with our class 
+      <span class="courier">WhatToDoToday</span> by defining an instance method <span class="courier">get_up_and_go</span>:</p>
+   <p class="courier_indent";>class WhatToDoToday</p>
+      <p class="courier_indent2";>def initialize(purpose, location, transportation=nil)</p> 
+      <br>
+      ...
+      <br>
+      <p class="courier_indent2";>end</p> 
+      <p class="courier_indent2";>def get_up_and_go</p>
+        <p class="courier_indent3">if @purpose == "nothing"</p>
+          <p class="courier_indent4">p "Slow down and rest at #{@location}!"</p>
+       <p class="courier_indent3">elsif @purpose == "business"</p>
+          <p class="courier_indent4">p "Get up early go to #{@location}!"</p>
+       <p class="courier_indent3">elsif @purpose == "pleasure"</p>
+          <p class="courier_indent4">p "Have fun at the #{@location}."</p>
+       <p class="courier_indent3">end</p>
+      <p class="courier_indent2">end</p>
        
-     </p>
+  
 work_hard.get_up_and_go
     </p>
     </p>
