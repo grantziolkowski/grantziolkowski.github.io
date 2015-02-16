@@ -51,7 +51,7 @@
     the class, we'll need to initialize it using the same number of arguments as you set for your initialize method.
     For example, the top of your program will look like this:
     </p>
-    <p><class="courier_indent";>class WhatToDoToday</p><br>
+    <p class="courier_indent";>class WhatToDoToday</p><br>
     <p><span class="courier_indent2";>def initialize(purpose, location, transportation=nil)<span> <br>
         <span class="courier_indent3";>@purpose = purpose</span> <br>
         <span class="courier_indent3";>  @transportation = transportation</span> <br>
@@ -65,15 +65,13 @@
     <p>Within the initialize method, we create instance variables which you can reference from anywhere in the
       class. We create them by using the <span class="courier">@</span> sign, so now we have three instance variables, which
       take their values from whatever you give them when you you create an instance of the class and initialize it.</p>
-   <p>So in our instance <span class="courier">relax</span> ,the instance variable <span class="courier">@purpose = "nothing"</span>.</p>  
+   <p>So in our instance <span class="courier">relax</span>, the instance variable <span class="courier">@purpose = "nothing"</span>.</p>  
     <p>After the initialize method in your class, you'll want to give it some logic. In this case, we'll define an 
       instance method which you will be able to call on any instance of the class. Let's continue with our class 
       <span class="courier">WhatToDoToday</span> by defining an instance method <span class="courier">get_up_and_go</span>:</p>
    <p class="courier_indent";>class WhatToDoToday</p>
-      <p class="courier_indent2";>def initialize(purpose, location, transportation=nil) 
-      <br>
-      ...
-      <br>
+      <p class="courier_indent2";>def initialize(purpose, location, transportation=nil) <br>
+        <span class="courier_indent">...</span> <br>
       end
       </p>
       <p>
