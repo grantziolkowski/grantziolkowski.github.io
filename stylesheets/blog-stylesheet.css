@@ -48,7 +48,7 @@ h1{
 }
 #posttitle {
   display: block;
-  position: absolute;
+  position: static;
   width: 700px;
   height: 15px;
 }
