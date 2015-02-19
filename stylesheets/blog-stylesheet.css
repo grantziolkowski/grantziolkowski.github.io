@@ -47,8 +47,8 @@ h1{
   top: 210px
 }
 #posttitle {
-  display:block;
-  position: relative;
+  display: block;
+  position: absolute;
   width: 700px;
   height: 15px;
 }
