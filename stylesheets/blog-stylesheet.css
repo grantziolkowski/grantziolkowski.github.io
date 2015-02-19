@@ -49,7 +49,7 @@ h1{
 #posttitle {
   display:block;
   position: relative;
-  width: 400px;
+  width: 700px;
   height: 15px;
 }
 
@@ -57,7 +57,7 @@ h1{
   display:block;
   position: relative;
   height: 10px;
-  width: 700px;
+  width: 400px;
 }
 #date {
   display:block;
