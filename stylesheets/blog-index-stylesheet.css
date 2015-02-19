@@ -2,7 +2,7 @@
 #second_from_top {
 display: block;
 position: relative;
-top: 1680px;
+top: 410px;
 left: 100px;
 }
 
@@ -10,49 +10,56 @@ left: 100px;
 #third_from_top {
 display: block;
 position: relative;
-top: 1690px;
+top: 420px;
 left: 100px;
 }
 
 #fourth_from_top {
 display: block;
 position: relative;
-top: 1700px;
+top: 430px;
 left: 100px;
 }
 
 #fifth_from_top {
 display: block;
 position: relative;
-top: 1710px;
+top: 440px;
 left: 100px;
 }
 
 #sixth_from_top {
 display: block;
 position: relative;
-top: 1720px;
+top: 450px;
 left: 100px;
 }
 
 #seventh_from_top {
 display: block;
 position: relative;
-top: 1730px;
+top: 460px;
 left: 100px;
 }
 
 #eighth_from_top {
 display: block;
 position: relative;
-top: 1740px;
+top: 470px;
 left: 100px;
 }
 
 #ninth_from_top {
 display: block;
 position: relative;
-top: 1750px;
+top: 480px;
+left: 100px;
+}
+
+#tenth_from_top {
+display: block;
+position: relative;
+top: 480px;
 left: 100px;
 }
 
