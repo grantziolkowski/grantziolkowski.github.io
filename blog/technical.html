@@ -54,10 +54,11 @@
     </p>
     <p class="courier_indent";>class WhatToDoToday</p>
     <p><span class="courier_indent2";>def initialize(purpose, location, transportation=nil)<span> <br>
-        <span class="courier_indent3";>@purpose = purpose</span> <br>
+        <span class="courier_indent3";>  @purpose = purpose</span> <br>
         <span class="courier_indent3";>  @transportation = transportation</span> <br>
         <span class="courier_indent3";>  @location = location </span> <br>
         <span class="courier_indent2";>end</span></p>
+    <p class="courier_indent";>end</p>  
      <p>Later on when you create an instance of the class, it will look something like this:</p>
      <p class="courier_indent";>work_hard = WhatToDoToday.new("business","work","train")
      <p>Or like this, if you take advantange of the defaualt value of <span class="courier">transportation</span>
