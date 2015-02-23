@@ -3,7 +3,7 @@
 display: block;
 position: relative;
 left: 100px;
-top: 2210px;
+top: 2200px;
 }
 
 
@@ -11,21 +11,21 @@ top: 2210px;
 display: block;
 position: relative;
 left: 100px;
-top: 2220px;
+top: 2210px;
 }
 
 #fourth_from_top {
 display: block;
 position: relative;
 left: 100px;
-top: 22300px;
+top: 2220px;
 
 }
 #fifth_from_top {
 display: block;
 position: relative;
 left: 100px;
-top: 2240px;
+top: 2230px;
 
 }
 
@@ -33,7 +33,7 @@ top: 2240px;
 display: block;
 position: relative;
 left: 100px;
-top: 2250px;
+top: 2240px;
 
 }
 
@@ -41,6 +41,6 @@ top: 2250px;
 main {
 display: block;
 height: 100%;
-padding-bottom: 2250px;
+padding-bottom: 2240px;
 
 }
