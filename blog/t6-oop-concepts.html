@@ -1,9 +1,11 @@
-<html>
-<section>
+<section id="top">
+  <h2 id="posttitle">Inheritance vs. Composition</h2>
+  <h3 id="subtitle">Organizing your classes</h3>
+  <h4 id="date">February 22, 2015</h4>
   <p>Inheritance, composition and modules are different ways to organize your code. </p>
   <p>Inheritance is an abstract class hierarchy, using subclasses that inherit information from superclasses. Subclasses 
 are more specialized versions of their superclasses.</p>
-  <p>Example using Inheritance</p>
+  <p>Example using Inheritance:</p>
   <p class="courier_indent";>class Menu</p>
   <p><span class="courier_indent2";>attr_reader :food_items, :meal<span> <br> 
         <span class="courier_indent2";>def initialize(args={})</span> <br>
@@ -40,17 +42,42 @@ are more specialized versions of their superclasses.</p>
    <span class="courier_indent3";>price: 2))  </span> <br>
   <span class="courier_indent";>p monday_menu.meal  </span> <br>
   <span class="courier_indent";>p monday_menu.food_items   </span> <br></p>
-   <p class="courier_indent";>=></p>
-  <p class="courier_indent";>"lunch"</p>                                                                                                                                  
-  <p class="courier_indent";> #<FoodItems:0x007f7279513540 @food="taco", @price=2> </p>
+   <p class="courier_indent";>=> "lunch"</p>                                                                                                                                  
+  <p class="courier_indent";> #&ltFoodItems:0x007f7279513540 @food="taco", @price=2> </p>
+<p> <span class="courier";>#&ltFoodItems:0x007f7279513540</span> is just the computer telling you what the 
+ <span class="courier";>self</span> object you're acting on is. The  <span class="courier";>food_items</span>
+ attribute returned the correct hash according to our inheritance hierarchy.</p>
+ 
+ <p>The way we've created our food universe so far, our "food items" are an example of a "lunch menu,"
+   which is a specialized version of a "menu." A subclass "is a" specialized version of a superclass.</p>
+ 
+ <p>It is helpful to use inheritance to create classes that will inherit the behavior and messages of their
+   parent classes. However, this can get messy and create problematic dependencies if you need to change your code in the future.
+   When organizing code, one must always ask: "What would be the future consequences if I am wrong about this?"
+ </p>
 
+<p>Composition can help you avoid these dependencies. Using composition, small well-defined objects interact via well-defined interfaces
+to create a larger object that is more than a sum of its parts. The inner objects play the role of the container object, but they are not a "kind" of its class.
+</p>
 
+<p>In our inheritance model above, imagine if we had a <span class="courier";>DinnerMenu</span> that was a subclass of
+<span class="courier";>Menu</span>. If many of the same "food items" were shared among the different intances of "lunch menus"
+and "dinner menus," you would have a mess of confusing and repetitive code trying to keep every "taco" and every "meal"
+accounted for. Let's compose instead, building up from the smallest, most structurally independent objects.</p>
+
+  <p class="courier_indent";>class Menu</p>
+  <p><span class="courier_indent2";>attr_reader :food_items, :meal<span> <br> 
+        <span class="courier_indent2";>def initialize(args={})</span> <br>
+          <span class="courier_indent3";> @meal = args[:meal]</span> <br>
+          <span class="courier_indent3";> @food_items = args[:food_items]  </span> <br>
+        <span class="courier_indent2";>end</span></p>
+    <p class="courier_indent";>end</p> 
+    
   <p class="courier_indent";> class FoodItems < LunchMenu  </p> 
     <span class="courier_indent2";> def initialize(food_items)<span> <br>
        <span class="courier_indent3";> @food_items = food_items</span> <br>
       <span class="courier_indent2";>end</span> <br>
   <p class="courier_indent";>end</p>
-  
   
     <p class="courier_indent";>  class FoodItem </p> 
     <span class="courier_indent2";>  def initialize(args)<span> <br>
@@ -59,8 +86,12 @@ are more specialized versions of their superclasses.</p>
       <span class="courier_indent2";>end</span> <br>
   <p class="courier_indent";>end</p>
  
+ <p>We've created a new <span class="courier";>FoodItem</span> class. Now, our meals won't be so entangled and
+   dependent. If different instances need to share food items, or even if your "dinner taco" were to cost more than your 
+   "lunch taco," you shouldn't have a problem. 
+ </p>
  
-<p span class="courier_indent";> beef = FoodItem.new(food: "beef", price: 7)</span> <br>
+<p><span class="courier_indent";> beef = FoodItem.new(food: "beef", price: 7)</span> <br>
  <span class="courier_indent";>sandwich = FoodItem.new(food: "sandwich", price: 5)</span> <br>
    <span class="courier_indent";>tuesday_menu = Menu.new((</span> <br>
      <span class="courier_indent2";>  meal: "dinner",</span> <br>
@@ -68,35 +99,16 @@ are more specialized versions of their superclasses.</p>
   <span class="courier_indent";>p tuesday_menu.meal  </span> <br>
   <span class="courier_indent";>p tuesday_menu.food_items </span> <br></p>
    <p class="courier_indent";>=></p>
-  <p class="courier_indent";>"dinner</p>                                                                                                                                  
-  <p class="courier_indent";>#<FoodItems:0x007f45e86bf938 @food_items=[#<FoodItem:0x007f45e86bfac8 @food="beef", @price=7>, #<FoodItem:0x007f45e86bfa00 @food="sandwic
-h", @price=5>]>   </p>
-  
-                                                                                                                                
+  <p class="courier_indent";>"dinner"</p>                                                                                                                                  
+  <p class="courier_indent";>#&ltFoodItems:0x007f45e86bf938 @food_items=[<br>
+  #&ltFoodItem:0x007f45e86bfac8 @food="beef", @price=7&gt, <br>
+  #&ltFoodItem:0x007f45e86bfa00 @food="sandwich", @price=5&gt]>   </p>
 
-  
+<p>Using composition, our <span class="courier";>Menu</span> has <span class="courier";>FoodItems</span> which have
+individual <span class="courier";>FoodItem</span> instances. The only drawback to this clear, highly changeable
+organizational tool is that you have to explicitly delegate all your messages, wordily telling your objects how to communicate
+because they are not bound to any single hiearchy.<p>
  
-
-</html>
-<p>
- >> one object "is-a" other object: specialized variants feed into a superclass
- >> automatic delegation of messages invokes the correct behavior
- >> subclasses are bound to classes above them: amplifies modications, deeply embedded dependencies
- >> cost = objects in hiearchy, benefit = message delegation for free
- only for "correctly-modeled hierarchy"
- >>>reasonable: big changes in behavior can be made in small changes of code (at the top of hierarchy)
- >>>usable: open (for extension)-closed (for modification)
- >>>examplary: other coders will copy the sturcture of your subclasses
- >> what will happen in the future if I'm wrong?
- >> if object to be inherited is already part of a hierarchy, IMPOSSIBLE
- </p>
-<p> Composition: one object "has-a" other object
-  >>Using composition, small well-defined objects interact via well-defined interfaces to create a larger object that is more
-  than a sum of its parts. The inner objects play the role of the container object, but they are not a "kind" of its class.
-  >> composed behavior is more than sum of its parts
-  >> cost = must explicity delegate messages, benefit =  structural independence
-   >>> far fewer built-in dependencies = high tolerance for change
-   </p>
 </section>
 
 </html>
