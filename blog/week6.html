@@ -76,7 +76,7 @@ are more specialized versions of their superclasses.</p>
    <p class="courier_indent";>=> "lunch"</p>                                                                                                                                  
   <p class="courier_indent";> #&ltFoodItems:0x007f7279513540 @food="taco", @price=2> </p>
 <p span class="courier";>#&ltFoodItems:0x007f7279513540</span> is just the computer telling you what the 
- span class="courier";>self</span> object you're acting on is. The  <span class="courier";>food_items</span>
+ <span class="courier";>self</span> object you're acting on is. The  <span class="courier";>food_items</span>
  attribute returned the correct hash according to our inheritance hierarchy.</p>
  
  <p>The way we've created our food universe so far, our "food items" are an example of a "lunch menu,"
@@ -90,12 +90,25 @@ are more specialized versions of their superclasses.</p>
 <p>Composition can help you avoid these dependencies. Using composition, small well-defined objects interact via well-defined interfaces
 to create a larger object that is more than a sum of its parts. The inner objects play the role of the container object, but they are not a "kind" of its class.
 </p>
+
+<p>In our inheritance model above, imagine if we had a <span class="courier";>DinnerMenu</span> that was a subclass of
+<span class="courier";>Menu</span>. If many of the same "food items" were shared among the different intances of "lunch menus"
+and "dinner menus," you would have a mess of confusing and repetitive code trying to keep every "taco" and every "meal"
+accounted for. Let's compose instead, building up from the smallest, most structurally independent objects.</p>
+
+  <p class="courier_indent";>class Menu</p>
+  <p><span class="courier_indent2";>attr_reader :food_items, :meal<span> <br> 
+        <span class="courier_indent2";>def initialize(args={})</span> <br>
+          <span class="courier_indent3";> @meal = args[:meal]</span> <br>
+          <span class="courier_indent3";> @food_items = args[:food_items]  </span> <br>
+        <span class="courier_indent2";>end</span></p>
+    <p class="courier_indent";>end</p> 
+    
   <p class="courier_indent";> class FoodItems < LunchMenu  </p> 
     <span class="courier_indent2";> def initialize(food_items)<span> <br>
        <span class="courier_indent3";> @food_items = food_items</span> <br>
       <span class="courier_indent2";>end</span> <br>
   <p class="courier_indent";>end</p>
-  
   
     <p class="courier_indent";>  class FoodItem </p> 
     <span class="courier_indent2";>  def initialize(args)<span> <br>
@@ -104,6 +117,10 @@ to create a larger object that is more than a sum of its parts. The inner object
       <span class="courier_indent2";>end</span> <br>
   <p class="courier_indent";>end</p>
  
+ <p>We've created a new <span class="courier";>FoodItem</span> class. Now, our meals won't be so entangled and
+   dependent. If different instances need to share food items, or even if your "dinner taco" were to cost more than your 
+   "lunch taco," you shouldn't have a problem. 
+ </p>
  
 <p span class="courier_indent";> beef = FoodItem.new(food: "beef", price: 7)</span> <br>
  <span class="courier_indent";>sandwich = FoodItem.new(food: "sandwich", price: 5)</span> <br>
@@ -114,18 +131,16 @@ to create a larger object that is more than a sum of its parts. The inner object
   <span class="courier_indent";>p tuesday_menu.food_items </span> <br></p>
    <p class="courier_indent";>=></p>
   <p class="courier_indent";>"dinner</p>                                                                                                                                  
-  <p class="courier_indent";>#&ltFoodItems:0x007f45e86bf938 @food_items=[#&ltFoodItem:0x007f45e86bfac8 @food="beef", @price=7>, #<FoodItem:0x007f45e86bfa00 @food="sandwic
-h", @price=5>]>   </p>
-  
+  <p class="courier_indent";>#&ltFoodItems:0x007f45e86bf938 @food_items=[#&ltFoodItem:0x007f45e86bfac8 @food="beef", @price=7&rt, 
+  #&ltFoodItem:0x007f45e86bfa00 @food="sandwich", @price=5&rt]>   </p>
+
+
                                                                                                                                 
-<p>
+<p>Using composition, our <span class="courier";Menu</span> has <span class="courier";>FoodItems</span> which have
+individual <span class="courier";>FoodItem</span> instances. The only drawback to this clear, highly changeable
+organizational tool is that you have to explicitly delegate all your messages, wordily telling your objects how to communicate
+because they are not bound to any single hiearchy.<p>
  
- </p>
-<p> Composition: one object "has-a" other object
-  >
-  >> cost = must explicity delegate messages, benefit =  structural independence
-   >>> far fewer built-in dependencies = high tolerance for change
-   </p>
 </section>
   <section id="second_6">
   <h2 id="posttitle">Stereotype Threat</h2>
