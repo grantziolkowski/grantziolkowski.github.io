@@ -39,29 +39,30 @@
     and syntax. Both are essential for grouping one or more values to a corresponding object (piece of data).
     Think of a dictionary: each word is tied to its definition.
     </p>
-    <p>In Ruby, <i>keys</i> have corresponding values.</p>
+    <p>In Ruby Hashes, <i>keys</i> have corresponding values.</p>
     
        <p> <span class="courier_indent";>my_hash = {</span> <br>
-          <span class="courier_indent2";>apples: 2 </span><br>
-          <span class="courier_indent2";>peaches: 5 </span><br>
+          <span class="courier_indent2";>apples: 2, </span><br>
+          <span class="courier_indent2";>peaches: 5, </span><br>
+          <span class="courier_indent2";>oranges: 3,</span><br>
+          <span class="courier_indent2";>} </span>
+      </p>  
+      <p>In JavaScript Objects, <i>properties</i> have corresponding values.</p>    
+      
+         <p> <span class="courier_indent";>var myObject = {</span> <br>
+          <span class="courier_indent2";>apples: 2, </span><br>
+          <span class="courier_indent2";>peaches: 5, </span><br>
           <span class="courier_indent2";>oranges: 3 </span><br>
           <span class="courier_indent2";>} </span>
-        </p>  
-          
+      </p>  
        
       <p>
       <span class="courier_indent2";>def get_up_and_go</span> <br>
         <span class="courier_indent3">if @purpose == "nothing"</span> <br>
           <span class="courier_indent4">p "Slow down and rest at #{@location}!"</span> <br>
-       <span class="courier_indent3">elsif @purpose == "business"</span> <br>
-          <span class="courier_indent4">p "Get up early go to #{@location}!"</span> <br>
-       <span class="courier_indent3">elsif @purpose == "pleasure"</span> <br>
-          <span class="courier_indent4">p "Have fun at the #{@location}."</span> <br>
-       <span class="courier_indent3">end</span> <br>
-      <span class="courier_indent2">end</span> <br>
-      <span class="courier_indent">end</span>
+       
      </p>
-     <p>In JavaScript, <i>properties</i> have corresponding values.
+    
   </section>   
   <section id="second_7">
     <h2 id="posttitle">Value Affirmation</h2>
