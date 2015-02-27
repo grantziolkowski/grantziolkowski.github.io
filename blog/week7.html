@@ -44,7 +44,7 @@
        <p> <span class="courier_indent";>my_hash = {</span> <br>
           <span class="courier_indent2";>apples: 2, </span><br>
           <span class="courier_indent2";>peaches: 5, </span><br>
-          <span class="courier_indent2";>oranges: 3,</span><br>
+          <span class="courier_indent2";>oranges: 3</span><br>
           <span class="courier_indent2";>} </span>
       </p>  
       <p>In JavaScript Objects, <i>properties</i> have corresponding values.</p>    
@@ -56,12 +56,32 @@
           <span class="courier_indent2";>} </span>
       </p>  
        
-      <p>
-      <span class="courier_indent2";>def get_up_and_go</span> <br>
-        <span class="courier_indent3">if @purpose == "nothing"</span> <br>
-          <span class="courier_indent4">p "Slow down and rest at #{@location}!"</span> <br>
-       
-     </p>
+      <p>The are two small differences thus far. Ruby uses the <span class="courier">lowercase_lowercase</span>
+      convention for multi-word variables. JavaScript uses the keyword <span class="courier">var</span>and the naming convention
+      <span class="courier">lowercaseUppercase</span> for multi-word variables</p>
+      
+      <p>Beyond naming, you access the values in these objects in these two languages differently.</p>
+      
+      <p>In Ruby, you can look up a hash value like this:</p>
+         <p class="courier_indent";>p my_hash[:apples]</p>
+         <p class="courier_indent";>=> 2</p>
+      
+      <p><span class="courier">p</span> prints and returns your value in Ruby.</p>
+      <p>Similarily in JavaScript:</p>
+          <p class="courier_indent";>console.log(myObject["apples"])</p>
+          <p class="courier_indent";>=> 2</p>
+          
+      <p><span class="courier">console.log()</span> prints and returns your value in JavaScript.</p>
+      <p>There are other slightly different ways to look up values in Ruby Hashes and JavaScript Objects, but you can see
+        these two examples are nearly identical beyond a few syntax tweaks.
+      </p>
+      
+      <p>Unlike in Ruby, when working in JavaScript you can look up the value(s) of a property of an Object by directly calling
+      it using the <span class="courier">.property</span> notation:</p>
+      
+       <p class="courier_indent";>myObject.apples</p>
+       <p class="courier_indent";>=> 2</p>
+
     
   </section>   
   <section id="second_7">
