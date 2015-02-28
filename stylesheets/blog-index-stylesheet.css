@@ -2,7 +2,7 @@
 #second_from_top {
 display: block;
 position: relative;
-top: 2200px;
+top: 940px;
 left: 100px;
 }
 
@@ -10,62 +10,74 @@ left: 100px;
 #third_from_top {
 display: block;
 position: relative;
-top: 2210px;
+top: 950px;
 left: 100px;
 }
 
 #fourth_from_top {
 display: block;
 position: relative;
-top: 2220px;
+top: 960px;
 left: 100px;
 }
 
 #fifth_from_top {
 display: block;
 position: relative;
-top: 2230px;
+top: 970px;
 left: 100px;
 }
 
 #sixth_from_top {
 display: block;
 position: relative;
-top: 2240px;
+top: 980px;
 left: 100px;
 }
 
 #seventh_from_top {
 display: block;
 position: relative;
-top: 2250px;
+top: 990px;
 left: 100px;
 }
 
 #eighth_from_top {
 display: block;
 position: relative;
-top: 2260px;
+top: 1000px;
 left: 100px;
 }
 
 #ninth_from_top {
 display: block;
 position: relative;
-top: 2270px;
+top: 1010px;
 left: 100px;
 }
 
 #tenth_from_top {
 display: block;
 position: relative;
-top: 2280px;
+top: 1020px;
 left: 100px;
 }
 #eleventh_from_top {
 display: block;
 position: relative;
-top: 2290px;
+top: 1030px;
+left: 100px;
+}
+#twelfth_from_top {
+display: block;
+position: relative;
+top: 1030px;
+left: 100px;
+}
+#thirteenth_from_top {
+display: block;
+position: relative;
+top: 1030px;
 left: 100px;
 }
 
