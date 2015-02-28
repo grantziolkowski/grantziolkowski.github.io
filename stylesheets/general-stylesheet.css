@@ -1,7 +1,7 @@
 main {
 	display: block;
 	height: 100%;
-	padding-bottom: 460px;
+	padding-bottom: 420px;
 }
 
 
@@ -9,32 +9,32 @@ main {
 display: block;
 position: relative;
 left: 100px;
-top: 410px;
+top: 370px;
 }
 
 #third_from_top {
 display: block;
 position: relative;
 left: 100px;
-top: 420px;
+top: 380px;
 }
 
 #fourth_from_top {
 display: block;
 position: relative;
 left: 100px;
-top: 430px;
+top: 390px;
 }
 #fifth_from_top {
 display: block;
 position: relative;
 left: 100px;
-top: 440px;
+top: 400px;
 }
 #sixth_from_top {
 display: block;
 position: relative;
 left: 100px;
-top: 450px;
+top: 410px;
 }
 
