@@ -29,13 +29,88 @@
      <li><a href="week7.html">Week 7</a></li>
      <li><a href="week8.html">Week 8</a></li>
   </ul>
+  
   <section id="top">
+    <h2 id="posttitle">Ruby Hashes vs. JavaScript Objects</h2>
+    <h3 id="subtitle">Comparing data structures</h3>
+    <h4 id="date">February 27, 2015</h4>
+
+    <p>Hashes in Ruby and Objects in JavaScript are similar structures used to organize data. The main differences lie in some terminology
+    and syntax. Both are essential for grouping one or more values to a corresponding object (piece of data).
+    Think of a dictionary: each word is tied to its definition.
+    </p>
+    <p>In Ruby Hashes, <i>keys</i> have corresponding values.</p>
+    
+       <p> <span class="courier_indent";>my_hash = {</span> <br>
+          <span class="courier_indent2";>apples: 2, </span><br>
+          <span class="courier_indent2";>peaches: 5, </span><br>
+          <span class="courier_indent2";>oranges: 3</span><br>
+          <span class="courier_indent2";>} </span>
+      </p>  
+      <p>In JavaScript Objects, <i>properties</i> have corresponding values.</p>    
+      
+         <p> <span class="courier_indent";>var myObject = {</span> <br>
+          <span class="courier_indent2";>apples: 2, </span><br>
+          <span class="courier_indent2";>peaches: 5, </span><br>
+          <span class="courier_indent2";>oranges: 3 </span><br>
+          <span class="courier_indent2";>} </span>
+      </p>  
+       
+      <p>There are two small differences thus far. Ruby uses the <span class="courier">lowercase_lowercase</span>
+      convention for multi-word variables. JavaScript uses the keyword <span class="courier">var</span> and the naming convention
+      <span class="courier">lowercaseUppercase</span> for multi-word variables</p>
+      
+      <p>Beyond naming the Hash/Object variables, you access values in these objects differently depending on the language
+      you're working in.</p>
+      
+      <p>In Ruby, you can look up a hash value like this:</p>
+         <p class="courier_indent";>p my_hash[:apples]</p>
+         <p class="courier_indent";>=> 2</p>
+      
+      <p><span class="courier">p</span> prints and returns a value in Ruby.</p>
+      <p>Similarily in JavaScript:</p>
+          <p class="courier_indent";>console.log(myObject["apples"])</p>
+          <p class="courier_indent";>=> 2</p>
+          
+      <p><span class="courier">console.log()</span> prints and returns a value in JavaScript.</p>
+      <p>There are other slightly different ways to look up values in Ruby Hashes and JavaScript Objects, but you can see
+        these two examples are nearly identical beyond a few syntax tweaks.
+      </p>
+      
+      <p>Unlike in Ruby, when working in JavaScript you can look up the value(s) of a property of an Object by directly calling
+      it using the <span class="courier">.property</span> notation:</p>
+      
+       <p class="courier_indent";>myObject.apples</p>
+       <p class="courier_indent";>=> 2</p>
+
+    
+   </section>   
+    <section id="second_from_top">
+    <h2 id="posttitle">Value Affirmation</h2>
+    <h3 id="subtitle">Know your values, know your worth</h3>
+    <h4 id="date">February 27</h4>
+    <p><i> Curiosity</i> as a value is important to me. When you emphasize the curious search for knowledge, growth, wisdom and adventure
+      as an end unto itself, you take pressure off yourself. Whether you're learning something new or striving towards some accomplishment,
+      a sense of unmitigated curiosity and wonder can be more important than the concrete task at hand. This applies to everything from
+      social situations, cultural exploration and intellectual stimulation.</p>
+
+    <p>A friend recently asked advice for musical growth. I told him not to get bogged down in the technicalities and the daunting immensity
+      of the task at hand. Stay curious, stick to the task at hand regardless of any concrete accomplishments, and growth will come on its own.
+    </p>
+
+    <p>Affirming your values is an important tool for combatting stereotype threat and performance anxiety. If you affirm the values of
+      curiosity, growth, creativity, and adventure with an emphasis on personal development and challenge, you can take away the psychological
+      threat of underperforming. Focusing on your worth as a creative learner can take the bite out of a fear of failure. Know your worth
+      and don't worry about others' perceptions.</p>
+  
+  </section>
+  <section id="third_from_top">
   <h2 id="posttitle">Inheritance vs. Composition</h2>
   <h3 id="subtitle">Organizing your classes</h3>
   <h4 id="date">February 22, 2015</h4>
   <p>Inheritance, composition and modules are different ways to organize your code. </p>
   <p>Inheritance is an abstract class hierarchy, using subclasses that inherit information from superclasses. Subclasses 
-are more specialized versions of their superclasses.</p>
+    are more specialized versions of their superclasses.</p>
   <p>Example using Inheritance:</p>
   <p class="courier_indent";>class Menu</p>
   <p><span class="courier_indent2";>attr_reader :food_items, :meal<span> <br> 
@@ -69,15 +144,15 @@ are more specialized versions of their superclasses.</p>
  <p span class="courier_indent";>monday_menu = Menu.new(</span> <br>
      <span class="courier_indent2";>meal: "lunch",</span> <br>
      <span class="courier_indent2";>food_items: FoodItems.new(  </span> <br>
-   <span class="courier_indent3";>food: "taco",  </span> <br>
-   <span class="courier_indent3";>price: 2))  </span> <br>
-  <span class="courier_indent";>p monday_menu.meal  </span> <br>
-  <span class="courier_indent";>p monday_menu.food_items   </span> <br></p>
+    <span class="courier_indent3";>food: "taco",  </span> <br>
+    <span class="courier_indent3";>price: 2))  </span> <br>
+    <span class="courier_indent";>p monday_menu.meal  </span> <br>
+   <span class="courier_indent";>p monday_menu.food_items   </span> <br></p>
    <p class="courier_indent";>=> "lunch"</p>                                                                                                                                  
   <p class="courier_indent";> #&ltFoodItems:0x007f7279513540 @food="taco", @price=2> </p>
-<p> <span class="courier";>#&ltFoodItems:0x007f7279513540</span> is just the computer telling you what the 
- <span class="courier";>self</span> object you're acting on is. The  <span class="courier";>food_items</span>
- attribute returned the correct hash according to our inheritance hierarchy.</p>
+  <p> <span class="courier";>#&ltFoodItems:0x007f7279513540</span> is just the computer telling you what the 
+     <span class="courier";>self</span> object you're acting on is. The  <span class="courier";>food_items</span>
+      attribute returned the correct hash according to our inheritance hierarchy.</p>
  
  <p>The way we've created our food universe so far, our "food items" are an example of a "lunch menu,"
    which is a specialized version of a "menu." A subclass "is a" specialized version of a superclass.</p>
@@ -141,7 +216,7 @@ organizational tool is that you have to explicitly delegate all your messages, w
 because they are not bound to any single hiearchy.<p>
  
 </section>
-  <section id="second_from_top">
+  <section id="fourth_from_top">
     <h2 id="posttitle">Stereotype Threat</h2>
     <h3 id="subtitle">Social identities and the subconcious</h3>
     <h4 id="date">February 18, 2015</h4>
@@ -165,7 +240,7 @@ because they are not bound to any single hiearchy.<p>
       
     </p>
   </section>
-<section id="third_from_top">
+<section id="fifth_from_top">
 
     <h2 id="posttitle">Ruby Classes</h2>
     <h3 id="subtitle">Orient Your Objects</h3>
@@ -250,7 +325,7 @@ because they are not bound to any single hiearchy.<p>
     <span class="courier_indent";>rock_show.transportation</span><br>
     <span class="courier_indent";>=> "taxi"</span></p>
 </section>
-<section id="fourth_from_top">
+<section id="sixth_from_top">
    <h2 id="posttitle">Pair Programming and Giving/Receiving Feedback</h2>
     <h3 id="subtitle">Pairing is Caring</h3>
     <h4 id="date">February 15, 2015</h4>
@@ -276,7 +351,7 @@ kind on a personal level. It is definitely empowering though, knowing you can he
 by giving them actionable, kind and specific annonymous feedback.
     </p>
 </section>    
-<section id="fifth_from_top">
+<section id="seventh_from_top">
     <h2 id="posttitle">Ruby Enumerables</h2>
     <h3 id="subtitle">Iterating through a data structure</h3>
     <h4 id="date">February 6, 2015</h4>
@@ -328,7 +403,7 @@ by giving them actionable, kind and specific annonymous feedback.
       </p>
   </section>
 
-  <section id="sixth_from_top">
+  <section id="eighth_from_top">
     <h2 id="posttitle">Issues in Tech</h2>
     <h3 id="subtitle">Access, availability and scope</h3>
     <h4 id="date">February 7, 2015</h4>
@@ -359,8 +434,7 @@ by giving them actionable, kind and specific annonymous feedback.
     </p>
 
   </section>
-  </section>
-   <section id="seventh_from_top">
+  <section id="ninth_from_top">
     <h2 id="posttitle">Ruby Arrays and Hashes</h2>
     <h3 id="subtitle">Storing information in lists</h3>
     <h4 id="date">January 30, 2015</h4>
@@ -416,7 +490,7 @@ by giving them actionable, kind and specific annonymous feedback.
     <p>Now, <span class="courier">my_hash = {"cat" => "feline", "dog" => "canine", "fish" => "piscine"}</span></p>
   </section>
 
-  <section id="eighth_from_top">
+  <section id="tenth_from_top">
     <h2 id="posttitle">Thinking Style</h2>
     <h3 id="subtitle">Mindsets and learning styles</h3>
     <h4 id="date">January 30, 2015</h4>
@@ -428,7 +502,7 @@ by giving them actionable, kind and specific annonymous feedback.
     </p>
   </section>
 
-  <section id="ninth_from_top">
+  <section id="eleventh_from_top">
      <h2 id="posttitle">CSS</h2>
     <h3 id="subtitle">Style</h3>
     <h4 id="date">January 25, 2015</h4>
@@ -474,7 +548,7 @@ by giving them actionable, kind and specific annonymous feedback.
   </p>
 </section>
 
-<section id="tenth_from_top">
+<section id="twelfth_from_top">
     <h2 id="posttitle">Week 1</h2>
     <h3 id="subtitle">Version Control and Git</h3>
     <h4 id="date">January 19, 2015 </h4>
@@ -495,7 +569,7 @@ by giving them actionable, kind and specific annonymous feedback.
     </p>
  </section>
 
-  <section id="eleventh_from_top">
+  <section id="thirteenth_from_top">
     <h2 id="posttitle">Week 1</h2>
     <h3 id="subtitle">Introduction</h3>
     <h4 id="date">January 19, 2014</h4>
