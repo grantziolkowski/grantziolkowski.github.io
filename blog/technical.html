@@ -30,42 +30,96 @@
      <li><a href="week8.html">Week 8</a></li>
   </ul>
   <section id="top">
-  <h2 id="posttitle">Inheritance vs. Composition</h2>
-  <h3 id="subtitle">Organizing your classes</h3>
-  <h4 id="date">February 22, 2015</h4>
-  <p>Inheritance, composition and modules are different ways to organize your code. </p>
-  <p>Inheritance is an abstract class hierarchy, using subclasses that inherit information from superclasses. Subclasses 
-are more specialized versions of their superclasses.</p>
-  <p>Example using Inheritance:</p>
-  <p class="courier_indent";>class Menu</p>
-  <p><span class="courier_indent2";>attr_reader :food_items, :meal<span> <br> 
+    <h2 id="posttitle">Ruby Hashes vs. JavaScript Objects</h2>
+    <h3 id="subtitle">Comparing data structures</h3>
+    <h4 id="date">February 27, 2015</h4>
+
+    <p>Hashes in Ruby and Objects in JavaScript are similar structures used to organize data. The main differences lie in some terminology
+    and syntax. Both are essential for grouping one or more values to a corresponding object (piece of data).
+    Think of a dictionary: each word is tied to its definition.
+    </p>
+    <p>In Ruby Hashes, <i>keys</i> have corresponding values.</p>
+    
+       <p> <span class="courier_indent";>my_hash = {</span> <br>
+          <span class="courier_indent2";>apples: 2, </span><br>
+          <span class="courier_indent2";>peaches: 5, </span><br>
+          <span class="courier_indent2";>oranges: 3</span><br>
+          <span class="courier_indent2";>} </span>
+      </p>  
+      <p>In JavaScript Objects, <i>properties</i> have corresponding values.</p>    
+      
+         <p> <span class="courier_indent";>var myObject = {</span> <br>
+          <span class="courier_indent2";>apples: 2, </span><br>
+          <span class="courier_indent2";>peaches: 5, </span><br>
+          <span class="courier_indent2";>oranges: 3 </span><br>
+          <span class="courier_indent2";>} </span>
+      </p>  
+       
+      <p>There are two small differences thus far. Ruby uses the <span class="courier">lowercase_lowercase</span>
+      convention for multi-word variables. JavaScript uses the keyword <span class="courier">var</span> and the naming convention
+      <span class="courier">lowercaseUppercase</span> for multi-word variables</p>
+      
+      <p>Beyond naming the Hash/Object variables, you access values in these objects differently depending on the language
+      you're working in.</p>
+      
+      <p>In Ruby, you can look up a hash value like this:</p>
+         <p class="courier_indent";>p my_hash[:apples]</p>
+         <p class="courier_indent";>=> 2</p>
+      
+      <p><span class="courier">p</span> prints and returns a value in Ruby.</p>
+      <p>Similarily in JavaScript:</p>
+          <p class="courier_indent";>console.log(myObject["apples"])</p>
+          <p class="courier_indent";>=> 2</p>
+          
+      <p><span class="courier">console.log()</span> prints and returns a value in JavaScript.</p>
+      <p>There are other slightly different ways to look up values in Ruby Hashes and JavaScript Objects, but you can see
+        these two examples are nearly identical beyond a few syntax tweaks.
+      </p>
+      
+      <p>Unlike in Ruby, when working in JavaScript you can look up the value(s) of a property of an Object by directly calling
+      it using the <span class="courier">.property</span> notation:</p>
+      
+       <p class="courier_indent";>myObject.apples</p>
+       <p class="courier_indent";>=> 2</p>
+
+  </section>   
+  <section id="second_from_top">
+    <h2 id="posttitle">Inheritance vs. Composition</h2>
+    <h3 id="subtitle">Organizing your classes</h3>
+    <h4 id="date">February 22, 2015</h4>
+    <p>Inheritance, composition and modules are different ways to organize your code. </p>
+    <p>Inheritance is an abstract class hierarchy, using subclasses that inherit information from superclasses. Subclasses 
+    are more specialized versions of their superclasses.</p>
+    <p>Example using Inheritance:</p>
+    <p class="courier_indent";>class Menu</p>
+    <p><span class="courier_indent2";>attr_reader :food_items, :meal<span> <br> 
         <span class="courier_indent2";>def initialize(args={})</span> <br>
           <span class="courier_indent3";> @meal = args[:meal]</span> <br>
           <span class="courier_indent3";> @food_items = args[:food_items]  </span> <br>
         <span class="courier_indent2";>end</span></p>
-    <p class="courier_indent";>end</p> 
+      <p class="courier_indent";>end</p> 
     
-    <p>Now let's create the subclass <span class="courier";>LunchMenu</span> that will inherit the behavorios, methods and instance
-    variables of <span class="courier";>Menu</span>. </p>
+      <p>Now let's create the subclass <span class="courier";>LunchMenu</span> that will inherit the behavorios, methods and instance
+      variables of <span class="courier";>Menu</span>. </p>
     
-    <p class="courier_indent";>class LunchMenu < Menu<br> 
+     <p class="courier_indent";>class LunchMenu < Menu<br> 
        end</p>
        
      <p>Let's do it again, adding another link to our inheritance hierarchy. We will create the class 
      <span class="courier";>FoodItems</span>, which inherits from <span class="courier";>LunchMenu</span>, which inherits from
      <span class="courier";>Menu</span>.</p>
 
-  <p class="courier_indent";> class FoodItems < LunchMenu  </p> 
-     <span class="courier_indent2";>def initialize(args={})<span> <br>
-       <span class="courier_indent3";> @food = args[:food] </span> <br>
-       <span class="courier_indent3";> @price = args[:price] </span> <br>
-     <span class="courier_indent2";>end</span></p>
+   <p class="courier_indent";> class FoodItems < LunchMenu  </p> 
+      <span class="courier_indent2";>def initialize(args={})<span> <br>
+        <span class="courier_indent3";> @food = args[:food] </span> <br>
+         <span class="courier_indent3";> @price = args[:price] </span> <br>
+      <span class="courier_indent2";>end</span></p>
   <p class="courier_indent";>end</p>
-  
+   
   <p>Now let's create an instance of the <span class="courier";>Menu</span> class, which will take a new instance of 
-   <span class="courier";>FoodItems</span> class in its argument hash. Then we can look up the instance variables 
-   <span class="courier";>meal</span> and  <span class="courier";>food_items</span> which are available to us using
-   <span class="courier";>attr_reader</span> and calling them as an instance method.</p>
+    <span class="courier";>FoodItems</span> class in its argument hash. Then we can look up the instance variables 
+    <span class="courier";>meal</span> and  <span class="courier";>food_items</span> which are available to us using
+    <span class="courier";>attr_reader</span> and calling them as an instance method.</p>
  <p span class="courier_indent";>monday_menu = Menu.new(</span> <br>
      <span class="courier_indent2";>meal: "lunch",</span> <br>
      <span class="courier_indent2";>food_items: FoodItems.new(  </span> <br>
@@ -141,7 +195,7 @@ organizational tool is that you have to explicitly delegate all your messages, w
 because they are not bound to any single hiearchy.<p>
  
 </section>
- <section id="second_from_top">
+ <section id="third_from_top">
 
     <h2 id="posttitle">Ruby Classes</h2>
     <h3 id="subtitle">Orient Your Objects</h3>
@@ -200,33 +254,33 @@ because they are not bound to any single hiearchy.<p>
       <span class="courier_indent2">end</span> <br>
       <span class="courier_indent">end</span>
      </p>
-  <p>So we can create our instance of the class <span class="courier">WhatToDoToday</span> and tell it what to do
-  by calling the method <span class="courier">get_up_and_go</span>. The <span class="courier">=></span> sign just
-  shows you what the computer will return:</p>
-  <p><span class="courier_indent";>work_hard = WhatToDoToday.new("business","work","train")</span><br>
-     <span class="courier_indent";>work_hard.get_up_and_go</span><br>
-     <span class="courier_indent";>=> "Get up early go to work!"</span></p>
-  <p>The other main topic when talking about Ruby Classes is attributes. Creating attribute readers <span class="courier">
-  (attr_reader)<span> allows you to access the attributes of your class, namely the instance variables, 
-  from outside of the class. Attribute writers <span class="courier">(attr_writer)</span>can be set
-    from outside of the class, and attribute accessors <span class="courier">(attr_accessor)</span>can be read and set. 
-    You create these at the beginning of your class, before the initalize method:
-  </p>
-   <p><span class="courier_indent";>class WhatToDoToday</span><br>
-     <span class="courier_indent2";>attr_reader :transportation</span><br>
-      <span class="courier_indent2";>def initialize(purpose, location, transportation=nil) <br>
-      <span class="courier_indent2";> ...</span>
-<p>So then we can read a particular attribute of the class by calling it like an instance method. In fact, creating
-  <span class="courier">attr_reader :transportation</span> is just shorthand for:</p>
-<p><span class="courier_indent2";>def transportation</span> <br>
-    <span class="courier_indent3">@transportation</span> <br>
-    <span class="courier_indent2";>end</span> <br></p>
-<p>Let's try it:</p>
-<p><span class="courier_indent";>rock_show = WhatToDoToday.new("pleasure","club", "taxi")</span><br>
-    <span class="courier_indent";>rock_show.transportation</span><br>
-    <span class="courier_indent";>=> "taxi"</span></p>
+    <p>So we can create our instance of the class <span class="courier">WhatToDoToday</span> and tell it what to do
+    by calling the method <span class="courier">get_up_and_go</span>. The <span class="courier">=></span> sign just
+    shows you what the computer will return:</p>
+    <p><span class="courier_indent";>work_hard = WhatToDoToday.new("business","work","train")</span><br>
+       <span class="courier_indent";>work_hard.get_up_and_go</span><br>
+       <span class="courier_indent";>=> "Get up early go to work!"</span></p>
+    <p>The other main topic when talking about Ruby Classes is attributes. Creating attribute readers <span class="courier">
+    (attr_reader)<span> allows you to access the attributes of your class, namely the instance variables, 
+    from outside of the class. Attribute writers <span class="courier">(attr_writer)</span>can be set
+      from outside of the class, and attribute accessors <span class="courier">(attr_accessor)</span>can be read and set. 
+      You create these at the beginning of your class, before the initalize method:
+    </p>
+     <p><span class="courier_indent";>class WhatToDoToday</span><br>
+       <span class="courier_indent2";>attr_reader :transportation</span><br>
+        <span class="courier_indent2";>def initialize(purpose, location, transportation=nil) <br>
+        <span class="courier_indent2";> ...</span>
+  <p>So then we can read a particular attribute of the class by calling it like an instance method. In fact, creating
+    <span class="courier">attr_reader :transportation</span> is just shorthand for:</p>
+  <p><span class="courier_indent2";>def transportation</span> <br>
+      <span class="courier_indent3">@transportation</span> <br>
+      <span class="courier_indent2";>end</span> <br></p>
+  <p>Let's try it:</p>
+  <p><span class="courier_indent";>rock_show = WhatToDoToday.new("pleasure","club", "taxi")</span><br>
+      <span class="courier_indent";>rock_show.transportation</span><br>
+      <span class="courier_indent";>=> "taxi"</span></p>
 </section>
-<section id="third_from_top">
+<section id="fourth_from_top">
     <h2 id="posttitle">Ruby Enumerables</h2>
     <h3 id="subtitle">Iterating through a data structure</h3>
     <h4 id="date">February 6, 2015</h4>
@@ -277,7 +331,7 @@ because they are not bound to any single hiearchy.<p>
       pears 
       </p> 
    </section>
-   <section id="fourth_from_top">
+   <section id="fifth_from_top">
     <h2 id="posttitle">Ruby Arrays and Hashes</h2>
     <h3 id="subtitle">Storing information in lists</h3>
     <h4 id="date">January 30, 2015</h4>
@@ -332,7 +386,7 @@ because they are not bound to any single hiearchy.<p>
     <p>I've assigned the value <span class="courier">"piscine" </span>to the key<span class="courier"> "fish"</span>.</p>
     <p>Now, <span class="courier">my_hash = {"cat" => "feline", "dog" => "canine", "fish" => "piscine"}</span></p>
   </section>
- <section id="fifth_from_top">
+ <section id="sixth_from_top">
     <h2 id="posttitle">CSS</h2>
     <h3 id="subtitle">Style</h3>
     <h4 id="date">January 25, 2015</h4>
@@ -378,7 +432,7 @@ because they are not bound to any single hiearchy.<p>
   </p>
 </section>
 
-<section id="sixth_from_top">
+<section id="seventh_from_top">
   <h2 id="posttitle">Week 1</h2>
   <h3 id="subtitle">Version Control and Git</h3>
     <h4 id="date"> January 19, 2015 </h4>
