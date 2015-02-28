@@ -35,7 +35,7 @@
     <h3 id="subtitle">Comparing data structures</h3>
     <h4 id="date">February 27, 2015</h4>
 
-    <p>Hashes in Ruby and Objects in JavaScript are similar structures used to organized data. The only differences lie in some terminology
+    <p>Hashes in Ruby and Objects in JavaScript are similar structures used to organize data. The main differences lie in some terminology
     and syntax. Both are essential for grouping one or more values to a corresponding object (piece of data).
     Think of a dictionary: each word is tied to its definition.
     </p>
@@ -57,21 +57,22 @@
       </p>  
        
       <p>There are two small differences thus far. Ruby uses the <span class="courier">lowercase_lowercase</span>
-      convention for multi-word variables. JavaScript uses the keyword <span class="courier">var</span>and the naming convention
+      convention for multi-word variables. JavaScript uses the keyword <span class="courier">var</span> and the naming convention
       <span class="courier">lowercaseUppercase</span> for multi-word variables</p>
       
-      <p>Beyond naming, you access the values in these objects in these two languages differently.</p>
+      <p>Beyond naming the Hash/Object variables, you access values in these objects differently depending on the language
+      you're working in.</p>
       
       <p>In Ruby, you can look up a hash value like this:</p>
          <p class="courier_indent";>p my_hash[:apples]</p>
          <p class="courier_indent";>=> 2</p>
       
-      <p><span class="courier">p</span> prints and returns your value in Ruby.</p>
+      <p><span class="courier">p</span> prints and returns a value in Ruby.</p>
       <p>Similarily in JavaScript:</p>
           <p class="courier_indent";>console.log(myObject["apples"])</p>
           <p class="courier_indent";>=> 2</p>
           
-      <p><span class="courier">console.log()</span> prints and returns your value in JavaScript.</p>
+      <p><span class="courier">console.log()</span> prints and returns a value in JavaScript.</p>
       <p>There are other slightly different ways to look up values in Ruby Hashes and JavaScript Objects, but you can see
         these two examples are nearly identical beyond a few syntax tweaks.
       </p>
