@@ -1,0 +1,46 @@
+html {
+  font-family: Helvetica;
+  background-color: #BCED91;
+}
+
+h2 {
+  display: block;
+  text-align: center;
+  border: 5px solid black;
+  padding: 20px;
+}
+
+#definition {
+  text-align: center;
+
+}
+
+#red {
+  color: red;
+  }
+#red_center {
+  color: red;
+  text-align: center;
+}
+.topics {
+  font-weight: bold;
+}
+
+.italics {
+  font-style: italic;
+}
+
+.center {
+  text-align:center;
+}
+
+.indent {
+  margin-left: 50px;
+}
+.huge_indent {
+  margin-left: 200px;
+}
+
+#hover_example:hover {
+  background-color:blue;
+  }
