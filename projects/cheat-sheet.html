@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <h2>CSS CheatSheet</h2>
+  <link rel="stylesheet" type="text/css" href="../stylesheets/cheat-sheet-stylesheet.css">
+</head>
+
+
+  <nav>
+  <p id="definition">Css is a position web development language use for styling and formating of HTML. Below are some of the basic elements in CSS</p>
+  <br></br>
+  <ul>
+  <li class ="topics">Selectors</li>
+  <p>CSS selectors allow you to select and manipulate HTML elements. CSS selectors are used to "find" (or select) HTML elements based on their id, class, type, attribute, and more.</p>
+  <p  class="italics">The Element Selector</p>
+  <p class ="indent">&ltp&gt This is a paragraph in your HTML &lt/p&gt</p>
+  <p>This is how your CSS file could look:</p>
+  <p class="indent">
+  p { <br>
+  text-align: center; <br>
+  color: red; <br>
+  }</p>
+  <p>After formatting:</p>
+  <p id="red"><span class="indent">This is a paragraph</span></p>
+
+  <p class="italics">The id Selector</p>
+  <p>
+The id selector uses the id attribute of an HTML element to select a specific element.
+
+An id should be unique within a page, so the id selector is used if you want to select a single, unique element.
+
+To select an element with a specific id, write a hash character, followed by the id of the element.
+
+The style rule below will be applied to the HTML element with id="para1":
+<p class ="indent">&ltp id="para1"&gt This is a paragraph in your HTML with the para1 id.&lt/p&gt</p>
+
+Example:
+<p class = "indent">
+#para1 { <br>
+  text-align: center; <br>
+  color: red;<br>
+}</p>
+ <p>After formatting:</p>
+  <p id="red_center"><span class="indent">This is a paragraph in your HTML with the para1 id.</span></p>
+
+<p class="italics">The class Selector</p>
+<p>
+The class selector selects elements with a specific class attribute.
+
+To select elements with a specific class, write a period character, followed by the name of the class:
+
+In the example below, all HTML elements with class="center" will be center-aligned:
+<p class ="indent">&ltp id="center"&gt This is a paragraph in your HTML with the center class.&lt/p&gt</p>
+
+<p class ="indent">&ltp id="center"&gt This is another paragraph in your HTML with the center class.&lt/p&gt</p>
+
+<p>Example</p>
+<p class="indent">
+.center {<br>
+  text-align: center;<br>
+  color: red;<br>
+}</p>
+ <p>After formatting:</p>
+  <p id="red_center"><span class="indent">This is a paragraph in your HTML with the center class.</span></p>
+
+    <p id="red_center"><span class="indent">This is another paragraph in your HTML with the center class.</span></p>
+
+<p>
+Try it yourself
+You can also specify that only specific HTML elements should be affected by a class.
+
+In the example below, all <p> elements with class="center" will be center-aligned:
+
+Example</p>
+<p class="indent">
+p.center {<br>
+  text-align: center;<br>
+  color: red;<br>
+}
+</p>
+
+  <li class ="topics">Class vs. IDs</li>
+  <p><span class="italics">Class</span> are a grouping of many lines of code that you want to have the same formating.</p>
+  <p><span class="italics">IDs </span>are like classes but are unqiue to one object. You only want that part of the code to have that styling. They are like nicknames for that code.</p>
+  <li class ="topics">Margin</li>
+  <p>Clear an area around an element. The margin does not have a background color. The top,right,bottom and left margin can be changed independently. And using Chrome dev tools makes them easlier to navigate. Here's an example using margin on an "indent" class we created. This will indent whatever you assign to that class 50 px from the left:</p>
+  <p class="indent"><br>
+    .indent {<br>
+    margin-left: 50px;<br>
+}</p>
+ <p>Another example:</p>
+ <p class="huge_indent"><br>
+  .huge_indent {<br>
+  margin-left: 200px;<br>
+}</p>
+  <li class ="topics">Positioning</li>
+  <p>Postioning allows you to move sections/elements in your site around the wire frame of your site. There are four main types of positioning in CSS. Static, Fixed Positioning, Relative, and Absolute.</p>
+  <li class ="topics">Hover</li>
+  <p>Hover lets you adjust the style of a link only for when your mouse is "hovering"
+    over it. Make sure you're hovering over it. For example:</p>
+    <p class="center">www.google.com becomes: <span id="hover_example">www.google.com</span></p>
+
+  </ul>
+  </ul>
+  </nav>
