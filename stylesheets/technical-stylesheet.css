@@ -3,7 +3,7 @@
 display: block;
 position: relative;
 left: 100px;
-top: 590px;
+top: 600px;
 }
 
 
@@ -11,25 +11,17 @@ top: 590px;
 display: block;
 position: relative;
 left: 100px;
-top: 600px;
+top: 610px;
 }
 
 #fourth_from_top {
 display: block;
 position: relative;
 left: 100px;
-top: 610px;
-
-}
-#fifth_from_top {
-display: block;
-position: relative;
-left: 100px;
 top: 620px;
 
 }
-
-#sixth_from_top {
+#fifth_from_top {
 display: block;
 position: relative;
 left: 100px;
@@ -37,7 +29,7 @@ top: 630px;
 
 }
 
-#seventh_from_top {
+#sixth_from_top {
 display: block;
 position: relative;
 left: 100px;
@@ -45,7 +37,7 @@ top: 640px;
 
 }
 
-#eighth_from_top {
+#seventh_from_top {
 display: block;
 position: relative;
 left: 100px;
@@ -53,10 +45,17 @@ top: 650px;
 
 }
 
+#eighth_from_top {
+display: block;
+position: relative;
+left: 100px;
+top: 660px;
+
+}
 
 main {
 display: block;
 height: 100%;
-padding-bottom: 660px;
+padding-bottom: 670px;
 
 }
