@@ -1,4 +1,3 @@
-<!DOCTYPE html>
 <section id="top">
     <h2 id="posttitle">SQL Injection</h2>
     <h3 id="subtitle">Careful now</h3>
@@ -19,21 +18,19 @@
     
     <p>For example, imagine a website with a field asking for your user name:</p>
     
-    <p class="indent">User name: </p>
-    <p id="search_field"></p>
-    <p>In Ruby Hashes, <i>keys</i> have corresponding values.</p>
-    
-       <p> <span class="courier_indent";>my_hash = {</span> <br>
-          <span class="courier_indent2";>apples: 2, </span><br>
-          <span class="courier_indent2";>peaches: 5, </span><br>
-          <span class="courier_indent2";>oranges: 3</span><br>
-          <span class="courier_indent2";>} </span>
-      </p>  
-      <p>In JavaScript Objects, <i>properties</i> have corresponding values.</p>    
+    <p class="indent">User name: <br>
+      <span id="search_field">" or ""="</span>
+    </p>
+    <p>Imagine your database read this and assigned " or ""=" to the value User.</p>
+    <p>Adding " or ""=" as the username will cause dangerous confusion when querying the UserNames database using SQL.</p>
+    <p>For example, a sample SQL query could read:</p>
+    <p class="courier_indent">SELECT * FROM UserNames WHERE Name = '" + User + '"</p>
+    <p>Reading from the data your user entered in the User field (" or ""="), your SQL query would result in:</p>
+    <p class="courier_indent">SELECT * FROM UserNames WHERE Name = "" or ""=""</p>
+    <p>Since <span class="courier">WHERE ""=""</span> is always true, THIS WOULD RETURN ALL OF THE User VALUES IN THE Usernames
+    DATABASE.</p>
+    <p>Now imagine the field was passwords, or credit card numbers... Careful now!</p>
       
-         <p> <span class="courier_indent";>var myObject = {</span> <br>
-          <span class="courier_indent2";>apples: 2, </span><br>
-          <span class="courier_indent2";>peaches: 5, </span><br>
-          <span class="courier_indent2";>oranges: 3 </span><br>
-          <span class="courier_indent2";>} </span>
-      </p>  
+
+  
+  </section>
