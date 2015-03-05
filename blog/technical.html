@@ -30,6 +30,42 @@
      <li><a href="week8.html">Week 8</a></li>
   </ul>
   <section id="top">
+    <h2 id="posttitle">SQL Injection</h2>
+    <h3 id="subtitle">Careful now</h3>
+    <h4 id="date">March 5, 2015</h4>
+
+    <p>SQL (Structured Query Language) lets you retrieve and update data from a database.
+    </p>
+    
+    <p>You need to be careful when using user input for your search values on a website.</p>
+    
+    <p>Either on purpose or by accident, a user could enter in valid SQL commands in a database field and
+      you have potential for trouble.
+    </p>
+    
+    <p>Sometimes users are bad and they can inject SQL commands that can alter your SQL statement, your database, and the 
+      security of your website.
+    </p>
+    
+    <p>For example, imagine a website with a field asking for your user name:</p>
+    
+    <p class="indent">User name: <br>
+      <span id="search_field">" or ""="</span>
+    </p>
+    <p>Imagine your database read this and assigned " or ""=" to the value User.</p>
+    <p>Adding " or ""=" as the username will cause dangerous confusion when querying the UserNames database using SQL.</p>
+    <p>For example, a sample SQL query could read:</p>
+    <p class="courier_indent">SELECT * FROM UserNames WHERE Name = '" + User + '"</p>
+    <p>Reading from the data your user entered in the User field (" or ""="), your SQL query would result in:</p>
+    <p class="courier_indent">SELECT * FROM UserNames WHERE Name = "" or ""=""</p>
+    <p>Since <span class="courier">WHERE ""=""</span> is always true, THIS WOULD RETURN ALL OF THE User VALUES IN THE Usernames
+    DATABASE.</p>
+    <p>Now imagine the field was passwords, or credit card numbers... Careful now!</p>
+      
+
+  
+  </section>
+  <section id="second_from_top">
     <h2 id="posttitle">Ruby Hashes vs. JavaScript Objects</h2>
     <h3 id="subtitle">Comparing data structures</h3>
     <h4 id="date">February 27, 2015</h4>
@@ -83,7 +119,7 @@
        <p class="courier_indent";>=> 2</p>
 
   </section>   
-  <section id="second_from_top">
+  <section id="third_from_top">
     <h2 id="posttitle">Inheritance vs. Composition</h2>
     <h3 id="subtitle">Organizing your classes</h3>
     <h4 id="date">February 22, 2015</h4>
@@ -195,7 +231,7 @@ organizational tool is that you have to explicitly delegate all your messages, w
 because they are not bound to any single hierarchy.<p>
  
 </section>
- <section id="third_from_top">
+ <section id="fourth_from_top">
 
     <h2 id="posttitle">Ruby Classes</h2>
     <h3 id="subtitle">Orient Your Objects</h3>
@@ -280,7 +316,7 @@ because they are not bound to any single hierarchy.<p>
       <span class="courier_indent";>rock_show.transportation</span><br>
       <span class="courier_indent";>=> "taxi"</span></p>
 </section>
-<section id="fourth_from_top">
+<section id="fifth_from_top">
     <h2 id="posttitle">Ruby Enumerables</h2>
     <h3 id="subtitle">Iterating through a data structure</h3>
     <h4 id="date">February 6, 2015</h4>
@@ -331,7 +367,7 @@ because they are not bound to any single hierarchy.<p>
       pears 
       </p> 
    </section>
-   <section id="fifth_from_top">
+   <section id="sixth_from_top">
     <h2 id="posttitle">Ruby Arrays and Hashes</h2>
     <h3 id="subtitle">Storing information in lists</h3>
     <h4 id="date">January 30, 2015</h4>
@@ -386,7 +422,7 @@ because they are not bound to any single hierarchy.<p>
     <p>I've assigned the value <span class="courier">"piscine" </span>to the key<span class="courier"> "fish"</span>.</p>
     <p>Now, <span class="courier">my_hash = {"cat" => "feline", "dog" => "canine", "fish" => "piscine"}</span></p>
   </section>
- <section id="sixth_from_top">
+ <section id="seventh_from_top">
     <h2 id="posttitle">CSS</h2>
     <h3 id="subtitle">Style</h3>
     <h4 id="date">January 25, 2015</h4>
@@ -432,7 +468,7 @@ because they are not bound to any single hierarchy.<p>
   </p>
 </section>
 
-<section id="seventh_from_top">
+<section id="eighth_from_top">
   <h2 id="posttitle">Week 1</h2>
   <h3 id="subtitle">Version Control and Git</h3>
     <h4 id="date"> January 19, 2015 </h4>
