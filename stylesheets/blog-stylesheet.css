@@ -104,6 +104,13 @@ section {
 	margin-left: 100px;
 }
 
+.indent {
+	margin-left:30px;
+}
+#search_field {
+	border: 10px solid black;
+}
+
 #top {
 display:block;
 position: absolute;
