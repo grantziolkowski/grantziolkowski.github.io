@@ -49,7 +49,18 @@
     <p>For example, imagine a website with a field asking for your user name:</p>
     
     <p class="indent">User name: <br>
-      <span id="search_field">"</span
+      <span id="search_field">" or ""="</span>
+    </p>
+    <p>Imagine your database read this and assigned " or ""=" to the value User.</p>
+    <p>Adding " or ""=" as the username will cause dangerous confusion when querying the UserNames database using SQL.</p>
+    <p>For example, a sample SQL query could read:</p>
+    <p class="courier_indent">SELECT * FROM UserNames WHERE Name = '" + User + '"</p>
+    <p>Reading from the data your user entered in the User field (" or ""="), your SQL query would result in:</p>
+    <p class="courier_indent">SELECT * FROM UserNames WHERE Name = "" or ""=""</p>
+    <p>Since <span class="courier">WHERE ""=""</span> is always true, THIS WOULD RETURN ALL OF THE User VALUES IN THE Usernames
+    DATABASE.</p>
+    <p>Now imagine the field was passwords, or credit card numbers...</p>
+      
 
   
   </section>
