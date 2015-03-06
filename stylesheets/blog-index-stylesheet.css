@@ -2,7 +2,7 @@
 #second_from_top {
 display: block;
 position: relative;
-top: 940px;
+top: 610px;
 left: 100px;
 }
 
@@ -10,81 +10,93 @@ left: 100px;
 #third_from_top {
 display: block;
 position: relative;
-top: 950px;
+top: 620px;
 left: 100px;
 }
 
 #fourth_from_top {
 display: block;
 position: relative;
-top: 960px;
+top: 630px;
 left: 100px;
 }
 
 #fifth_from_top {
 display: block;
 position: relative;
-top: 970px;
+top: 640px;
 left: 100px;
 }
 
 #sixth_from_top {
 display: block;
 position: relative;
-top: 980px;
+top: 650px;
 left: 100px;
 }
 
 #seventh_from_top {
 display: block;
 position: relative;
-top: 990px;
+top: 660px;
 left: 100px;
 }
 
 #eighth_from_top {
 display: block;
 position: relative;
-top: 1000px;
+top: 670px;
 left: 100px;
 }
 
 #ninth_from_top {
 display: block;
 position: relative;
-top: 1010px;
+top: 680px;
 left: 100px;
 }
 
 #tenth_from_top {
 display: block;
 position: relative;
-top: 1020px;
+top: 690px;
 left: 100px;
 }
 #eleventh_from_top {
 display: block;
 position: relative;
-top: 1030px;
+top: 700px;
 left: 100px;
 }
 #twelfth_from_top {
 display: block;
 position: relative;
-top: 1030px;
+top: 710px;
 left: 100px;
 }
 #thirteenth_from_top {
 display: block;
 position: relative;
-top: 1030px;
+top: 720px;
 left: 100px;
 }
 
+#fourteenth_from_top {
+display: block;
+position: relative;
+top: 730px;
+left: 100px;
+}
+#fifteenth_from_top {
+display: block;
+position: relative;
+top: 740px;
+left: 100px;
+}
 main {
 	display: block;
 	height: 100%;
-	padding-bottom: 1040px;
+	padding-bottom: 750px;
 }
 
 
