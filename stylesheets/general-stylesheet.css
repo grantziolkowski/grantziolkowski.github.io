@@ -1,7 +1,7 @@
 main {
 	display: block;
 	height: 100%;
-	padding-bottom: 400px;
+	padding-bottom: 410px;
 }
 
 
@@ -36,5 +36,11 @@ display: block;
 position: relative;
 left: 100px;
 top: 390px;
+}
+#seventh_from_top {
+display: block;
+position: relative;
+left: 100px;
+top: 400px;
 }
 
