@@ -24,6 +24,11 @@ h2 {
   color: red;
   text-align: center;
 }
+
+#blue_center {
+  color: blue;
+  text-align: center;
+}
 .topics {
   font-weight: bold;
 }
