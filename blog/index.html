@@ -15,7 +15,7 @@
     <a href="technical.html">Technical</a>
   </nav>
   <ul>
-    <li class="previous_next"><a href="week3.html">Previous</a></li>
+    <li class="previous_next"><a href="week7.html">Previous</a></li>
     <li class="previous_next"><a id="index.html"; href="##">Current Week</a></li>
     <li class="previous_next"><a href="##">Next</a></li>
   </ul>
@@ -69,7 +69,7 @@
      part that needs help.
     <li>Points to a specific error message at specific line. Don't say you "get an error"; state the exact error and indicate where it occurs.</li>
    </li>
-  
+
  </ul>
  </section>
   <section id="second_from_top">
@@ -79,19 +79,19 @@
 
     <p>SQL (Structured Query Language) lets you retrieve and update data from a database.
     </p>
-    
+
     <p>You need to be careful when using user input for your search values on a website.</p>
-    
+
     <p>Either on purpose or by accident, a user could enter in valid SQL commands in a database field and
       you have potential for trouble.
     </p>
-    
-    <p>Sometimes users are bad and they can inject SQL commands that can alter your SQL statement, your database, and the 
+
+    <p>Sometimes users are bad and they can inject SQL commands that can alter your SQL statement, your database, and the
       security of your website.
     </p>
-    
+
     <p>For example, imagine a website with a field asking for your user name:</p>
-    
+
     <p class="indent">User name: <br>
       <span id="search_field">" or ""="</span>
     </p>
@@ -104,7 +104,7 @@
     <p>Since <span class="courier">WHERE ""=""</span> is always true, THIS WOULD RETURN ALL OF THE User VALUES IN THE Usernames
     DATABASE.</p>
     <p>Now imagine the field was passwords, or credit card numbers... Careful now!</p>
-      
+
   </section>
   <section id="third_from_top">
     <h2 id="posttitle">Conflict</h2>
@@ -112,8 +112,8 @@
     <h4 id="date">March 5, 2015</h4>
     <p>A friend once stepped on my mandolin, destroying the top. The main conflict that arose out of this situation
       centered on who was going to pay for the repairs. The conflict snowballed due to lack of communication. Asking for an
-      apology and showing forgiveness were not the same as the large sum of money involved. I felt mostly powerless and 
-      betrayed. 
+      apology and showing forgiveness were not the same as the large sum of money involved. I felt mostly powerless and
+      betrayed.
     </p>
     <p>As the process got drawn out and the communication lines became less open, I had to have an honest conversation
     with my friend, removed from the emotional context, in order to resolve the issue and get past the elephant in the room.
@@ -132,51 +132,51 @@
     Think of a dictionary: each word is tied to its definition.
     </p>
     <p>In Ruby Hashes, <i>keys</i> have corresponding values.</p>
-    
+
        <p> <span class="courier_indent";>my_hash = {</span> <br>
           <span class="courier_indent2";>apples: 2, </span><br>
           <span class="courier_indent2";>peaches: 5, </span><br>
           <span class="courier_indent2";>oranges: 3</span><br>
           <span class="courier_indent2";>} </span>
-      </p>  
-      <p>In JavaScript Objects, <i>properties</i> have corresponding values.</p>    
-      
+      </p>
+      <p>In JavaScript Objects, <i>properties</i> have corresponding values.</p>
+
          <p> <span class="courier_indent";>var myObject = {</span> <br>
           <span class="courier_indent2";>apples: 2, </span><br>
           <span class="courier_indent2";>peaches: 5, </span><br>
           <span class="courier_indent2";>oranges: 3 </span><br>
           <span class="courier_indent2";>} </span>
-      </p>  
-       
+      </p>
+
       <p>There are two small differences thus far. Ruby uses the <span class="courier">lowercase_lowercase</span>
       convention for multi-word variables. JavaScript uses the keyword <span class="courier">var</span> and the naming convention
       <span class="courier">lowercaseUppercase</span> for multi-word variables</p>
-      
+
       <p>Beyond naming the Hash/Object variables, you access values in these objects differently depending on the language
       you're working in.</p>
-      
+
       <p>In Ruby, you can look up a hash value like this:</p>
          <p class="courier_indent";>p my_hash[:apples]</p>
          <p class="courier_indent";>=> 2</p>
-      
+
       <p><span class="courier">p</span> prints and returns a value in Ruby.</p>
       <p>Similarily in JavaScript:</p>
           <p class="courier_indent";>console.log(myObject["apples"])</p>
           <p class="courier_indent";>=> 2</p>
-          
+
       <p><span class="courier">console.log()</span> prints and returns a value in JavaScript.</p>
       <p>There are other slightly different ways to look up values in Ruby Hashes and JavaScript Objects, but you can see
         these two examples are nearly identical beyond a few syntax tweaks.
       </p>
-      
+
       <p>Unlike in Ruby, when working in JavaScript you can look up the value(s) of a property of an Object by directly calling
       it using the <span class="courier">.property</span> notation:</p>
-      
+
        <p class="courier_indent";>myObject.apples</p>
        <p class="courier_indent";>=> 2</p>
 
-    
-   </section>   
+
+   </section>
     <section id="fifth_from_top">
     <h2 id="posttitle">Value Affirmation</h2>
     <h3 id="subtitle">Know your values, know your worth</h3>
@@ -194,43 +194,43 @@
       curiosity, growth, creativity, and adventure with an emphasis on personal development and challenge, you can take away the psychological
       threat of underperforming. Focusing on your worth as a creative learner can take the bite out of a fear of failure. Know your worth
       and don't worry about others' perceptions.</p>
-  
+
   </section>
   <section id="sixth_from_top">
   <h2 id="posttitle">Inheritance vs. Composition</h2>
   <h3 id="subtitle">Organizing your classes</h3>
   <h4 id="date">February 22, 2015</h4>
   <p>Inheritance, composition and modules are different ways to organize your code. </p>
-  <p>Inheritance is an abstract class hierarchy, using subclasses that inherit information from superclasses. Subclasses 
+  <p>Inheritance is an abstract class hierarchy, using subclasses that inherit information from superclasses. Subclasses
     are more specialized versions of their superclasses.</p>
   <p>Example using Inheritance:</p>
   <p class="courier_indent";>class Menu</p>
-  <p><span class="courier_indent2";>attr_reader :food_items, :meal<span> <br> 
+  <p><span class="courier_indent2";>attr_reader :food_items, :meal<span> <br>
         <span class="courier_indent2";>def initialize(args={})</span> <br>
           <span class="courier_indent3";> @meal = args[:meal]</span> <br>
           <span class="courier_indent3";> @food_items = args[:food_items]  </span> <br>
         <span class="courier_indent2";>end</span></p>
-    <p class="courier_indent";>end</p> 
-    
+    <p class="courier_indent";>end</p>
+
     <p>Now let's create the subclass <span class="courier";>LunchMenu</span> that will inherit the behaviors, methods and instance
     variables of <span class="courier";>Menu</span>. </p>
-    
-    <p class="courier_indent";>class LunchMenu < Menu<br> 
+
+    <p class="courier_indent";>class LunchMenu < Menu<br>
        end</p>
-       
-     <p>Let's do it again, adding another link to our inheritance hierarchy. We will create the class 
+
+     <p>Let's do it again, adding another link to our inheritance hierarchy. We will create the class
      <span class="courier";>FoodItems</span>, which inherits from <span class="courier";>LunchMenu</span>, which inherits from
      <span class="courier";>Menu</span>.</p>
 
-  <p class="courier_indent";> class FoodItems < LunchMenu  </p> 
+  <p class="courier_indent";> class FoodItems < LunchMenu  </p>
      <span class="courier_indent2";>def initialize(args={})<span> <br>
        <span class="courier_indent3";> @food = args[:food] </span> <br>
        <span class="courier_indent3";> @price = args[:price] </span> <br>
      <span class="courier_indent2";>end</span></p>
   <p class="courier_indent";>end</p>
-  
-  <p>Now let's create an instance of the <span class="courier";>Menu</span> class, which will take a new instance of 
-   <span class="courier";>FoodItems</span> class in its argument hash. Then we can look up the instance variables 
+
+  <p>Now let's create an instance of the <span class="courier";>Menu</span> class, which will take a new instance of
+   <span class="courier";>FoodItems</span> class in its argument hash. Then we can look up the instance variables
    <span class="courier";>meal</span> and  <span class="courier";>food_items</span> which are available to us using
    <span class="courier";>attr_reader</span> and calling them as an instance method.</p>
  <p span class="courier_indent";>monday_menu = Menu.new(</span> <br>
@@ -240,15 +240,15 @@
     <span class="courier_indent3";>price: 2))  </span> <br>
     <span class="courier_indent";>p monday_menu.meal  </span> <br>
    <span class="courier_indent";>p monday_menu.food_items   </span> <br></p>
-   <p class="courier_indent";>=> "lunch"</p>                                                                                                                                  
+   <p class="courier_indent";>=> "lunch"</p>
   <p class="courier_indent";> #&ltFoodItems:0x007f7279513540 @food="taco", @price=2> </p>
-  <p> <span class="courier";>#&ltFoodItems:0x007f7279513540</span> is just the computer telling you what the 
+  <p> <span class="courier";>#&ltFoodItems:0x007f7279513540</span> is just the computer telling you what the
      <span class="courier";>self</span> object you're acting on is. The  <span class="courier";>food_items</span>
       attribute returned the correct hash according to our inheritance hierarchy.</p>
- 
+
  <p>The way we've created our food universe so far, our "food items" are an example of a "lunch menu,"
    which is a specialized version of a "menu." A subclass "is a" specialized version of a superclass.</p>
- 
+
  <p>It is helpful to use inheritance to create classes that will inherit the behavior and messages of their
    parent classes. However, this can get messy and create problematic dependencies if you need to change your code in the future.
    When organizing code, one must always ask: "What would be the future consequences if I am wrong about this?"
@@ -264,31 +264,31 @@ and "dinner menus," you would have a mess of confusing and repetitive code tryin
 accounted for. Let's compose instead, building up from the smallest, most structurally independent objects.</p>
 
   <p class="courier_indent";>class Menu</p>
-  <p><span class="courier_indent2";>attr_reader :food_items, :meal<span> <br> 
+  <p><span class="courier_indent2";>attr_reader :food_items, :meal<span> <br>
         <span class="courier_indent2";>def initialize(args={})</span> <br>
           <span class="courier_indent3";> @meal = args[:meal]</span> <br>
           <span class="courier_indent3";> @food_items = args[:food_items]  </span> <br>
         <span class="courier_indent2";>end</span></p>
-    <p class="courier_indent";>end</p> 
-    
-  <p class="courier_indent";> class FoodItems < LunchMenu  </p> 
+    <p class="courier_indent";>end</p>
+
+  <p class="courier_indent";> class FoodItems < LunchMenu  </p>
     <span class="courier_indent2";> def initialize(food_items)<span> <br>
        <span class="courier_indent3";> @food_items = food_items</span> <br>
       <span class="courier_indent2";>end</span> <br>
   <p class="courier_indent";>end</p>
-  
-    <p class="courier_indent";>  class FoodItem </p> 
+
+    <p class="courier_indent";>  class FoodItem </p>
     <span class="courier_indent2";>  def initialize(args)<span> <br>
         <span class="courier_indent3";> @food = args[:food]</span> <br>
         <span class="courier_indent3";> @price = args[:price]</span> <br>
       <span class="courier_indent2";>end</span> <br>
   <p class="courier_indent";>end</p>
- 
+
  <p>We've created a new <span class="courier";>FoodItem</span> class. Now, our meals won't be so entangled and
-   dependent. If different instances need to share food items, or even if your "dinner taco" were to cost more than your 
-   "lunch taco," you shouldn't have a problem. 
+   dependent. If different instances need to share food items, or even if your "dinner taco" were to cost more than your
+   "lunch taco," you shouldn't have a problem.
  </p>
- 
+
 <p><span class="courier_indent";> beef = FoodItem.new(food: "beef", price: 7)</span> <br>
  <span class="courier_indent";>sandwich = FoodItem.new(food: "sandwich", price: 5)</span> <br>
    <span class="courier_indent";>tuesday_menu = Menu.new((</span> <br>
@@ -297,7 +297,7 @@ accounted for. Let's compose instead, building up from the smallest, most struct
   <span class="courier_indent";>p tuesday_menu.meal  </span> <br>
   <span class="courier_indent";>p tuesday_menu.food_items </span> <br></p>
    <p class="courier_indent";>=></p>
-  <p class="courier_indent";>"dinner"</p>                                                                                                                                  
+  <p class="courier_indent";>"dinner"</p>
   <p class="courier_indent";>#&ltFoodItems:0x007f45e86bf938 @food_items=[<br>
   #&ltFoodItem:0x007f45e86bfac8 @food="beef", @price=7&gt, <br>
   #&ltFoodItem:0x007f45e86bfa00 @food="sandwich", @price=5&gt]>   </p>
@@ -306,30 +306,30 @@ accounted for. Let's compose instead, building up from the smallest, most struct
 individual <span class="courier";>FoodItem</span> instances. The only drawback to this clear, highly changeable
 organizational tool is that you have to explicitly delegate all your messages, wordily telling your objects how to communicate
 because they are not bound to any single hierarchy.</p>
- 
+
 </section>
   <section id="seventh_from_top">
     <h2 id="posttitle">Stereotype Threat</h2>
     <h3 id="subtitle">Social identities and the subconcious</h3>
     <h4 id="date">February 18, 2015</h4>
-    
+
       <p>Stereotype threat is a psychological process wherein someone of a specific social identity underperforms for fear of
     acting out a stereotype. This can be accentuated by a lack of trust towards a group at large, the perceived stereotypers. Additionally, stereotype threat
     has a compounding effect by which a person disengages from a group at large (i.e. a profession, field or school) or "disidentifies"
     with their own identity group for fear of acting out the stereotype.</p>
-    
+
     <p>While I am lucky enough to not have been a direct victim of stereotype threat, I have suffered from the related "spotlight anxiety" or
       underperforming for fear of being judged. While not having to battle subconcious manifestations of racial or gender stereotypes, I can relate to this
       self-handicapping and sense of disappointment and resulting disilusionment. My experience has been in musical performance, and I have
       always asked myself, "What if I realy do lack the required talent?" or "What if I simply didn't prepare enough?" even though the poor
       examples of perforamance were almost always a case of mental self-sabotage.
     </p>
-    
-    <p>Like in education, the tech sector needs to foster a culture of trust to alleviate some of the instances of stereotype threat. 
+
+    <p>Like in education, the tech sector needs to foster a culture of trust to alleviate some of the instances of stereotype threat.
     We need to stress a path of shared growth and learning rather than a competition and exhibition of ability/intelligence. I've already noticed
     this in paired programming exercises. Someone can always "show you want they know," whereas their nerves, or in many cases stereotype
     threat, can derail them when they are tested to perform.
-      
+
     </p>
   </section>
 <section id="eighth_from_top">
@@ -370,9 +370,9 @@ because they are not bound to any single hierarchy.</p>
     <p>Within the initialize method, we create instance variables which you can reference from anywhere in the
       class. We create them by using the <span class="courier">@</span> sign, so now we have three instance variables, which
       take their values from whatever you give them when you you create an instance of the class and initialize it.</p>
-   <p>So in our instance <span class="courier">relax</span>, the instance variable <span class="courier">@purpose = "nothing"</span>.</p>  
-    <p>After the initialize method in your class, you'll want to give it some logic. In this case, we'll define an 
-      instance method which you will be able to call on any instance of the class. Let's continue with our class 
+   <p>So in our instance <span class="courier">relax</span>, the instance variable <span class="courier">@purpose = "nothing"</span>.</p>
+    <p>After the initialize method in your class, you'll want to give it some logic. In this case, we'll define an
+      instance method which you will be able to call on any instance of the class. Let's continue with our class
       <span class="courier">WhatToDoToday</span> by defining an instance method <span class="courier">get_up_and_go</span>:</p>
    <p class="courier_indent";>class WhatToDoToday</p>
       <p class="courier_indent2";>def initialize(purpose, location, transportation=nil) <br>
@@ -398,9 +398,9 @@ because they are not bound to any single hierarchy.</p>
      <span class="courier_indent";>work_hard.get_up_and_go</span><br>
      <span class="courier_indent";>=> "Get up early go to work!"</span></p>
   <p>The other main topic when talking about Ruby Classes is attributes. Creating attribute readers <span class="courier">
-  (attr_reader)<span> allows you to access the attributes of your class, namely the instance variables, 
+  (attr_reader)<span> allows you to access the attributes of your class, namely the instance variables,
   from outside of the class. Attribute writers <span class="courier">(attr_writer)</span>can be set
-    from outside of the class, and attribute accessors <span class="courier">(attr_accessor)</span>can be read and set. 
+    from outside of the class, and attribute accessors <span class="courier">(attr_accessor)</span>can be read and set.
     You create these at the beginning of your class, before the initalize method:
   </p>
    <p><span class="courier_indent";>class WhatToDoToday</span><br>
@@ -421,7 +421,7 @@ because they are not bound to any single hierarchy.</p>
    <h2 id="posttitle">Pair Programming and Giving/Receiving Feedback</h2>
     <h3 id="subtitle">Pairing is Caring</h3>
     <h4 id="date">February 15, 2015</h4>
-  
+
     <p>Pair programming has played a central role in the DevBootcamp experience thus far. For software developers,
     pair programming lets two or more team members catch bugs quickly by proofreading each other. It also provides an
     efficient teaching structure, where one person can "navigate" and guide the other person in real time. This technique has
@@ -442,7 +442,7 @@ who you were working with and how you worked together. It's a little bit touchy 
 kind on a personal level. It is definitely empowering though, knowing you can help someone grow on a personal or technical level
 by giving them actionable, kind and specific annonymous feedback.
     </p>
-</section>    
+</section>
 <section id="tenth_from_top">
     <h2 id="posttitle">Ruby Enumerables</h2>
     <h3 id="subtitle">Iterating through a data structure</h3>
