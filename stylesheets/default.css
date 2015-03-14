@@ -26,7 +26,7 @@ nav a {
     width: 170px;
     padding: 10px;
     left: 200px;
-    top: -190px;
+    top: -65px;
     margin-right: 50px;
     text-decoration: none;
     color: white;
@@ -34,21 +34,14 @@ nav a {
     font-size: 1.5em;
     text-align: center;
 }
-table {
-  display: block;
-  position: relative;
-  margin-left: 920px;
-  width: 120px;
-  top: 20px;
-  margin-bottom: 20px;
-  line-height: 1.8em;
-}
+
 
 table a {
 
   text-decoration: none;
   color: #6496BD;
   font-size: 1.5em;
+
 }
 
 .center {
@@ -63,7 +56,9 @@ table a {
 }
 
 #homepage_subtitle {
-  margin-top: -170px;
+  margin-top: -30px;
+  font-family: 'Lora', serif;
+  color: gray;
 }
 h2 {
   font-style: italic;
@@ -72,11 +67,17 @@ h2 {
 
 }
 #sample {
-  margin-top: -10px;
+  margin-top: 150px;
   width: 675px;
   left: 100px;
 }
 
+.logo {
+/*  display: block;*/
+  width: 30px;
+}
+
 footer {
 margin-bottom: 10px;
+left: 100px;
 }
