@@ -35,6 +35,10 @@ nav a {
     text-align: center;
 }
 
+nav a:active {
+  background: white;
+}
+
 
 table a {
 
