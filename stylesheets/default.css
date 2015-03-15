@@ -1,28 +1,26 @@
 * {
-font-family: sans-serif;
-background-color: #ff10;}
-
+    font-family: sans-serif;
+    background-color: #ff10;
+}
 #coverphoto {
-  padding-left: 14px;
-  top: 33px;
-  width: 170px;
-  position: absolute
+    padding-left: 14px;
+    top: 33px;
+    width: 170px;
+    position: absolute
 }
-
 h1 {
-  position: relative;
-  margin-left:200px;
-  top: -10px;
-  padding: 0px;
-  font-weight: bold;
-  font-size: 86px;
+    position: relative;
+    margin-left: 200px;
+    top: -10px;
+    padding: 0px;
+    font-weight: bold;
+    font-size: 86px;
 }
-
 nav a {
     display: inline-block;
     position: relative;
-    border: 2px solid #1A6171;
-    border-radius:5px;
+    border: 1px solid #1A6171;
+    border-radius: 5px;
     width: 170px;
     padding: 10px;
     left: 200px;
@@ -34,69 +32,63 @@ nav a {
     font-size: 1.5em;
     text-align: center;
 }
-
+nav a:hover {
+    color: #1A6171;
+    border: 1px solid #1A6171;
+    background-color: white;
+}
 nav a:active {
-  background: white;
+    color: white;
+    background: gray;
 }
-
-
 table a {
-
-  text-decoration: none;
-  color: #6496BD;
-  font-size: 1.5em;
-
+    text-decoration: none;
+    color: #6496BD;
+    font-size: 1.5em;
 }
-
 .center {
-  font-size: 1.7em;
-  text-align: center;
-  display: block;
-  position: relative;
-  top: -20px;
-  width: 675px;
-  left:210px;
-
+    font-size: 1.7em;
+    text-align: center;
+    display: block;
+    position: relative;
+    top: -20px;
+    width: 675px;
+    left: 210px;
 }
-
 #homepage_subtitle {
-  margin-top: -30px;
-  font-family: 'Lora', serif;
-  color: gray;
-
-#aboutme {
-  font-family: 'Lora', serif;
-  color: gray;
-  position: absolute;
-  display: block;
-  left: 100px;
-
-
+    margin-top: -30px;
+    font-family: 'Lora', serif;
+    color: gray;
 }
+#aboutme {
+    font-family: 'Lora', serif;
+    font-size: 2em;
+    color: gray;
+    position: absolute;
+    display: block;
+    left: 200px;
 }
 h2 {
-  font-style: italic;
-  font-family: 'Goudy', 'Gregorio';
-  color: gray;
-
+    font-style: italic;
+    font-family: 'Goudy', 'Gregorio';
+    color: gray;
 }
 #sample {
-/*  display:block;*/
-/*  margin-top: 150px;*/
-  margin-bottom:10px;
-  width: 675px;
-  left: 100px;
-}
+    /*  display:block;*/
+    /*  margin-top: 150px;*/
 
+    margin-bottom: 10px;
+    width: 675px;
+    left: 100px;
+}
 .logo {
-/*  display: block;*/
-  width: 30px;
+    /*  display: block;*/
+
+    width: 30px;
 }
-
 #footer {
-display:block;
-position: absolute;
-bottom: 10px;
-
-
+    text-decoration: none;
+    display: block;
+    position: absolute;
+    bottom: 10px;
 }
