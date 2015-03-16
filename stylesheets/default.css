@@ -51,12 +51,11 @@ table a {
     text-align: center;
     display: block;
     position: relative;
-    top: -20px;
     width: 675px;
     left: 210px;
 }
 #homepage_subtitle {
-    margin-top: -30px;
+    margin-top: -50px;
     font-family: 'Lora', serif;
     color: gray;
 }
@@ -64,8 +63,8 @@ table a {
 
     font-size: 1.5em;
     color: gray;
-    position: absolute;
     display: block;
+    position: relative;
     left: 200px;
     font-family: 'Lora', serif;
 }
@@ -82,17 +81,20 @@ h2 {
     color: gray;
 }
 #sample {
+    display: block;
+    position: relative;
     margin: 10px;
     width: 675px;
     left: 100px;
 }
 .logo {
-      width: 25px;
+  width: 25px;
 }
 #footer {
-    display: block;
-    position: absolute;
-    margin: 10px;
+  display: block;
+  position: absolute;
+  margin-top: 10px;
+
 }
 
 

@@ -25,13 +25,24 @@ h1{
 .previous_next {
   display: inline-block;
   position: relative;
-  margin-left: 50px;
-  left: 140px;
+  margin-left: 20px;
+  left: 320px;
   top: -80px;
   text-decoration: underline;
   font-size: 20px;
-  color: black;
 }
+
+.previous_next a {
+  color: gray;
+}
+
+.previous_next a:hover{
+   padding: 2px;
+   border-radius: 5px;
+   background-color: gray;
+   color:white;
+}
+
 #current {
   font-size= 2em;
   text-decoration: bold;
@@ -39,12 +50,23 @@ h1{
 #sidebar {
   position: absolute;
   display: block;
+  color: gray;
   list-style-type: none;
-  right: 30%;
+  right: 25%;
   line-height: 40px;
   font-style: bold;
   top: 210px
 }
+#sidebar a{
+  color:gray;
+}
+#sidebar a:hover{
+   padding:2px;
+   border-radius: 5px;
+   background-color: gray;
+   color:white;
+}
+
 #posttitle {
   display: block;
   position: static;
@@ -111,6 +133,15 @@ section {
 	background-color:white;
 }*/
 
+#pseudo_example:hover{
+   background-color: green;
+   color: white;
+}
+
+#pseudo_example:active{
+   background-color: red;
+   color: white;
+   }
 #top {
 display:block;
 position: absolute;
