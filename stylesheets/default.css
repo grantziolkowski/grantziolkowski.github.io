@@ -85,12 +85,9 @@ h2 {
     position: relative;
     margin: 10px;
     width: 675px;
-    left: 100px;
+    left: 300px;
 }
 
-object {
-    margin:auto;
-}
 .logo {
   width: 25px;
 }
