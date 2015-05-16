@@ -69,6 +69,10 @@ table a {
     list-style-type: none;
 }
 
+#aboutme a {
+    font-family: 'Lora', serif;
+}
+
 #aboutme a:visited {
   color: blue;
 }
