@@ -80,11 +80,11 @@ h2 {
     font-family: 'Goudy', 'Gregorio';
     color: gray;
 }
-#sample {
+.sample {
     display: block;
     position: relative;
     margin: 10px;
-    width: 675px;
+    width: 400px;
     left: 320px;
 }
 
