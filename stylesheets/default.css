@@ -60,13 +60,13 @@ table a {
     color: gray;
 }
 #aboutme {
-
     font-size: 1.5em;
     color: gray;
     display: block;
     position: relative;
     left: 200px;
-    font-family: 'Lora', serif;
+    font-style: 'Lora', serif;
+    list-style-type: none;
 }
 
 #aboutme a {
