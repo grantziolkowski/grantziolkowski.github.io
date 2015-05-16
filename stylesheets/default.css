@@ -82,9 +82,9 @@ h2 {
 }
 .sample {
     display: block;
-    position: relative;
+    position: absolute;
     margin: 10px;
-    width: 400px;
+    width: 20px;
     left: 320px;
 }
 
