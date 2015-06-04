@@ -1,0 +1,52 @@
+html {
+  font-family: Courier;
+  -webkit-font-smoothing: antialiased;
+}
+
+#arena {
+  width: 800px;
+  height: 600px;
+  border: 2px solid white;
+  margin: 0 auto;
+  background-image: url("../img/soccerfield_full.jpeg");
+  position: relative;
+}
+
+#title {
+  text-align: center;
+}
+
+#goal {
+  font-family: 'Press Start 2P', cursive;
+  font-size: 3em;
+  color: red;
+  position: relative;
+}
+
+.player {
+  height: 48px;
+  width: 48px;
+  background-image: url("../img/player.gif");
+  position: absolute;
+}
+
+
+#ball {
+  height: 20px;
+  width: 20px;
+  background-image: url("../img/ball.gif");
+  position: absolute;
+}
+
+#ball.move {
+  -webkit-transition: 0.3s ease-in-out;
+}
+
+.goalie {
+  position: relative;
+  height: 48px;
+  width: 48px;
+  background-image: url("../img/goalie.png");
+  -webkit-transition: 0.3s ease-in-out;
+}
+
