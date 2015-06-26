@@ -8,6 +8,20 @@
           animation: fadein 2s;
 }
 
+.summary {
+  position: absolute;
+  opacity: 0;
+  width: 10%;
+  left: 60%;
+  bottom: 35%;
+  padding: 2% 0% 2% 3%;
+  border: #d3d3d3 1px solid;
+  border-radius: 2px;
+  background-color: #F9FCFF;
+  -webkit-transition: width 1s, height 1s, -webkit-transform 1s;  Safari
+  transition: width 1s, height 1s, transform 1s;
+}
+
 @keyframes fadein {
     from { opacity: 0; }
     to   { opacity: 1; }
