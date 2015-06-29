@@ -8,6 +8,9 @@
           animation: fadein 2s;
 }
 
+.row img{
+  display: inline;
+}
 .summary {
   position: absolute;
   opacity: 0;
