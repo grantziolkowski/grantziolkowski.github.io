@@ -10,7 +10,6 @@
           animation: fadein 2s;
 }
 
-
 .row img {
   margin: 0% 5% 5% 0%;
   display: inline;
@@ -34,7 +33,7 @@
   left: 15%;}
 
 #summary_2 {
-  top: 10%;
+  top: 20%;
   right: -35%;
 }
 
