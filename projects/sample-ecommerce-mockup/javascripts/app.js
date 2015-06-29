@@ -1,7 +1,7 @@
 $(document).ready(function() {
     (function initialize() {
         TOTAL_SLIDES = $('#slides').children().length
-        CYCLE = 2000
+        CYCLE = 4/ TOTAL_SLIDES * 1000
         FULL_CYCLE = TOTAL_SLIDES * CYCLE
         setInterval(carousel, FULL_CYCLE);
         $(window).scroll(stickSideBar)

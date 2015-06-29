@@ -57,11 +57,11 @@ ul {
   width: 33.33%;
   position: relative;
   float: left;
-     -webkit-animation: slider 6s linear 6s infinite;
-     -moz-animation: slider 6s linear 6s infinite;
-      -ms-animation: slider 6s linear 6s infinite;
-       -o-animation: slider 6s linear 6s infinite;
-          animation: slider 6s linear 6s infinite;
+     -webkit-animation: slider 4s linear 4s infinite;
+     -moz-animation: slider 4s linear 4s infinite;
+      -ms-animation: slider 4s linear 4s infinite;
+       -o-animation: slider 4s linear 4s infinite;
+          animation: slider 4s linear 4s infinite;
 }
     @-webkit-keyframes slider {
         from { left: -2%; }
