@@ -1,9 +1,11 @@
 $(document).ready(function(){
-  $("#my_pill_pal").hover(function(){
+  $("a").hover(function(){
+    var id = event.target.dataset.id
+    this.selector = '.summary[data-id="' + id + '"]'
      $(event.target).css({
       "opacity" : "0.7"
       })
-    $(".summary").css({
+    $(this.selector).css({
       "opacity": "1",
        "-webkit-transform": "rotate(360deg)",
        "-moz-webkit-transform": "rotate(360deg)",
@@ -14,7 +16,7 @@ $(document).ready(function(){
       $(event.target).css({
       "opacity" : "1"
       })
-    $(".summary").css({
+    $(this.selector).css({
       "opacity": "0",
        "-webkit-transform": "none",
        "-moz-webkit-transform": "none",
@@ -22,5 +24,5 @@ $(document).ready(function(){
        "-o-webkit-transform": "none",
       "transform": "none"
     })
-  })
+  }, this)
 })
