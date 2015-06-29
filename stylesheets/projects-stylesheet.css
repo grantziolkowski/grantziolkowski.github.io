@@ -8,7 +8,6 @@
           animation: fadein 2s;
 }
 
-
 .row img {
   margin: 0% 5% 5% 0%;
   display: inline;
@@ -24,7 +23,7 @@
   border: #d3d3d3 1px solid;
   border-radius: 2px;
   background-color: #F9FCFF;
-  -webkit-transition: width 1s, height 1s, -webkit-transform 1s;  Safari
+  -webkit-transition: width 1s, height 1s, -webkit-transform 1s;
   transition: width 1s, height 1s, transform 1s;
 }
 
