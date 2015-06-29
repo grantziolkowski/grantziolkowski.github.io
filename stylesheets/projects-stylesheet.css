@@ -1,5 +1,7 @@
 .projects {
+  display: block;
   position: relative;
+  left: -20%;
   padding: 5px;
    -webkit-animation: fadein 2s;
      -moz-animation: fadein 2s;
@@ -7,6 +9,7 @@
        -o-animation: fadein 2s;
           animation: fadein 2s;
 }
+
 
 .row img {
   margin: 0% 5% 5% 0%;
