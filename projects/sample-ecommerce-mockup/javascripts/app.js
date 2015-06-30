@@ -10,8 +10,7 @@ $(document).ready(function() {
         })
 
         $(".count").text("1");
-        var totalSlides = $('#slides').children().length
-        $('#total').html(totalSlides)
+        $('#total').html(TOTAL_SLIDES)
         $('.bottom_slide.active p').html($('#summary1').text())
         $('.bottom_description').html($('.description #description1').text())
     }());
