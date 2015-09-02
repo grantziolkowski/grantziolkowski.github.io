@@ -49,6 +49,7 @@ h1{
 }
 #sidebar {
   position: absolute;
+  float: right;
   display: block;
   color: gray;
   list-style-type: none;
@@ -56,6 +57,12 @@ h1{
   line-height: 40px;
   font-style: bold;
   top: 210px
+}
+
+@media (max-width: 1200px) {
+  #sidebar {
+    visibility: hidden;
+  }
 }
 #sidebar a{
   color:gray;
