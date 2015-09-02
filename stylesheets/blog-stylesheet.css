@@ -45,7 +45,9 @@ h1{
 }
 
 .blog_content {
-
+  display: block;
+  position: relative;
+  top: -100px;
 }
 
 #current {
@@ -69,6 +71,7 @@ h1{
     visibility: hidden;
   }
 }
+
 #sidebar a{
   color:gray;
 }
@@ -92,6 +95,7 @@ h1{
   height: 10px;
   width: 400px;
 }
+
 #date {
   display:block;
   position: relative;
@@ -102,10 +106,10 @@ h1{
 .center {
   text-align:center;
 }
+
 section {
   display: block;
   position:relative;
-  padding-top: 4px;
   width: 600px;
   text-align:left;
   left: 110px;
@@ -113,9 +117,11 @@ section {
   font-style: sans-serif;
   line-height: 1.1em
 }
+
 .courier {
 	font-family: Courier;
 }
+
 .courier_indent {
 	font-family: Courier;
 	margin-left: 30px;
@@ -125,6 +131,7 @@ section {
 	font-family: Courier;
 	margin-left: 60px;
 }
+
 .courier_indent3 {
 	font-family: Courier;
 	margin-left: 80px;
@@ -155,26 +162,21 @@ section {
    background-color: red;
    color: white;
    }
-#top {
-  display:block;
-  position: relative;
-  top: -110px;
 
-}
 #footer {
    display: block;
    position: absolute;
    width: 100%;
    text-align: center;
    bottom: 5px;
-
-
 }
+
 #footer a:hover {
    border: 1px solid black;
    padding: 1px;
    border-radius: 5px;
 }
+
 #footer a:active {
    border: 1px solid black;
    padding: 2px;
