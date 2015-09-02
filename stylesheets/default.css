@@ -16,6 +16,7 @@ h1 {
     font-weight: bold;
     font-size: 86px;
 }
+
 nav a {
     display: inline-block;
     position: relative;
@@ -24,6 +25,7 @@ nav a {
     width: 170px;
     padding: 10px;
     left: 200px;
+    margin-bottom: 10px;
     top: -65px;
     margin-right: 50px;
     text-decoration: none;
@@ -40,6 +42,25 @@ nav a:hover {
 nav a:active {
     color: white;
     background: gray;
+}
+
+@media (max-width: 500px) {
+  h1 {
+    font-size: 45px;
+    margin-left: 150px;
+  }
+
+  nav a {
+    top: -30px;
+  }
+
+  #coverphoto {
+    width: 100px;
+  }
+
+  .previous_next {
+    visibility: hidden;
+  }
 }
 table a {
     text-decoration: none;
