@@ -42,499 +42,498 @@
      <li><a href="week8.html">SQL Injection</a></li>
      <li><a href="t9-css-pseudo-classes.html">CSS Pseudo-classes</a><li>
     </ul>
-    <section id="top">
-        <h2 id="posttitle">SQL Injection</h2>
-        <h3 id="subtitle">Careful now</h3>
-        <h4 id="date">March 5, 2015</h4>
+    <div class="blog_content">
+        <section id="top">
+            <h2 id="posttitle">SQL Injection</h2>
+            <h3 id="subtitle">Careful now</h3>
+            <h4 id="date">March 5, 2015</h4>
 
-        <p>SQL (Structured Query Language) lets you retrieve and update data from a database.
-        </p>
+            <p>SQL (Structured Query Language) lets you retrieve and update data from a database.
+            </p>
 
-        <p>You need to be careful when using user input for your search values on a website.</p>
+            <p>You need to be careful when using user input for your search values on a website.</p>
 
-        <p>Either on purpose or by accident, a user could enter in valid SQL commands in a database field and you have potential for trouble.
-        </p>
+            <p>Either on purpose or by accident, a user could enter in valid SQL commands in a database field and you have potential for trouble.
+            </p>
 
-        <p>Sometimes users are bad and they can inject SQL commands that can alter your SQL statement, your database, and the security of your website.
-        </p>
+            <p>Sometimes users are bad and they can inject SQL commands that can alter your SQL statement, your database, and the security of your website.
+            </p>
 
-        <p>For example, imagine a website with a field asking for your user name:</p>
+            <p>For example, imagine a website with a field asking for your user name:</p>
 
-        <p class="indent">User name:
-            <br>
-            <span id="search_field">" or ""="</span>
-        </p>
-        <p>Imagine your database read this and assigned " or ""=" to the value User.</p>
-        <p>Adding " or ""=" as the username will cause dangerous confusion when querying the UserNames database using SQL.</p>
-        <p>For example, a sample SQL query could read:</p>
-        <p class="courier_indent">SELECT * FROM UserNames WHERE Name = '" + User + '"</p>
-        <p>Reading from the data your user entered in the User field (" or ""="), your SQL query would result in:</p>
-        <p class="courier_indent">SELECT * FROM UserNames WHERE Name = "" or ""=""</p>
-        <p>Since <span class="courier">WHERE ""=""</span> is always true, THIS WOULD RETURN ALL OF THE User VALUES IN THE Usernames DATABASE.
-        </p>
-        <p>Now imagine the field was passwords, or credit card numbers... Careful now!</p>
-
-
-
-    </section>
-    <section id="second_from_top">
-        <h2 id="posttitle">Ruby Hashes vs. JavaScript Objects</h2>
-        <h3 id="subtitle">Comparing data structures</h3>
-        <h4 id="date">February 27, 2015</h4>
-
-        <p>Hashes in Ruby and Objects in JavaScript are similar structures used to organize data. The main differences lie in some terminology and syntax. Both are essential for grouping one or more values to a corresponding object (piece of data). Think of a dictionary: each word is tied to its definition.
-        </p>
-        <p>In Ruby Hashes, <i>keys</i> have corresponding values.</p>
-
-        <p> <span class="courier_indent" ;>my_hash = {</span>
-            <br>
-            <span class="courier_indent2" ;>apples: 2, </span>
-            <br>
-            <span class="courier_indent2" ;>peaches: 5, </span>
-            <br>
-            <span class="courier_indent2" ;>oranges: 3</span>
-            <br>
-            <span class="courier_indent2" ;>} </span>
-        </p>
-        <p>In JavaScript Objects, <i>properties</i> have corresponding values.</p>
-
-        <p> <span class="courier_indent" ;>var myObject = {</span>
-            <br>
-            <span class="courier_indent2" ;>apples: 2, </span>
-            <br>
-            <span class="courier_indent2" ;>peaches: 5, </span>
-            <br>
-            <span class="courier_indent2" ;>oranges: 3 </span>
-            <br>
-            <span class="courier_indent2" ;>} </span>
-        </p>
-
-        <p>There are two small differences thus far. Ruby uses the <span class="courier">lowercase_lowercase</span> convention for multi-word variables. JavaScript uses the keyword <span class="courier">var</span> and the naming convention
-            <span class="courier">lowercaseUppercase</span> for multi-word variables</p>
-
-        <p>Beyond naming the Hash/Object variables, you access values in these objects differently depending on the language you're working in.</p>
-
-        <p>In Ruby, you can look up a hash value like this:</p>
-        <p class="courier_indent" ;>p my_hash[:apples]</p>
-        <p class="courier_indent" ;>=> 2</p>
-
-        <p><span class="courier">p</span> prints and returns a value in Ruby.</p>
-        <p>Similarily in JavaScript:</p>
-        <p class="courier_indent" ;>console.log(myObject["apples"])</p>
-        <p class="courier_indent" ;>=> 2</p>
-
-        <p><span class="courier">console.log()</span> prints and returns a value in JavaScript.</p>
-        <p>There are other slightly different ways to look up values in Ruby Hashes and JavaScript Objects, but you can see these two examples are nearly identical beyond a few syntax tweaks.
-        </p>
-
-        <p>Unlike in Ruby, when working in JavaScript you can look up the value(s) of a property of an Object by directly calling it using the <span class="courier">.property</span> notation:</p>
-
-        <p class="courier_indent" ;>myObject.apples</p>
-        <p class="courier_indent" ;>=> 2</p>
-
-    </section>
-    <section id="third_from_top">
-        <h2 id="posttitle">Inheritance vs. Composition</h2>
-        <h3 id="subtitle">Organizing your classes</h3>
-        <h4 id="date">February 22, 2015</h4>
-        <p>Inheritance, composition and modules are different ways to organize your code. </p>
-        <p>Inheritance is an abstract class hierarchy, using subclasses that inherit information from superclasses. Subclasses are more specialized versions of their superclasses.</p>
-        <p>Example using Inheritance:</p>
-        <p class="courier_indent" ;>class Menu</p>
-        <p><span class="courier_indent2" ;>attr_reader :food_items, :meal<span> <br>
-        <span class="courier_indent2";>def initialize(args={})</span>
-            <br>
-            <span class="courier_indent3" ;> @meal = args[:meal]</span>
-            <br>
-            <span class="courier_indent3" ;> @food_items = args[:food_items]  </span>
-            <br>
-            <span class="courier_indent2" ;>end</span>
-        </p>
-        <p class="courier_indent" ;>end</p>
-
-        <p>Now let's create the subclass <span class="courier" ;>LunchMenu</span> that will inherit the behaviors, methods and instance variables of <span class="courier" ;>Menu</span>. </p>
-
-        <p class="courier_indent" ;>class LunchMenu
-            < Menu<br>
-                end</p>
-
-        <p>Let's do it again, adding another link to our inheritance hierarchy. We will create the class
-            <span class="courier" ;>FoodItems</span>, which inherits from <span class="courier" ;>LunchMenu</span>, which inherits from
-            <span class="courier" ;>Menu</span>.</p>
-
-        <p class="courier_indent" ;> class FoodItems
-            < LunchMenu </p>
-                <span class="courier_indent2" ;>def initialize(args={})<span> <br>
-        <span class="courier_indent3";> @food = args[:food] </span>
+            <p class="indent">User name:
                 <br>
-                <span class="courier_indent3" ;> @price = args[:price] </span>
+                <span id="search_field">" or ""="</span>
+            </p>
+            <p>Imagine your database read this and assigned " or ""=" to the value User.</p>
+            <p>Adding " or ""=" as the username will cause dangerous confusion when querying the UserNames database using SQL.</p>
+            <p>For example, a sample SQL query could read:</p>
+            <p class="courier_indent">SELECT * FROM UserNames WHERE Name = '" + User + '"</p>
+            <p>Reading from the data your user entered in the User field (" or ""="), your SQL query would result in:</p>
+            <p class="courier_indent">SELECT * FROM UserNames WHERE Name = "" or ""=""</p>
+            <p>Since <span class="courier">WHERE ""=""</span> is always true, THIS WOULD RETURN ALL OF THE User VALUES IN THE Usernames DATABASE.
+            </p>
+            <p>Now imagine the field was passwords, or credit card numbers... Careful now!</p>
+
+
+
+        </section>
+        <section id="second_from_top">
+            <h2 id="posttitle">Ruby Hashes vs. JavaScript Objects</h2>
+            <h3 id="subtitle">Comparing data structures</h3>
+            <h4 id="date">February 27, 2015</h4>
+
+            <p>Hashes in Ruby and Objects in JavaScript are similar structures used to organize data. The main differences lie in some terminology and syntax. Both are essential for grouping one or more values to a corresponding object (piece of data). Think of a dictionary: each word is tied to its definition.
+            </p>
+            <p>In Ruby Hashes, <i>keys</i> have corresponding values.</p>
+
+            <p> <span class="courier_indent" ;>my_hash = {</span>
+                <br>
+                <span class="courier_indent2" ;>apples: 2, </span>
+                <br>
+                <span class="courier_indent2" ;>peaches: 5, </span>
+                <br>
+                <span class="courier_indent2" ;>oranges: 3</span>
+                <br>
+                <span class="courier_indent2" ;>} </span>
+            </p>
+            <p>In JavaScript Objects, <i>properties</i> have corresponding values.</p>
+
+            <p> <span class="courier_indent" ;>var myObject = {</span>
+                <br>
+                <span class="courier_indent2" ;>apples: 2, </span>
+                <br>
+                <span class="courier_indent2" ;>peaches: 5, </span>
+                <br>
+                <span class="courier_indent2" ;>oranges: 3 </span>
+                <br>
+                <span class="courier_indent2" ;>} </span>
+            </p>
+
+            <p>There are two small differences thus far. Ruby uses the <span class="courier">lowercase_lowercase</span> convention for multi-word variables. JavaScript uses the keyword <span class="courier">var</span> and the naming convention
+                <span class="courier">lowercaseUppercase</span> for multi-word variables</p>
+
+            <p>Beyond naming the Hash/Object variables, you access values in these objects differently depending on the language you're working in.</p>
+
+            <p>In Ruby, you can look up a hash value like this:</p>
+            <p class="courier_indent" ;>p my_hash[:apples]</p>
+            <p class="courier_indent" ;>=> 2</p>
+
+            <p><span class="courier">p</span> prints and returns a value in Ruby.</p>
+            <p>Similarily in JavaScript:</p>
+            <p class="courier_indent" ;>console.log(myObject["apples"])</p>
+            <p class="courier_indent" ;>=> 2</p>
+
+            <p><span class="courier">console.log()</span> prints and returns a value in JavaScript.</p>
+            <p>There are other slightly different ways to look up values in Ruby Hashes and JavaScript Objects, but you can see these two examples are nearly identical beyond a few syntax tweaks.
+            </p>
+
+            <p>Unlike in Ruby, when working in JavaScript you can look up the value(s) of a property of an Object by directly calling it using the <span class="courier">.property</span> notation:</p>
+
+            <p class="courier_indent" ;>myObject.apples</p>
+            <p class="courier_indent" ;>=> 2</p>
+
+        </section>
+        <section id="third_from_top">
+            <h2 id="posttitle">Inheritance vs. Composition</h2>
+            <h3 id="subtitle">Organizing your classes</h3>
+            <h4 id="date">February 22, 2015</h4>
+            <p>Inheritance, composition and modules are different ways to organize your code. </p>
+            <p>Inheritance is an abstract class hierarchy, using subclasses that inherit information from superclasses. Subclasses are more specialized versions of their superclasses.</p>
+            <p>Example using Inheritance:</p>
+            <p class="courier_indent" ;>class Menu</p>
+            <p><span class="courier_indent2" ;>attr_reader :food_items, :meal<span> <br>
+            <span class="courier_indent2";>def initialize(args={})</span>
+                <br>
+                <span class="courier_indent3" ;> @meal = args[:meal]</span>
+                <br>
+                <span class="courier_indent3" ;> @food_items = args[:food_items]  </span>
                 <br>
                 <span class="courier_indent2" ;>end</span>
-        </p>
-        <p class="courier_indent" ;>end</p>
+            </p>
+            <p class="courier_indent" ;>end</p>
 
-        <p>Now let's create an instance of the <span class="courier" ;>Menu</span> class, which will take a new instance of
-            <span class="courier" ;>FoodItems</span> class in its argument hash. Then we can look up the instance variables
-            <span class="courier" ;>meal</span> and <span class="courier" ;>food_items</span> which are available to us using
-            <span class="courier" ;>attr_reader</span> and calling them as an instance method.</p>
-        <p span class="courier_indent" ;>monday_menu = Menu.new(</span>
-            <br>
-            <span class="courier_indent2" ;>meal: "lunch",</span>
-            <br>
-            <span class="courier_indent2" ;>food_items: FoodItems.new(  </span>
-            <br>
-            <span class="courier_indent3" ;>food: "taco",  </span>
-            <br>
-            <span class="courier_indent3" ;>price: 2))  </span>
-            <br>
-            <span class="courier_indent" ;>p monday_menu.meal  </span>
-            <br>
-            <span class="courier_indent" ;>p monday_menu.food_items   </span>
-            <br>
-        </p>
-        <p class="courier_indent" ;>=> "lunch"</p>
-        <p class="courier_indent" ;> #&ltFoodItems:0x007f7279513540 @food="taco", @price=2> </p>
-        <p> <span class="courier" ;>#&ltFoodItems:0x007f7279513540</span> is just the computer telling you what the
-            <span class="courier" ;>self</span> object you're acting on is. The <span class="courier" ;>food_items</span> attribute returned the correct hash according to our inheritance hierarchy.</p>
+            <p>Now let's create the subclass <span class="courier" ;>LunchMenu</span> that will inherit the behaviors, methods and instance variables of <span class="courier" ;>Menu</span>. </p>
 
-        <p>The way we've created our food universe so far, our "food items" are an example of a "lunch menu," which is a specialized version of a "menu." A subclass "is a" specialized version of a superclass.</p>
+            <p class="courier_indent" ;>class LunchMenu
+                < Menu<br>
+                    end</p>
 
-        <p>It is helpful to use inheritance to create classes that will inherit the behavior and messages of their parent classes. However, this can get messy and create problematic dependencies if you need to change your code in the future. When organizing code, one must always ask: "What would be the future consequences if I am wrong about this?"
-        </p>
+            <p>Let's do it again, adding another link to our inheritance hierarchy. We will create the class
+                <span class="courier" ;>FoodItems</span>, which inherits from <span class="courier" ;>LunchMenu</span>, which inherits from
+                <span class="courier" ;>Menu</span>.</p>
 
-        <p>Composition can help you avoid these dependencies. Using composition, small well-defined objects interact via well-defined interfaces to create a larger object that is more than a sum of its parts. The inner objects play the role of the container object, but they are not a "kind" of its class.
-        </p>
+            <p class="courier_indent" ;> class FoodItems
+                < LunchMenu </p>
+                    <span class="courier_indent2" ;>def initialize(args={})<span> <br>
+            <span class="courier_indent3";> @food = args[:food] </span>
+                    <br>
+                    <span class="courier_indent3" ;> @price = args[:price] </span>
+                    <br>
+                    <span class="courier_indent2" ;>end</span>
+            </p>
+            <p class="courier_indent" ;>end</p>
 
-        <p>In our inheritance model above, imagine if we had a <span class="courier" ;>DinnerMenu</span> that was a subclass of
-            <span class="courier" ;>Menu</span>. If many of the same "food items" were shared among the different intances of "lunch menus" and "dinner menus," you would have a mess of confusing and repetitive code trying to keep every "taco" and every "meal" accounted for. Let's compose instead, building up from the smallest, most structurally independent objects.</p>
+            <p>Now let's create an instance of the <span class="courier" ;>Menu</span> class, which will take a new instance of
+                <span class="courier" ;>FoodItems</span> class in its argument hash. Then we can look up the instance variables
+                <span class="courier" ;>meal</span> and <span class="courier" ;>food_items</span> which are available to us using
+                <span class="courier" ;>attr_reader</span> and calling them as an instance method.</p>
+            <p span class="courier_indent" ;>monday_menu = Menu.new(</span>
+                <br>
+                <span class="courier_indent2" ;>meal: "lunch",</span>
+                <br>
+                <span class="courier_indent2" ;>food_items: FoodItems.new(  </span>
+                <br>
+                <span class="courier_indent3" ;>food: "taco",  </span>
+                <br>
+                <span class="courier_indent3" ;>price: 2))  </span>
+                <br>
+                <span class="courier_indent" ;>p monday_menu.meal  </span>
+                <br>
+                <span class="courier_indent" ;>p monday_menu.food_items   </span>
+                <br>
+            </p>
+            <p class="courier_indent" ;>=> "lunch"</p>
+            <p class="courier_indent" ;> #&ltFoodItems:0x007f7279513540 @food="taco", @price=2> </p>
+            <p> <span class="courier" ;>#&ltFoodItems:0x007f7279513540</span> is just the computer telling you what the
+                <span class="courier" ;>self</span> object you're acting on is. The <span class="courier" ;>food_items</span> attribute returned the correct hash according to our inheritance hierarchy.</p>
 
-        <p class="courier_indent" ;>class Menu</p>
-        <p><span class="courier_indent2" ;>attr_reader :food_items, :meal<span> <br>
-        <span class="courier_indent2";>def initialize(args={})</span>
-            <br>
-            <span class="courier_indent3" ;> @meal = args[:meal]</span>
-            <br>
-            <span class="courier_indent3" ;> @food_items = args[:food_items]  </span>
-            <br>
-            <span class="courier_indent2" ;>end</span>
-        </p>
-        <p class="courier_indent" ;>end</p>
+            <p>The way we've created our food universe so far, our "food items" are an example of a "lunch menu," which is a specialized version of a "menu." A subclass "is a" specialized version of a superclass.</p>
 
-        <p class="courier_indent" ;> class FoodItems
-            < LunchMenu </p>
-                <span class="courier_indent2" ;> def initialize(food_items)<span> <br>
-       <span class="courier_indent3";> @food_items = food_items</span>
+            <p>It is helpful to use inheritance to create classes that will inherit the behavior and messages of their parent classes. However, this can get messy and create problematic dependencies if you need to change your code in the future. When organizing code, one must always ask: "What would be the future consequences if I am wrong about this?"
+            </p>
+
+            <p>Composition can help you avoid these dependencies. Using composition, small well-defined objects interact via well-defined interfaces to create a larger object that is more than a sum of its parts. The inner objects play the role of the container object, but they are not a "kind" of its class.
+            </p>
+
+            <p>In our inheritance model above, imagine if we had a <span class="courier" ;>DinnerMenu</span> that was a subclass of
+                <span class="courier" ;>Menu</span>. If many of the same "food items" were shared among the different intances of "lunch menus" and "dinner menus," you would have a mess of confusing and repetitive code trying to keep every "taco" and every "meal" accounted for. Let's compose instead, building up from the smallest, most structurally independent objects.</p>
+
+            <p class="courier_indent" ;>class Menu</p>
+            <p><span class="courier_indent2" ;>attr_reader :food_items, :meal<span> <br>
+            <span class="courier_indent2";>def initialize(args={})</span>
+                <br>
+                <span class="courier_indent3" ;> @meal = args[:meal]</span>
+                <br>
+                <span class="courier_indent3" ;> @food_items = args[:food_items]  </span>
                 <br>
                 <span class="courier_indent2" ;>end</span>
-                <br>
-                <p class="courier_indent" ;>end</p>
+            </p>
+            <p class="courier_indent" ;>end</p>
 
-                <p class="courier_indent" ;> class FoodItem </p>
-                <span class="courier_indent2" ;>  def initialize(args)<span> <br>
-        <span class="courier_indent3";> @food = args[:food]</span>
-                <br>
-                <span class="courier_indent3" ;> @price = args[:price]</span>
-                <br>
-                <span class="courier_indent2" ;>end</span>
-                <br>
-                <p class="courier_indent" ;>end</p>
+            <p class="courier_indent" ;> class FoodItems
+                < LunchMenu </p>
+                    <span class="courier_indent2" ;> def initialize(food_items)<span> <br>
+           <span class="courier_indent3";> @food_items = food_items</span>
+                    <br>
+                    <span class="courier_indent2" ;>end</span>
+                    <br>
+                    <p class="courier_indent" ;>end</p>
 
-                <p>We've created a new <span class="courier" ;>FoodItem</span> class. Now, our meals won't be so entangled and dependent. If different instances need to share food items, or even if your "dinner taco" were to cost more than your "lunch taco," you shouldn't have a problem.
-                </p>
+                    <p class="courier_indent" ;> class FoodItem </p>
+                    <span class="courier_indent2" ;>  def initialize(args)<span> <br>
+            <span class="courier_indent3";> @food = args[:food]</span>
+                    <br>
+                    <span class="courier_indent3" ;> @price = args[:price]</span>
+                    <br>
+                    <span class="courier_indent2" ;>end</span>
+                    <br>
+                    <p class="courier_indent" ;>end</p>
 
-                <p><span class="courier_indent" ;> beef = FoodItem.new(food: "beef", price: 7)</span>
-                    <br>
-                    <span class="courier_indent" ;>sandwich = FoodItem.new(food: "sandwich", price: 5)</span>
-                    <br>
-                    <span class="courier_indent" ;>tuesday_menu = Menu.new((</span>
-                    <br>
-                    <span class="courier_indent2" ;>  meal: "dinner",</span>
-                    <br>
-                    <span class="courier_indent2" ;> food_items: FoodItems.new([beef, sandwich]))(  </span>
-                    <br>
-                    <span class="courier_indent" ;>p tuesday_menu.meal  </span>
-                    <br>
-                    <span class="courier_indent" ;>p tuesday_menu.food_items </span>
-                    <br>
-                </p>
-                <p class="courier_indent" ;>=></p>
-                <p class="courier_indent" ;>"dinner"</p>
-                <p class="courier_indent" ;>#&ltFoodItems:0x007f45e86bf938 @food_items=[
-                    <br> #&ltFoodItem:0x007f45e86bfac8 @food="beef", @price=7&gt,
-                    <br> #&ltFoodItem:0x007f45e86bfa00 @food="sandwich", @price=5&gt]> </p>
+                    <p>We've created a new <span class="courier" ;>FoodItem</span> class. Now, our meals won't be so entangled and dependent. If different instances need to share food items, or even if your "dinner taco" were to cost more than your "lunch taco," you shouldn't have a problem.
+                    </p>
 
-                <p>Using composition, our <span class="courier" ;>Menu</span> has <span class="courier" ;>FoodItems</span> which have individual <span class="courier" ;>FoodItem</span> instances. The only drawback to this clear, highly changeable organizational tool is that you have to explicitly delegate all your messages, wordily telling your objects how to communicate because they are not bound to any single hierarchy.</p>
+                    <p><span class="courier_indent" ;> beef = FoodItem.new(food: "beef", price: 7)</span>
+                        <br>
+                        <span class="courier_indent" ;>sandwich = FoodItem.new(food: "sandwich", price: 5)</span>
+                        <br>
+                        <span class="courier_indent" ;>tuesday_menu = Menu.new((</span>
+                        <br>
+                        <span class="courier_indent2" ;>  meal: "dinner",</span>
+                        <br>
+                        <span class="courier_indent2" ;> food_items: FoodItems.new([beef, sandwich]))(  </span>
+                        <br>
+                        <span class="courier_indent" ;>p tuesday_menu.meal  </span>
+                        <br>
+                        <span class="courier_indent" ;>p tuesday_menu.food_items </span>
+                        <br>
+                    </p>
+                    <p class="courier_indent" ;>=></p>
+                    <p class="courier_indent" ;>"dinner"</p>
+                    <p class="courier_indent" ;>#&ltFoodItems:0x007f45e86bf938 @food_items=[
+                        <br> #&ltFoodItem:0x007f45e86bfac8 @food="beef", @price=7&gt,
+                        <br> #&ltFoodItem:0x007f45e86bfa00 @food="sandwich", @price=5&gt]> </p>
 
-    </section>
-    <section id="fourth_from_top">
+                    <p>Using composition, our <span class="courier" ;>Menu</span> has <span class="courier" ;>FoodItems</span> which have individual <span class="courier" ;>FoodItem</span> instances. The only drawback to this clear, highly changeable organizational tool is that you have to explicitly delegate all your messages, wordily telling your objects how to communicate because they are not bound to any single hierarchy.</p>
 
-        <h2 id="posttitle">Ruby Classes</h2>
-        <h3 id="subtitle">Orient Your Objects</h3>
-        <h4 id="date">February 14, 2015</h4>
-        <h3></h3>
-        <p>
-            Classes are objects in Ruby that are essential to organizing your programs. They give you a way to assign variables and methods to each individual subset of a program. It's essential to compartmentalize your Ruby programs using classes to prevent creating confusing mess of variables and methods that apply to some parts of the program but not others.
+        </section>
+        <section id="fourth_from_top">
+
+            <h2 id="posttitle">Ruby Classes</h2>
+            <h3 id="subtitle">Orient Your Objects</h3>
+            <h4 id="date">February 14, 2015</h4>
+            <h3></h3>
             <p>
-                <p>Create your class using All Caps like this:</p>
+                Classes are objects in Ruby that are essential to organizing your programs. They give you a way to assign variables and methods to each individual subset of a program. It's essential to compartmentalize your Ruby programs using classes to prevent creating confusing mess of variables and methods that apply to some parts of the program but not others.
+                <p>
+                    <p>Create your class using All Caps like this:</p>
+                    <p class="courier_indent" ;>
+                        class WhatToDoToday
+                        <br> end
+                    </p>
+                    <p>Later on, we will create an instance of our class like this:
+                        <p>
+                            <p class="courier_indent">relax = WhatToDoToday.new</p>
+                            <p>Next we initialize by creating the initialize method in your class. Later on, every time we create an instance of the class, we'll need to initialize it using the same number of arguments as you set for your initialize method. For example, the top of your program will look like this:
+                            </p>
+                            <p class="courier_indent" ;>class WhatToDoToday</p>
+                            <p><span class="courier_indent2" ;>def initialize(purpose, location, transportation=nil)<span> <br>
+            <span class="courier_indent3";>  @purpose = purpose</span>
+                                <br>
+                                <span class="courier_indent3" ;>  @transportation = transportation</span>
+                                <br>
+                                <span class="courier_indent3" ;>  @location = location </span>
+                                <br>
+                                <span class="courier_indent2" ;>end</span>
+                            </p>
+                            <p class="courier_indent" ;>end</p>
+                            <p>Later on when you create an instance of the class, it will look something like this:</p>
+                            <p class="courier_indent" ;>work_hard = WhatToDoToday.new("business","work","train")
+                                <p>Or like this, if you take advantange of the defaualt value of <span class="courier">transportation</span> being <span class="courier">nil</span> or "nothing":
+                                    <p class="courier_indent" ;> relax = WhatToDoToday.new("nothing","home")</p>
+                                    <p>Within the initialize method, we create instance variables which you can reference from anywhere in the class. We create them by using the <span class="courier">@</span> sign, so now we have three instance variables, which take their values from whatever you give them when you you create an instance of the class and initialize it.</p>
+                                    <p>So in our instance <span class="courier">relax</span>, the instance variable <span class="courier">@purpose = "nothing"</span>.</p>
+                                    <p>After the initialize method in your class, you'll want to give it some logic. In this case, we'll define an instance method which you will be able to call on any instance of the class. Let's continue with our class
+                                        <span class="courier">WhatToDoToday</span> by defining an instance method <span class="courier">get_up_and_go</span>:</p>
+                                    <p class="courier_indent" ;>class WhatToDoToday</p>
+                                    <p class="courier_indent2" ;>def initialize(purpose, location, transportation=nil)
+                                        <br>
+                                        <span class="courier_indent">...</span>
+                                        <br> end
+                                    </p>
+                                    <p>
+                                        <span class="courier_indent2" ;>def get_up_and_go</span>
+                                        <br>
+                                        <span class="courier_indent3">if @purpose == "nothing"</span>
+                                        <br>
+                                        <span class="courier_indent4">p "Slow down and rest at #{@location}!"</span>
+                                        <br>
+                                        <span class="courier_indent3">elsif @purpose == "business"</span>
+                                        <br>
+                                        <span class="courier_indent4">p "Get up early go to #{@location}!"</span>
+                                        <br>
+                                        <span class="courier_indent3">elsif @purpose == "pleasure"</span>
+                                        <br>
+                                        <span class="courier_indent4">p "Have fun at the #{@location}."</span>
+                                        <br>
+                                        <span class="courier_indent3">end</span>
+                                        <br>
+                                        <span class="courier_indent2">end</span>
+                                        <br>
+                                        <span class="courier_indent">end</span>
+                                    </p>
+                                    <p>So we can create our instance of the class <span class="courier">WhatToDoToday</span> and tell it what to do by calling the method <span class="courier">get_up_and_go</span>. The <span class="courier">=></span> sign just shows you what the computer will return:</p>
+                                    <p><span class="courier_indent" ;>work_hard = WhatToDoToday.new("business","work","train")</span>
+                                        <br>
+                                        <span class="courier_indent" ;>work_hard.get_up_and_go</span>
+                                        <br>
+                                        <span class="courier_indent" ;>=> "Get up early go to work!"</span>
+                                    </p>
+                                    <p>The other main topic when talking about Ruby Classes is attributes. Creating attribute readers <span class="courier">
+        (attr_reader)<span> allows you to access the attributes of your class, namely the instance variables,
+        from outside of the class. Attribute writers <span class="courier">(attr_writer)</span>can be set from outside of the class, and attribute accessors <span class="courier">(attr_accessor)</span>can be read and set. You create these at the beginning of your class, before the initalize method:
+                                    </p>
+                                    <p><span class="courier_indent" ;>class WhatToDoToday</span>
+                                        <br>
+                                        <span class="courier_indent2" ;>attr_reader :transportation</span>
+                                        <br>
+                                        <span class="courier_indent2" ;>def initialize(purpose, location, transportation=nil) <br>
+            <span class="courier_indent2";> ...</span>
+                                        <p>So then we can read a particular attribute of the class by calling it like an instance method. In fact, creating
+                                            <span class="courier">attr_reader :transportation</span> is just shorthand for:</p>
+                                        <p><span class="courier_indent2" ;>def transportation</span>
+                                            <br>
+                                            <span class="courier_indent3">@transportation</span>
+                                            <br>
+                                            <span class="courier_indent2" ;>end</span>
+                                            <br>
+                                        </p>
+                                        <p>Let's try it:</p>
+                                        <p><span class="courier_indent" ;>rock_show = WhatToDoToday.new("pleasure","club", "taxi")</span>
+                                            <br>
+                                            <span class="courier_indent" ;>rock_show.transportation</span>
+                                            <br>
+                                            <span class="courier_indent" ;>=> "taxi"</span>
+                                        </p>
+        </section>
+        <section id="fifth_from_top">
+            <h2 id="posttitle">Ruby Enumerables</h2>
+            <h3 id="subtitle">Iterating through a data structure</h3>
+            <h4 id="date">February 6, 2015</h4>
+            <p>Enumerables operate on data collections like hashes and arrays. They are all based on the #each method, iterating through each element of an array or hash.</p>
+            <h3>Cycle</h3>
+            <p>
+                Here's the pseudocode for the Cycle Enumerable:
+            </p>
+            <p class="courier_indent" ;>
+                array.cycle(n) {|element| code block}
+            </p>
+            <p>
+                Just like the "each" method, cycle will run your code block on every element of your array. In addition to functioning like #each, it will iterate through your array n amount of times, or forever in an infinite loop if you do not specify an n value.
+            </p>
+            <p>
+                For example, let's create an array. <span class="courier">my array = ["apples","oranges","pears"]</span>
+            </p>
+            <p class="courier_indent" ;>
+                my_array.cycle(2) {|fruit| p fruit}
+            </p>
+            <p>This will return:</p>
+            <p class="courier_indent" ;>
+                apples
+                <br> oranges
+                <br> pears
+                <br> apples
+                <br> oranges
+                <br> pears
+            </p>
+            <p>If you do not assign a code block to your cycle method, it will return an Enumerator, which basically catalogs the contents of your array or hash.</p>
+            <p>Let's give this enumeator a name:</p>
+            <p class="courier_indent" ;>
+                my_enumerator = my_array.cycle
+            </p>
+            <p>Check this out:</p>
+            <p class="courier_indent" ;>
+                my_enumerator
+                <br> my_enumerator.next
+                <br> my_enumerator.next
+                <br> my_enumerator.next
+            </p>
+            <p>This will return:</p>
+            <p class="courier_indent" ;>
+                #&ltEnumerator: ["apples", "oranges", "pears"]:cycle&gt
+                <br> apples
+                <br> oranges
+                <br> pears
+            </p>
+        </section>
+        <section id="sixth_from_top">
+            <h2 id="posttitle">Ruby Arrays and Hashes</h2>
+            <h3 id="subtitle">Storing information in lists</h3>
+            <h4 id="date">January 30, 2015</h4>
+
+            <h3 id="subtitle">Arrays</h3>
+            <p>
+                Arrays allow you to store lists of information in Ruby. You can name your array any one word and write it like this:
+            </p>
+            <p class="courier_indent" ;>
+                my_array = [1, 2, 3, 4, 5]
+                <br> another_array = ["tree","dog","cat"]
+            </p>
+            <p>
+                Arrays are very useful because you can run specific functions or methods that will act on or "iterate" over every element in the array. You only need to call these methods on your array name, rather than writing out all the information you've saved within it.
+            </p>
+            <p For example, you can add 1 to every number stored in your my_array variable by using the Array method "each". </p>
                 <p class="courier_indent" ;>
-                    class WhatToDoToday
+                    my_array.each do |number|
+                    <br> &nbsp&nbsp number + 1
                     <br> end
                 </p>
-                <p>Later on, we will create an instance of our class like this:
-                    <p>
-                        <p class="courier_indent">relax = WhatToDoToday.new</p>
-                        <p>Next we initialize by creating the initialize method in your class. Later on, every time we create an instance of the class, we'll need to initialize it using the same number of arguments as you set for your initialize method. For example, the top of your program will look like this:
-                        </p>
-                        <p class="courier_indent" ;>class WhatToDoToday</p>
-                        <p><span class="courier_indent2" ;>def initialize(purpose, location, transportation=nil)<span> <br>
-        <span class="courier_indent3";>  @purpose = purpose</span>
-                            <br>
-                            <span class="courier_indent3" ;>  @transportation = transportation</span>
-                            <br>
-                            <span class="courier_indent3" ;>  @location = location </span>
-                            <br>
-                            <span class="courier_indent2" ;>end</span>
-                        </p>
-                        <p class="courier_indent" ;>end</p>
-                        <p>Later on when you create an instance of the class, it will look something like this:</p>
-                        <p class="courier_indent" ;>work_hard = WhatToDoToday.new("business","work","train")
-                            <p>Or like this, if you take advantange of the defaualt value of <span class="courier">transportation</span> being <span class="courier">nil</span> or "nothing":
-                                <p class="courier_indent" ;> relax = WhatToDoToday.new("nothing","home")</p>
-                                <p>Within the initialize method, we create instance variables which you can reference from anywhere in the class. We create them by using the <span class="courier">@</span> sign, so now we have three instance variables, which take their values from whatever you give them when you you create an instance of the class and initialize it.</p>
-                                <p>So in our instance <span class="courier">relax</span>, the instance variable <span class="courier">@purpose = "nothing"</span>.</p>
-                                <p>After the initialize method in your class, you'll want to give it some logic. In this case, we'll define an instance method which you will be able to call on any instance of the class. Let's continue with our class
-                                    <span class="courier">WhatToDoToday</span> by defining an instance method <span class="courier">get_up_and_go</span>:</p>
-                                <p class="courier_indent" ;>class WhatToDoToday</p>
-                                <p class="courier_indent2" ;>def initialize(purpose, location, transportation=nil)
-                                    <br>
-                                    <span class="courier_indent">...</span>
-                                    <br> end
-                                </p>
-                                <p>
-                                    <span class="courier_indent2" ;>def get_up_and_go</span>
-                                    <br>
-                                    <span class="courier_indent3">if @purpose == "nothing"</span>
-                                    <br>
-                                    <span class="courier_indent4">p "Slow down and rest at #{@location}!"</span>
-                                    <br>
-                                    <span class="courier_indent3">elsif @purpose == "business"</span>
-                                    <br>
-                                    <span class="courier_indent4">p "Get up early go to #{@location}!"</span>
-                                    <br>
-                                    <span class="courier_indent3">elsif @purpose == "pleasure"</span>
-                                    <br>
-                                    <span class="courier_indent4">p "Have fun at the #{@location}."</span>
-                                    <br>
-                                    <span class="courier_indent3">end</span>
-                                    <br>
-                                    <span class="courier_indent2">end</span>
-                                    <br>
-                                    <span class="courier_indent">end</span>
-                                </p>
-                                <p>So we can create our instance of the class <span class="courier">WhatToDoToday</span> and tell it what to do by calling the method <span class="courier">get_up_and_go</span>. The <span class="courier">=></span> sign just shows you what the computer will return:</p>
-                                <p><span class="courier_indent" ;>work_hard = WhatToDoToday.new("business","work","train")</span>
-                                    <br>
-                                    <span class="courier_indent" ;>work_hard.get_up_and_go</span>
-                                    <br>
-                                    <span class="courier_indent" ;>=> "Get up early go to work!"</span>
-                                </p>
-                                <p>The other main topic when talking about Ruby Classes is attributes. Creating attribute readers <span class="courier">
-    (attr_reader)<span> allows you to access the attributes of your class, namely the instance variables,
-    from outside of the class. Attribute writers <span class="courier">(attr_writer)</span>can be set from outside of the class, and attribute accessors <span class="courier">(attr_accessor)</span>can be read and set. You create these at the beginning of your class, before the initalize method:
-                                </p>
-                                <p><span class="courier_indent" ;>class WhatToDoToday</span>
-                                    <br>
-                                    <span class="courier_indent2" ;>attr_reader :transportation</span>
-                                    <br>
-                                    <span class="courier_indent2" ;>def initialize(purpose, location, transportation=nil) <br>
-        <span class="courier_indent2";> ...</span>
-                                    <p>So then we can read a particular attribute of the class by calling it like an instance method. In fact, creating
-                                        <span class="courier">attr_reader :transportation</span> is just shorthand for:</p>
-                                    <p><span class="courier_indent2" ;>def transportation</span>
-                                        <br>
-                                        <span class="courier_indent3">@transportation</span>
-                                        <br>
-                                        <span class="courier_indent2" ;>end</span>
-                                        <br>
-                                    </p>
-                                    <p>Let's try it:</p>
-                                    <p><span class="courier_indent" ;>rock_show = WhatToDoToday.new("pleasure","club", "taxi")</span>
-                                        <br>
-                                        <span class="courier_indent" ;>rock_show.transportation</span>
-                                        <br>
-                                        <span class="courier_indent" ;>=> "taxi"</span>
-                                    </p>
-    </section>
-    <section id="fifth_from_top">
-        <h2 id="posttitle">Ruby Enumerables</h2>
-        <h3 id="subtitle">Iterating through a data structure</h3>
-        <h4 id="date">February 6, 2015</h4>
-        <p>Enumerables operate on data collections like hashes and arrays. They are all based on the #each method, iterating through each element of an array or hash.</p>
-        <h3>Cycle</h3>
-        <p>
-            Here's the pseudocode for the Cycle Enumerable:
-        </p>
-        <p class="courier_indent" ;>
-            array.cycle(n) {|element| code block}
-        </p>
-        <p>
-            Just like the "each" method, cycle will run your code block on every element of your array. In addition to functioning like #each, it will iterate through your array n amount of times, or forever in an infinite loop if you do not specify an n value.
-        </p>
-        <p>
-            For example, let's create an array. <span class="courier">my array = ["apples","oranges","pears"]</span>
-        </p>
-        <p class="courier_indent" ;>
-            my_array.cycle(2) {|fruit| p fruit}
-        </p>
-        <p>This will return:</p>
-        <p class="courier_indent" ;>
-            apples
-            <br> oranges
-            <br> pears
-            <br> apples
-            <br> oranges
-            <br> pears
-        </p>
-        <p>If you do not assign a code block to your cycle method, it will return an Enumerator, which basically catalogs the contents of your array or hash.</p>
-        <p>Let's give this enumeator a name:</p>
-        <p class="courier_indent" ;>
-            my_enumerator = my_array.cycle
-        </p>
-        <p>Check this out:</p>
-        <p class="courier_indent" ;>
-            my_enumerator
-            <br> my_enumerator.next
-            <br> my_enumerator.next
-            <br> my_enumerator.next
-        </p>
-        <p>This will return:</p>
-        <p class="courier_indent" ;>
-            #&ltEnumerator: ["apples", "oranges", "pears"]:cycle&gt
-            <br> apples
-            <br> oranges
-            <br> pears
-        </p>
-    </section>
-    <section id="sixth_from_top">
-        <h2 id="posttitle">Ruby Arrays and Hashes</h2>
-        <h3 id="subtitle">Storing information in lists</h3>
-        <h4 id="date">January 30, 2015</h4>
+                <p>I use "number" here to name the element, which identifies the individual list items your method will be acting on within the array </p>
+                <p>The result of this Ruby code will be <span class="courier">[2,3,4,5,6]</span>.</p>
 
-        <h3 id="subtitle">Arrays</h3>
-        <p>
-            Arrays allow you to store lists of information in Ruby. You can name your array any one word and write it like this:
-        </p>
-        <p class="courier_indent" ;>
-            my_array = [1, 2, 3, 4, 5]
-            <br> another_array = ["tree","dog","cat"]
-        </p>
-        <p>
-            Arrays are very useful because you can run specific functions or methods that will act on or "iterate" over every element in the array. You only need to call these methods on your array name, rather than writing out all the information you've saved within it.
-        </p>
-        <p For example, you can add 1 to every number stored in your my_array variable by using the Array method "each". </p>
-            <p class="courier_indent" ;>
-                my_array.each do |number|
-                <br> &nbsp&nbsp number + 1
-                <br> end
-            </p>
-            <p>I use "number" here to name the element, which identifies the individual list items your method will be acting on within the array </p>
-            <p>The result of this Ruby code will be <span class="courier">[2,3,4,5,6]</span>.</p>
+                <h3 id="subtitle">Hashes</h3>
+                <p>
+                    A hash is similar to an array of arrays. Each element in a hash has a key and a corresponding value. The hash is the list of these key-value pairs.
+                </p>
+                <p>Hashes look like this:</p>
+                <p class="courier_indent">
+                    my_hash = {"cat" => "feline", "dog" => "canine"}
+                </p>
+                <p>Or like this:</p>
+                <p class="courier_indent">
+                    another_hash = { "New_York": 8000000, "Chicago": 3000000 }
+                </p>
+                <p>
+                    Here, the <span class="courier">New York</span> key has corresponding value of <span class="courier">8000000</span>.
+                </p>
+                <p>
+                    Here's how I would add another key-value pair to <span class="courier">my_hash</span>:
+                </p>
+                <p class="courier_indent">my_hash["fish"] = "piscine"</p>
+                <p>I've assigned the value <span class="courier">"piscine" </span>to the key<span class="courier"> "fish"</span>.</p>
+                <p>Now, <span class="courier">my_hash = {"cat" => "feline", "dog" => "canine", "fish" => "piscine"}</span>
+                </p>
+        </section>
+        <section id="seventh_from_top">
+            <h2 id="posttitle">CSS</h2>
+            <h3 id="subtitle">Style</h3>
+            <h4 id="date">January 25, 2015</h4>
 
-            <h3 id="subtitle">Hashes</h3>
+            <h3>Margin > Border > Padding</h3>
             <p>
-                A hash is similar to an array of arrays. Each element in a hash has a key and a corresponding value. The hash is the list of these key-value pairs.
+                Margin is the distance your text, block, or photo will be from an adjacent element, or the edge of the page. Use margin-left, margin-right, margin-top, margin-bottom to adjust the position.
             </p>
-            <p>Hashes look like this:</p>
-            <p class="courier_indent">
-                my_hash = {"cat" => "feline", "dog" => "canine"}
+            <p class="courier_indent">margin-top: 10px;</p>
+            <p>
+                Border creates a border around your element. It can be any width, any color, dashed or solid.
             </p>
-            <p>Or like this:</p>
-            <p class="courier_indent">
-                another_hash = { "New_York": 8000000, "Chicago": 3000000 }
+            <p class="courier_indent"> border: 2px solid black;</p>
+            <p>
+                Padding is the distance between your element and the border.
+            </p>
+            <p class="courier_indent">padding: 20 px;</p>
+
+            <h3>Class vs. Id</h3>
+            <p>
+                CLASS. A class is category. You will assign many things to this category. Style the category once, don't style each individual element.
+            </p>
+            <p>Make it centered using class</p>
+            <p class="courier_indent"> .class_name {text-align:center}</p>
+            <p>
+                ID. An id is a nickname. You will assign one thing to this nickname. Name your id something logical so it stands out clearly on your CSS stylesheet.
+            </p>
+            <p>Make it red using id.</p>
+            <p class="courier_indent"> #id_name {color:red}</p>
+            <h3>Position: absolute vs. relative vs. fixed</h3>
+            <p>
+                A relative block will take position attributes like margin, padding, left, right, top or bottom _in relation an another element with an absolute position.
             </p>
             <p>
-                Here, the <span class="courier">New York</span> key has corresponding value of <span class="courier">8000000</span>.
+                A fixed block will stay glued to its position on the browser, even if you scroll up or down. Think of an old-school video game, where the background moves but the car you are driving stays put in the center of the screen, simulating movement.
+            </p>
+            <h3>Display: inline vs. display: inline-block</h3>
+            <p>
+                Inline will place an item directly adjacent to another, "in line" with it.
             </p>
             <p>
-                Here's how I would add another key-value pair to <span class="courier">my_hash</span>:
+                Inline block will also place it on the same line, but you can specificy the height, width, position, and additional margins to "block it off" from the adjacent element.
             </p>
-            <p class="courier_indent">my_hash["fish"] = "piscine"</p>
-            <p>I've assigned the value <span class="courier">"piscine" </span>to the key<span class="courier"> "fish"</span>.</p>
-            <p>Now, <span class="courier">my_hash = {"cat" => "feline", "dog" => "canine", "fish" => "piscine"}</span>
+        </section>
+
+        <section id="eighth_from_top">
+            <h2 id="posttitle">Week 1</h2>
+            <h3 id="subtitle">Version Control and Git</h3>
+            <h4 id="date"> January 19, 2015 </h4>
+            <p>
+                • What are the benefits of version control?
             </p>
-    </section>
-    <section id="seventh_from_top">
-        <h2 id="posttitle">CSS</h2>
-        <h3 id="subtitle">Style</h3>
-        <h4 id="date">January 25, 2015</h4>
-
-        <h3>Margin > Border > Padding</h3>
-        <p>
-            Margin is the distance your text, block, or photo will be from an adjacent element, or the edge of the page. Use margin-left, margin-right, margin-top, margin-bottom to adjust the position.
-        </p>
-        <p class="courier_indent">margin-top: 10px;</p>
-        <p>
-            Border creates a border around your element. It can be any width, any color, dashed or solid.
-        </p>
-        <p class="courier_indent"> border: 2px solid black;</p>
-        <p>
-            Padding is the distance between your element and the border.
-        </p>
-        <p class="courier_indent">padding: 20 px;</p>
-
-        <h3>Class vs. Id</h3>
-        <p>
-            CLASS. A class is category. You will assign many things to this category. Style the category once, don't style each individual element.
-        </p>
-        <p>Make it centered using class</p>
-        <p class="courier_indent"> .class_name {text-align:center}</p>
-        <p>
-            ID. An id is a nickname. You will assign one thing to this nickname. Name your id something logical so it stands out clearly on your CSS stylesheet.
-        </p>
-        <p>Make it red using id.</p>
-        <p class="courier_indent"> #id_name {color:red}</p>
-        <h3>Position: absolute vs. relative vs. fixed</h3>
-        <p>
-            A relative block will take position attributes like margin, padding, left, right, top or bottom _in relation an another element with an absolute position.
-        </p>
-        <p>
-            A fixed block will stay glued to its position on the browser, even if you scroll up or down. Think of an old-school video game, where the background moves but the car you are driving stays put in the center of the screen, simulating movement.
-        </p>
-        <h3>Display: inline vs. display: inline-block</h3>
-        <p>
-            Inline will place an item directly adjacent to another, "in line" with it.
-        </p>
-        <p>
-            Inline block will also place it on the same line, but you can specificy the height, width, position, and additional margins to "block it off" from the adjacent element.
-        </p>
-    </section>
-
-    <section id="eighth_from_top">
-        <h2 id="posttitle">Week 1</h2>
-        <h3 id="subtitle">Version Control and Git</h3>
-        <h4 id="date"> January 19, 2015 </h4>
-        <p>
-            • What are the benefits of version control?
-        </p>
-        <p>
-            Version Control allows you to keep track of changes in your work. This way, you can always go back to previous saved versions of document, file or project. If you make errors or are simply curious, you can "go back in time" to view a snapshot of your work or continue from a different point.
-        </p>
-        <p>
-            • How does git help you keep track of changes?
-        </p>
-        <p>
-            Once you make changes to a file or piece of code, you can stage the changes to be saved using git add
-            <FILENAME>. Then you can save or commit these changes using git commit
-                <FILENAME> -m "Type your reference message here."
-        </p>
-        <p>
-            • Why use GitHub to store your code?
-        </p>
-        <p>
-            Once you push your committed changes to a GitHub repository, they are saved on the internet remotely. Additionally, using GitHub your collaborators can see and edit your work without overwriting or potentially ruining it. Just like locally when you make branches using git, your collaborators can make branches from your work and eventually merge all these changes back to one master copy.
-        </p>
-    </section>
-
+            <p>
+                Version Control allows you to keep track of changes in your work. This way, you can always go back to previous saved versions of document, file or project. If you make errors or are simply curious, you can "go back in time" to view a snapshot of your work or continue from a different point.
+            </p>
+            <p>
+                • How does git help you keep track of changes?
+            </p>
+            <p>
+                Once you make changes to a file or piece of code, you can stage the changes to be saved using <span class="courier">git add &ltfilename&gt </span>. Then you can save or commit these changes using <span class="courier">git commit &ltfilename&gt -m "Type your reference message here."</span>."
+            </p>
+            <p>
+                • Why use GitHub to store your code?
+            </p>
+            <p>
+                Once you push your committed changes to a GitHub repository, they are saved on the internet remotely. Additionally, using GitHub your collaborators can see and edit your work without overwriting or potentially ruining it. Just like locally when you make branches using git, your collaborators can make branches from your work and eventually merge all these changes back to one master copy.
+            </p>
+        </section>
+    </div>
 </main>
 <footer id="footer">
     <a href="technical.html">Top</a>

@@ -34,655 +34,657 @@
      <li><a href="week8.html">SQL Injection</a></li>
      <li><a href="t9-css-pseudo-classes.html">CSS Pseudo-classes</a><li>
   </ul>
-  <section id ="top">
-   <h2 id="posttitle">Asking Good Questions</h2>
-    <h3 id="subtitle">For specific, actionable answers</h3>
-    <h4 id="date">March 14, 2015</h4>
- <p>
-  Being able to ask a meaningful, specific question is essential to getting a meaningful, specific answer. Everyone
-  on forums (whether you know them personally or not) is strapped for time. People are often skimming and/or scrollling through
-  a page very quickly.
-  </p>
-  <p class="indent"><i><b>Does your question have a title?</b></i></p>
-  <p>
-    If you hadn't been really reading the post, you definitely skimmed down and saw the bolded text. Your question needs to have
-    a short and specific title that illustrates exactly what you need from an answer.
-  </p>
-  <p>A bad question:</p>
-  <p class="indent"><i><b>JavaScript Problm: error trying string reverse</b></i></p>
-  <p>A better question:</p>
- <p class ="indent"><i><b>How can I reverse the letters of a string in Javascript?</b></i></p>
- <p class="courier_indent2">
-    console.log("money".reverse())<br>
-    /file.js:6 <br>
-     "money".reverse() <br>
-     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ^ <br>
-      TypeError: Object money has no method 'reverse'
- </p>
- <p>A couple things to keep in mind as to why this is a better question:</p>
- <p>
- <ul>
-   <li>It's a question. Phrasing your question as a question, though not always possible, points the answer towards
-     being an actual answer.  </li>
-   <li>It's specific. Ask exactly what you need in order to solve your problem. Someone is more likely to click on
-    your question and solve it if they know exactly what it will entail.
-   </li>
-   <li>No typos or grammatical issues. Proofread!</li>
-   <li>No use of potentially confusing code syntax in the title. Save these for the code snippet.</li>
-   <li>Includes a very concise code snippet. If the problem is complex enough, people are going to want a snippet
-     they can copy/paste into their own editor to try and run on their own. Don't include the whole program, just the
-     part that needs help.
-    <li>Points to a specific error message at specific line. Don't say you "get an error"; state the exact error and indicate where it occurs.</li>
-   </li>
-
- </ul>
- </section>
-  <section id="second_from_top">
-    <h2 id="posttitle">SQL Injection</h2>
-    <h3 id="subtitle">Careful now</h3>
-    <h4 id="date">March 5, 2015</h4>
-
-    <p>SQL (Structured Query Language) lets you retrieve and update data from a database.
+  <div class="blog_content">
+    <section id ="top">
+     <h2 id="posttitle">Asking Good Questions</h2>
+      <h3 id="subtitle">For specific, actionable answers</h3>
+      <h4 id="date">March 14, 2015</h4>
+   <p>
+    Being able to ask a meaningful, specific question is essential to getting a meaningful, specific answer. Everyone
+    on forums (whether you know them personally or not) is strapped for time. People are often skimming and/or scrollling through
+    a page very quickly.
     </p>
-
-    <p>You need to be careful when using user input for your search values on a website.</p>
-
-    <p>Either on purpose or by accident, a user could enter in valid SQL commands in a database field and
-      you have potential for trouble.
+    <p class="indent"><i><b>Does your question have a title?</b></i></p>
+    <p>
+      If you hadn't been really reading the post, you definitely skimmed down and saw the bolded text. Your question needs to have
+      a short and specific title that illustrates exactly what you need from an answer.
     </p>
+    <p>A bad question:</p>
+    <p class="indent"><i><b>JavaScript Problm: error trying string reverse</b></i></p>
+    <p>A better question:</p>
+   <p class ="indent"><i><b>How can I reverse the letters of a string in Javascript?</b></i></p>
+   <p class="courier_indent2">
+      console.log("money".reverse())<br>
+      /file.js:6 <br>
+       "money".reverse() <br>
+       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ^ <br>
+        TypeError: Object money has no method 'reverse'
+   </p>
+   <p>A couple things to keep in mind as to why this is a better question:</p>
+   <p>
+   <ul>
+     <li>It's a question. Phrasing your question as a question, though not always possible, points the answer towards
+       being an actual answer.  </li>
+     <li>It's specific. Ask exactly what you need in order to solve your problem. Someone is more likely to click on
+      your question and solve it if they know exactly what it will entail.
+     </li>
+     <li>No typos or grammatical issues. Proofread!</li>
+     <li>No use of potentially confusing code syntax in the title. Save these for the code snippet.</li>
+     <li>Includes a very concise code snippet. If the problem is complex enough, people are going to want a snippet
+       they can copy/paste into their own editor to try and run on their own. Don't include the whole program, just the
+       part that needs help.
+      <li>Points to a specific error message at specific line. Don't say you "get an error"; state the exact error and indicate where it occurs.</li>
+     </li>
 
-    <p>Sometimes users are bad and they can inject SQL commands that can alter your SQL statement, your database, and the
-      security of your website.
-    </p>
+   </ul>
+   </section>
+    <section id="second_from_top">
+      <h2 id="posttitle">SQL Injection</h2>
+      <h3 id="subtitle">Careful now</h3>
+      <h4 id="date">March 5, 2015</h4>
 
-    <p>For example, imagine a website with a field asking for your user name:</p>
+      <p>SQL (Structured Query Language) lets you retrieve and update data from a database.
+      </p>
 
-    <p class="indent">User name: <br>
-      <span id="search_field">" or ""="</span>
-    </p>
-    <p>Imagine your database read this and assigned " or ""=" to the value User.</p>
-    <p>Adding " or ""=" as the username will cause dangerous confusion when querying the UserNames database using SQL.</p>
-    <p>For example, a sample SQL query could read:</p>
-    <p class="courier_indent">SELECT * FROM UserNames WHERE Name = '" + User + '"</p>
-    <p>Reading from the data your user entered in the User field (" or ""="), your SQL query would result in:</p>
-    <p class="courier_indent">SELECT * FROM UserNames WHERE Name = "" or ""=""</p>
-    <p>Since <span class="courier">WHERE ""=""</span> is always true, THIS WOULD RETURN ALL OF THE User VALUES IN THE Usernames
-    DATABASE.</p>
-    <p>Now imagine the field was passwords, or credit card numbers... Careful now!</p>
+      <p>You need to be careful when using user input for your search values on a website.</p>
 
-  </section>
-  <section id="third_from_top">
-    <h2 id="posttitle">Conflict</h2>
-    <h3 id="subtitle">Isolate a cause, break down an emotion</h3>
-    <h4 id="date">March 5, 2015</h4>
-    <p>A friend once stepped on my mandolin, destroying the top. The main conflict that arose out of this situation
-      centered on who was going to pay for the repairs. The conflict snowballed due to lack of communication. Asking for an
-      apology and showing forgiveness were not the same as the large sum of money involved. I felt mostly powerless and
-      betrayed.
-    </p>
-    <p>As the process got drawn out and the communication lines became less open, I had to have an honest conversation
-    with my friend, removed from the emotional context, in order to resolve the issue and get past the elephant in the room.
-    Although I'm glad cooler heads prevailed, I should have had this difficult conversation sooner. Stressful situations like
-    conflicts only get worse as you let them fester so it's necessary to take an honest look at the situation, ask yourself
-    if there is a direct action you can take to resolve it, and then make haste.
-    </p>
+      <p>Either on purpose or by accident, a user could enter in valid SQL commands in a database field and
+        you have potential for trouble.
+      </p>
+
+      <p>Sometimes users are bad and they can inject SQL commands that can alter your SQL statement, your database, and the
+        security of your website.
+      </p>
+
+      <p>For example, imagine a website with a field asking for your user name:</p>
+
+      <p class="indent">User name: <br>
+        <span id="search_field">" or ""="</span>
+      </p>
+      <p>Imagine your database read this and assigned " or ""=" to the value User.</p>
+      <p>Adding " or ""=" as the username will cause dangerous confusion when querying the UserNames database using SQL.</p>
+      <p>For example, a sample SQL query could read:</p>
+      <p class="courier_indent">SELECT * FROM UserNames WHERE Name = '" + User + '"</p>
+      <p>Reading from the data your user entered in the User field (" or ""="), your SQL query would result in:</p>
+      <p class="courier_indent">SELECT * FROM UserNames WHERE Name = "" or ""=""</p>
+      <p>Since <span class="courier">WHERE ""=""</span> is always true, THIS WOULD RETURN ALL OF THE User VALUES IN THE Usernames
+      DATABASE.</p>
+      <p>Now imagine the field was passwords, or credit card numbers... Careful now!</p>
+
     </section>
-  <section id="fourth_from_top">
-    <h2 id="posttitle">Ruby Hashes vs. JavaScript Objects</h2>
-    <h3 id="subtitle">Comparing data structures</h3>
-    <h4 id="date">February 27, 2015</h4>
-
-    <p>Hashes in Ruby and Objects in JavaScript are similar structures used to organize data. The main differences lie in some terminology
-    and syntax. Both are essential for grouping one or more values to a corresponding object (piece of data).
-    Think of a dictionary: each word is tied to its definition.
-    </p>
-    <p>In Ruby Hashes, <i>keys</i> have corresponding values.</p>
-
-       <p> <span class="courier_indent";>my_hash = {</span> <br>
-          <span class="courier_indent2";>apples: 2, </span><br>
-          <span class="courier_indent2";>peaches: 5, </span><br>
-          <span class="courier_indent2";>oranges: 3</span><br>
-          <span class="courier_indent2";>} </span>
+    <section id="third_from_top">
+      <h2 id="posttitle">Conflict</h2>
+      <h3 id="subtitle">Isolate a cause, break down an emotion</h3>
+      <h4 id="date">March 5, 2015</h4>
+      <p>A friend once stepped on my mandolin, destroying the top. The main conflict that arose out of this situation
+        centered on who was going to pay for the repairs. The conflict snowballed due to lack of communication. Asking for an
+        apology and showing forgiveness were not the same as the large sum of money involved. I felt mostly powerless and
+        betrayed.
       </p>
-      <p>In JavaScript Objects, <i>properties</i> have corresponding values.</p>
-
-         <p> <span class="courier_indent";>var myObject = {</span> <br>
-          <span class="courier_indent2";>apples: 2, </span><br>
-          <span class="courier_indent2";>peaches: 5, </span><br>
-          <span class="courier_indent2";>oranges: 3 </span><br>
-          <span class="courier_indent2";>} </span>
+      <p>As the process got drawn out and the communication lines became less open, I had to have an honest conversation
+      with my friend, removed from the emotional context, in order to resolve the issue and get past the elephant in the room.
+      Although I'm glad cooler heads prevailed, I should have had this difficult conversation sooner. Stressful situations like
+      conflicts only get worse as you let them fester so it's necessary to take an honest look at the situation, ask yourself
+      if there is a direct action you can take to resolve it, and then make haste.
       </p>
+      </section>
+    <section id="fourth_from_top">
+      <h2 id="posttitle">Ruby Hashes vs. JavaScript Objects</h2>
+      <h3 id="subtitle">Comparing data structures</h3>
+      <h4 id="date">February 27, 2015</h4>
 
-      <p>There are two small differences thus far. Ruby uses the <span class="courier">lowercase_lowercase</span>
-      convention for multi-word variables. JavaScript uses the keyword <span class="courier">var</span> and the naming convention
-      <span class="courier">lowercaseUppercase</span> for multi-word variables</p>
+      <p>Hashes in Ruby and Objects in JavaScript are similar structures used to organize data. The main differences lie in some terminology
+      and syntax. Both are essential for grouping one or more values to a corresponding object (piece of data).
+      Think of a dictionary: each word is tied to its definition.
+      </p>
+      <p>In Ruby Hashes, <i>keys</i> have corresponding values.</p>
 
-      <p>Beyond naming the Hash/Object variables, you access values in these objects differently depending on the language
-      you're working in.</p>
+         <p> <span class="courier_indent";>my_hash = {</span> <br>
+            <span class="courier_indent2";>apples: 2, </span><br>
+            <span class="courier_indent2";>peaches: 5, </span><br>
+            <span class="courier_indent2";>oranges: 3</span><br>
+            <span class="courier_indent2";>} </span>
+        </p>
+        <p>In JavaScript Objects, <i>properties</i> have corresponding values.</p>
 
-      <p>In Ruby, you can look up a hash value like this:</p>
-         <p class="courier_indent";>p my_hash[:apples]</p>
+           <p> <span class="courier_indent";>var myObject = {</span> <br>
+            <span class="courier_indent2";>apples: 2, </span><br>
+            <span class="courier_indent2";>peaches: 5, </span><br>
+            <span class="courier_indent2";>oranges: 3 </span><br>
+            <span class="courier_indent2";>} </span>
+        </p>
+
+        <p>There are two small differences thus far. Ruby uses the <span class="courier">lowercase_lowercase</span>
+        convention for multi-word variables. JavaScript uses the keyword <span class="courier">var</span> and the naming convention
+        <span class="courier">lowercaseUppercase</span> for multi-word variables</p>
+
+        <p>Beyond naming the Hash/Object variables, you access values in these objects differently depending on the language
+        you're working in.</p>
+
+        <p>In Ruby, you can look up a hash value like this:</p>
+           <p class="courier_indent";>p my_hash[:apples]</p>
+           <p class="courier_indent";>=> 2</p>
+
+        <p><span class="courier">p</span> prints and returns a value in Ruby.</p>
+        <p>Similarily in JavaScript:</p>
+            <p class="courier_indent";>console.log(myObject["apples"])</p>
+            <p class="courier_indent";>=> 2</p>
+
+        <p><span class="courier">console.log()</span> prints and returns a value in JavaScript.</p>
+        <p>There are other slightly different ways to look up values in Ruby Hashes and JavaScript Objects, but you can see
+          these two examples are nearly identical beyond a few syntax tweaks.
+        </p>
+
+        <p>Unlike in Ruby, when working in JavaScript you can look up the value(s) of a property of an Object by directly calling
+        it using the <span class="courier">.property</span> notation:</p>
+
+         <p class="courier_indent";>myObject.apples</p>
          <p class="courier_indent";>=> 2</p>
 
-      <p><span class="courier">p</span> prints and returns a value in Ruby.</p>
-      <p>Similarily in JavaScript:</p>
-          <p class="courier_indent";>console.log(myObject["apples"])</p>
-          <p class="courier_indent";>=> 2</p>
 
-      <p><span class="courier">console.log()</span> prints and returns a value in JavaScript.</p>
-      <p>There are other slightly different ways to look up values in Ruby Hashes and JavaScript Objects, but you can see
-        these two examples are nearly identical beyond a few syntax tweaks.
+     </section>
+      <section id="fifth_from_top">
+      <h2 id="posttitle">Value Affirmation</h2>
+      <h3 id="subtitle">Know your values, know your worth</h3>
+      <h4 id="date">February 27</h4>
+      <p><i> Curiosity</i> as a value is important to me. When you emphasize the curious search for knowledge, growth, wisdom and adventure
+        as an end unto itself, you take pressure off yourself. Whether you're learning something new or striving towards some accomplishment,
+        a sense of unmitigated curiosity and wonder can be more important than the concrete task at hand. This applies to everything from
+        social situations, cultural exploration and intellectual stimulation.</p>
+
+      <p>A friend recently asked advice for musical growth. I told him not to get bogged down in the technicalities and the daunting immensity
+        of the task at hand. Stay curious, stick to the task at hand regardless of any concrete accomplishments, and growth will come on its own.
       </p>
 
-      <p>Unlike in Ruby, when working in JavaScript you can look up the value(s) of a property of an Object by directly calling
-      it using the <span class="courier">.property</span> notation:</p>
+      <p>Affirming your values is an important tool for combatting stereotype threat and performance anxiety. If you affirm the values of
+        curiosity, growth, creativity, and adventure with an emphasis on personal development and challenge, you can take away the psychological
+        threat of underperforming. Focusing on your worth as a creative learner can take the bite out of a fear of failure. Know your worth
+        and don't worry about others' perceptions.</p>
 
-       <p class="courier_indent";>myObject.apples</p>
-       <p class="courier_indent";>=> 2</p>
+    </section>
+    <section id="sixth_from_top">
+    <h2 id="posttitle">Inheritance vs. Composition</h2>
+    <h3 id="subtitle">Organizing your classes</h3>
+    <h4 id="date">February 22, 2015</h4>
+    <p>Inheritance, composition and modules are different ways to organize your code. </p>
+    <p>Inheritance is an abstract class hierarchy, using subclasses that inherit information from superclasses. Subclasses
+      are more specialized versions of their superclasses.</p>
+    <p>Example using Inheritance:</p>
+    <p class="courier_indent";>class Menu</p>
+    <p><span class="courier_indent2";>attr_reader :food_items, :meal<span> <br>
+          <span class="courier_indent2";>def initialize(args={})</span> <br>
+            <span class="courier_indent3";> @meal = args[:meal]</span> <br>
+            <span class="courier_indent3";> @food_items = args[:food_items]  </span> <br>
+          <span class="courier_indent2";>end</span></p>
+      <p class="courier_indent";>end</p>
 
+      <p>Now let's create the subclass <span class="courier";>LunchMenu</span> that will inherit the behaviors, methods and instance
+      variables of <span class="courier";>Menu</span>. </p>
 
-   </section>
-    <section id="fifth_from_top">
-    <h2 id="posttitle">Value Affirmation</h2>
-    <h3 id="subtitle">Know your values, know your worth</h3>
-    <h4 id="date">February 27</h4>
-    <p><i> Curiosity</i> as a value is important to me. When you emphasize the curious search for knowledge, growth, wisdom and adventure
-      as an end unto itself, you take pressure off yourself. Whether you're learning something new or striving towards some accomplishment,
-      a sense of unmitigated curiosity and wonder can be more important than the concrete task at hand. This applies to everything from
-      social situations, cultural exploration and intellectual stimulation.</p>
+      <p class="courier_indent";>class LunchMenu < Menu<br>
+         end</p>
 
-    <p>A friend recently asked advice for musical growth. I told him not to get bogged down in the technicalities and the daunting immensity
-      of the task at hand. Stay curious, stick to the task at hand regardless of any concrete accomplishments, and growth will come on its own.
-    </p>
+       <p>Let's do it again, adding another link to our inheritance hierarchy. We will create the class
+       <span class="courier";>FoodItems</span>, which inherits from <span class="courier";>LunchMenu</span>, which inherits from
+       <span class="courier";>Menu</span>.</p>
 
-    <p>Affirming your values is an important tool for combatting stereotype threat and performance anxiety. If you affirm the values of
-      curiosity, growth, creativity, and adventure with an emphasis on personal development and challenge, you can take away the psychological
-      threat of underperforming. Focusing on your worth as a creative learner can take the bite out of a fear of failure. Know your worth
-      and don't worry about others' perceptions.</p>
-
-  </section>
-  <section id="sixth_from_top">
-  <h2 id="posttitle">Inheritance vs. Composition</h2>
-  <h3 id="subtitle">Organizing your classes</h3>
-  <h4 id="date">February 22, 2015</h4>
-  <p>Inheritance, composition and modules are different ways to organize your code. </p>
-  <p>Inheritance is an abstract class hierarchy, using subclasses that inherit information from superclasses. Subclasses
-    are more specialized versions of their superclasses.</p>
-  <p>Example using Inheritance:</p>
-  <p class="courier_indent";>class Menu</p>
-  <p><span class="courier_indent2";>attr_reader :food_items, :meal<span> <br>
-        <span class="courier_indent2";>def initialize(args={})</span> <br>
-          <span class="courier_indent3";> @meal = args[:meal]</span> <br>
-          <span class="courier_indent3";> @food_items = args[:food_items]  </span> <br>
-        <span class="courier_indent2";>end</span></p>
+    <p class="courier_indent";> class FoodItems < LunchMenu  </p>
+       <span class="courier_indent2";>def initialize(args={})<span> <br>
+         <span class="courier_indent3";> @food = args[:food] </span> <br>
+         <span class="courier_indent3";> @price = args[:price] </span> <br>
+       <span class="courier_indent2";>end</span></p>
     <p class="courier_indent";>end</p>
 
-    <p>Now let's create the subclass <span class="courier";>LunchMenu</span> that will inherit the behaviors, methods and instance
-    variables of <span class="courier";>Menu</span>. </p>
+    <p>Now let's create an instance of the <span class="courier";>Menu</span> class, which will take a new instance of
+     <span class="courier";>FoodItems</span> class in its argument hash. Then we can look up the instance variables
+     <span class="courier";>meal</span> and  <span class="courier";>food_items</span> which are available to us using
+     <span class="courier";>attr_reader</span> and calling them as an instance method.</p>
+   <p span class="courier_indent";>monday_menu = Menu.new(</span> <br>
+       <span class="courier_indent2";>meal: "lunch",</span> <br>
+       <span class="courier_indent2";>food_items: FoodItems.new(  </span> <br>
+      <span class="courier_indent3";>food: "taco",  </span> <br>
+      <span class="courier_indent3";>price: 2))  </span> <br>
+      <span class="courier_indent";>p monday_menu.meal  </span> <br>
+     <span class="courier_indent";>p monday_menu.food_items   </span> <br></p>
+     <p class="courier_indent";>=> "lunch"</p>
+    <p class="courier_indent";> #&ltFoodItems:0x007f7279513540 @food="taco", @price=2> </p>
+    <p> <span class="courier";>#&ltFoodItems:0x007f7279513540</span> is just the computer telling you what the
+       <span class="courier";>self</span> object you're acting on is. The  <span class="courier";>food_items</span>
+        attribute returned the correct hash according to our inheritance hierarchy.</p>
 
-    <p class="courier_indent";>class LunchMenu < Menu<br>
-       end</p>
+   <p>The way we've created our food universe so far, our "food items" are an example of a "lunch menu,"
+     which is a specialized version of a "menu." A subclass "is a" specialized version of a superclass.</p>
 
-     <p>Let's do it again, adding another link to our inheritance hierarchy. We will create the class
-     <span class="courier";>FoodItems</span>, which inherits from <span class="courier";>LunchMenu</span>, which inherits from
-     <span class="courier";>Menu</span>.</p>
+   <p>It is helpful to use inheritance to create classes that will inherit the behavior and messages of their
+     parent classes. However, this can get messy and create problematic dependencies if you need to change your code in the future.
+     When organizing code, one must always ask: "What would be the future consequences if I am wrong about this?"
+   </p>
 
-  <p class="courier_indent";> class FoodItems < LunchMenu  </p>
-     <span class="courier_indent2";>def initialize(args={})<span> <br>
-       <span class="courier_indent3";> @food = args[:food] </span> <br>
-       <span class="courier_indent3";> @price = args[:price] </span> <br>
-     <span class="courier_indent2";>end</span></p>
-  <p class="courier_indent";>end</p>
+  <p>Composition can help you avoid these dependencies. Using composition, small well-defined objects interact via well-defined interfaces
+  to create a larger object that is more than a sum of its parts. The inner objects play the role of the container object, but they are not a "kind" of its class.
+  </p>
 
-  <p>Now let's create an instance of the <span class="courier";>Menu</span> class, which will take a new instance of
-   <span class="courier";>FoodItems</span> class in its argument hash. Then we can look up the instance variables
-   <span class="courier";>meal</span> and  <span class="courier";>food_items</span> which are available to us using
-   <span class="courier";>attr_reader</span> and calling them as an instance method.</p>
- <p span class="courier_indent";>monday_menu = Menu.new(</span> <br>
-     <span class="courier_indent2";>meal: "lunch",</span> <br>
-     <span class="courier_indent2";>food_items: FoodItems.new(  </span> <br>
-    <span class="courier_indent3";>food: "taco",  </span> <br>
-    <span class="courier_indent3";>price: 2))  </span> <br>
-    <span class="courier_indent";>p monday_menu.meal  </span> <br>
-   <span class="courier_indent";>p monday_menu.food_items   </span> <br></p>
-   <p class="courier_indent";>=> "lunch"</p>
-  <p class="courier_indent";> #&ltFoodItems:0x007f7279513540 @food="taco", @price=2> </p>
-  <p> <span class="courier";>#&ltFoodItems:0x007f7279513540</span> is just the computer telling you what the
-     <span class="courier";>self</span> object you're acting on is. The  <span class="courier";>food_items</span>
-      attribute returned the correct hash according to our inheritance hierarchy.</p>
+  <p>In our inheritance model above, imagine if we had a <span class="courier";>DinnerMenu</span> that was a subclass of
+  <span class="courier";>Menu</span>. If many of the same "food items" were shared among the different intances of "lunch menus"
+  and "dinner menus," you would have a mess of confusing and repetitive code trying to keep every "taco" and every "meal"
+  accounted for. Let's compose instead, building up from the smallest, most structurally independent objects.</p>
 
- <p>The way we've created our food universe so far, our "food items" are an example of a "lunch menu,"
-   which is a specialized version of a "menu." A subclass "is a" specialized version of a superclass.</p>
+    <p class="courier_indent";>class Menu</p>
+    <p><span class="courier_indent2";>attr_reader :food_items, :meal<span> <br>
+          <span class="courier_indent2";>def initialize(args={})</span> <br>
+            <span class="courier_indent3";> @meal = args[:meal]</span> <br>
+            <span class="courier_indent3";> @food_items = args[:food_items]  </span> <br>
+          <span class="courier_indent2";>end</span></p>
+      <p class="courier_indent";>end</p>
 
- <p>It is helpful to use inheritance to create classes that will inherit the behavior and messages of their
-   parent classes. However, this can get messy and create problematic dependencies if you need to change your code in the future.
-   When organizing code, one must always ask: "What would be the future consequences if I am wrong about this?"
- </p>
-
-<p>Composition can help you avoid these dependencies. Using composition, small well-defined objects interact via well-defined interfaces
-to create a larger object that is more than a sum of its parts. The inner objects play the role of the container object, but they are not a "kind" of its class.
-</p>
-
-<p>In our inheritance model above, imagine if we had a <span class="courier";>DinnerMenu</span> that was a subclass of
-<span class="courier";>Menu</span>. If many of the same "food items" were shared among the different intances of "lunch menus"
-and "dinner menus," you would have a mess of confusing and repetitive code trying to keep every "taco" and every "meal"
-accounted for. Let's compose instead, building up from the smallest, most structurally independent objects.</p>
-
-  <p class="courier_indent";>class Menu</p>
-  <p><span class="courier_indent2";>attr_reader :food_items, :meal<span> <br>
-        <span class="courier_indent2";>def initialize(args={})</span> <br>
-          <span class="courier_indent3";> @meal = args[:meal]</span> <br>
-          <span class="courier_indent3";> @food_items = args[:food_items]  </span> <br>
-        <span class="courier_indent2";>end</span></p>
+    <p class="courier_indent";> class FoodItems < LunchMenu  </p>
+      <span class="courier_indent2";> def initialize(food_items)<span> <br>
+         <span class="courier_indent3";> @food_items = food_items</span> <br>
+        <span class="courier_indent2";>end</span> <br>
     <p class="courier_indent";>end</p>
 
-  <p class="courier_indent";> class FoodItems < LunchMenu  </p>
-    <span class="courier_indent2";> def initialize(food_items)<span> <br>
-       <span class="courier_indent3";> @food_items = food_items</span> <br>
-      <span class="courier_indent2";>end</span> <br>
-  <p class="courier_indent";>end</p>
+      <p class="courier_indent";>  class FoodItem </p>
+      <span class="courier_indent2";>  def initialize(args)<span> <br>
+          <span class="courier_indent3";> @food = args[:food]</span> <br>
+          <span class="courier_indent3";> @price = args[:price]</span> <br>
+        <span class="courier_indent2";>end</span> <br>
+    <p class="courier_indent";>end</p>
 
-    <p class="courier_indent";>  class FoodItem </p>
-    <span class="courier_indent2";>  def initialize(args)<span> <br>
-        <span class="courier_indent3";> @food = args[:food]</span> <br>
-        <span class="courier_indent3";> @price = args[:price]</span> <br>
-      <span class="courier_indent2";>end</span> <br>
-  <p class="courier_indent";>end</p>
+   <p>We've created a new <span class="courier";>FoodItem</span> class. Now, our meals won't be so entangled and
+     dependent. If different instances need to share food items, or even if your "dinner taco" were to cost more than your
+     "lunch taco," you shouldn't have a problem.
+   </p>
 
- <p>We've created a new <span class="courier";>FoodItem</span> class. Now, our meals won't be so entangled and
-   dependent. If different instances need to share food items, or even if your "dinner taco" were to cost more than your
-   "lunch taco," you shouldn't have a problem.
- </p>
+  <p><span class="courier_indent";> beef = FoodItem.new(food: "beef", price: 7)</span> <br>
+   <span class="courier_indent";>sandwich = FoodItem.new(food: "sandwich", price: 5)</span> <br>
+     <span class="courier_indent";>tuesday_menu = Menu.new((</span> <br>
+       <span class="courier_indent2";>  meal: "dinner",</span> <br>
+       <span class="courier_indent2";> food_items: FoodItems.new([beef, sandwich]))(  </span> <br>
+    <span class="courier_indent";>p tuesday_menu.meal  </span> <br>
+    <span class="courier_indent";>p tuesday_menu.food_items </span> <br></p>
+     <p class="courier_indent";>=></p>
+    <p class="courier_indent";>"dinner"</p>
+    <p class="courier_indent";>#&ltFoodItems:0x007f45e86bf938 @food_items=[<br>
+    #&ltFoodItem:0x007f45e86bfac8 @food="beef", @price=7&gt, <br>
+    #&ltFoodItem:0x007f45e86bfa00 @food="sandwich", @price=5&gt]>   </p>
 
-<p><span class="courier_indent";> beef = FoodItem.new(food: "beef", price: 7)</span> <br>
- <span class="courier_indent";>sandwich = FoodItem.new(food: "sandwich", price: 5)</span> <br>
-   <span class="courier_indent";>tuesday_menu = Menu.new((</span> <br>
-     <span class="courier_indent2";>  meal: "dinner",</span> <br>
-     <span class="courier_indent2";> food_items: FoodItems.new([beef, sandwich]))(  </span> <br>
-  <span class="courier_indent";>p tuesday_menu.meal  </span> <br>
-  <span class="courier_indent";>p tuesday_menu.food_items </span> <br></p>
-   <p class="courier_indent";>=></p>
-  <p class="courier_indent";>"dinner"</p>
-  <p class="courier_indent";>#&ltFoodItems:0x007f45e86bf938 @food_items=[<br>
-  #&ltFoodItem:0x007f45e86bfac8 @food="beef", @price=7&gt, <br>
-  #&ltFoodItem:0x007f45e86bfa00 @food="sandwich", @price=5&gt]>   </p>
+  <p>Using composition, our <span class="courier";>Menu</span> has <span class="courier";>FoodItems</span> which have
+  individual <span class="courier";>FoodItem</span> instances. The only drawback to this clear, highly changeable
+  organizational tool is that you have to explicitly delegate all your messages, wordily telling your objects how to communicate
+  because they are not bound to any single hierarchy.</p>
 
-<p>Using composition, our <span class="courier";>Menu</span> has <span class="courier";>FoodItems</span> which have
-individual <span class="courier";>FoodItem</span> instances. The only drawback to this clear, highly changeable
-organizational tool is that you have to explicitly delegate all your messages, wordily telling your objects how to communicate
-because they are not bound to any single hierarchy.</p>
-
-</section>
-  <section id="seventh_from_top">
-    <h2 id="posttitle">Stereotype Threat</h2>
-    <h3 id="subtitle">Social identities and the subconcious</h3>
-    <h4 id="date">February 18, 2015</h4>
-
-      <p>Stereotype threat is a psychological process wherein someone of a specific social identity underperforms for fear of
-    acting out a stereotype. This can be accentuated by a lack of trust towards a group at large, the perceived stereotypers. Additionally, stereotype threat
-    has a compounding effect by which a person disengages from a group at large (i.e. a profession, field or school) or "disidentifies"
-    with their own identity group for fear of acting out the stereotype.</p>
-
-    <p>While I am lucky enough to not have been a direct victim of stereotype threat, I have suffered from the related "spotlight anxiety" or
-      underperforming for fear of being judged. While not having to battle subconcious manifestations of racial or gender stereotypes, I can relate to this
-      self-handicapping and sense of disappointment and resulting disilusionment. My experience has been in musical performance, and I have
-      always asked myself, "What if I realy do lack the required talent?" or "What if I simply didn't prepare enough?" even though the poor
-      examples of perforamance were almost always a case of mental self-sabotage.
-    </p>
-
-    <p>Like in education, the tech sector needs to foster a culture of trust to alleviate some of the instances of stereotype threat.
-    We need to stress a path of shared growth and learning rather than a competition and exhibition of ability/intelligence. I've already noticed
-    this in paired programming exercises. Someone can always "show you want they know," whereas their nerves, or in many cases stereotype
-    threat, can derail them when they are tested to perform.
-
-    </p>
   </section>
-<section id="eighth_from_top">
+    <section id="seventh_from_top">
+      <h2 id="posttitle">Stereotype Threat</h2>
+      <h3 id="subtitle">Social identities and the subconcious</h3>
+      <h4 id="date">February 18, 2015</h4>
 
-    <h2 id="posttitle">Ruby Classes</h2>
-    <h3 id="subtitle">Orient Your Objects</h3>
-    <h4 id="date">February 14, 2015</h4>
-    <h3></h3>
-    <p>
-      Classes are objects in Ruby that are essential to organizing your programs. They give you a way to assign variables and
-      methods to each individual subset of a program. It's essential to compartmentalize your Ruby programs using classes to prevent
-      creating confusing mess of variables and methods that apply to some parts of the program but not others.
-    <p>
-    <p>Create your class using All Caps like this:</p>
-    <p class="courier_indent";>
-      class WhatToDoToday
-      <br>
-      end
-    </p>
-    <p>Later on, we will create an instance of our class like this:<p>
-    <p class="courier_indent">relax = WhatToDoToday.new</p>
-    <p>Next we initialize by creating the initialize method in your class. Later on, every time we create an instance of
-    the class, we'll need to initialize it using the same number of arguments as you set for your initialize method.
-    For example, the top of your program will look like this:
-    </p>
-    <p class="courier_indent";>class WhatToDoToday</p>
-    <p><span class="courier_indent2";>def initialize(purpose, location, transportation=nil)<span> <br>
-        <span class="courier_indent3";>  @purpose = purpose</span> <br>
-        <span class="courier_indent3";>  @transportation = transportation</span> <br>
-        <span class="courier_indent3";>  @location = location </span> <br>
-        <span class="courier_indent2";>end</span></p>
-     <p class="courier_indent";>end</p>
-     <p>Later on when you create an instance of the class, it will look something like this:</p>
-     <p class="courier_indent";>work_hard = WhatToDoToday.new("business","work","train")
-     <p>Or like this, if you take advantange of the defaualt value of <span class="courier">transportation</span>
-       being <span class="courier">nil</span> or "nothing":
-    <p class="courier_indent";> relax = WhatToDoToday.new("nothing","home")</p>
-    <p>Within the initialize method, we create instance variables which you can reference from anywhere in the
-      class. We create them by using the <span class="courier">@</span> sign, so now we have three instance variables, which
-      take their values from whatever you give them when you you create an instance of the class and initialize it.</p>
-   <p>So in our instance <span class="courier">relax</span>, the instance variable <span class="courier">@purpose = "nothing"</span>.</p>
-    <p>After the initialize method in your class, you'll want to give it some logic. In this case, we'll define an
-      instance method which you will be able to call on any instance of the class. Let's continue with our class
-      <span class="courier">WhatToDoToday</span> by defining an instance method <span class="courier">get_up_and_go</span>:</p>
-   <p class="courier_indent";>class WhatToDoToday</p>
-      <p class="courier_indent2";>def initialize(purpose, location, transportation=nil) <br>
-        <span class="courier_indent">...</span> <br>
-      end
+        <p>Stereotype threat is a psychological process wherein someone of a specific social identity underperforms for fear of
+      acting out a stereotype. This can be accentuated by a lack of trust towards a group at large, the perceived stereotypers. Additionally, stereotype threat
+      has a compounding effect by which a person disengages from a group at large (i.e. a profession, field or school) or "disidentifies"
+      with their own identity group for fear of acting out the stereotype.</p>
+
+      <p>While I am lucky enough to not have been a direct victim of stereotype threat, I have suffered from the related "spotlight anxiety" or
+        underperforming for fear of being judged. While not having to battle subconcious manifestations of racial or gender stereotypes, I can relate to this
+        self-handicapping and sense of disappointment and resulting disilusionment. My experience has been in musical performance, and I have
+        always asked myself, "What if I realy do lack the required talent?" or "What if I simply didn't prepare enough?" even though the poor
+        examples of perforamance were almost always a case of mental self-sabotage.
       </p>
-      <p>
-      <span class="courier_indent2";>def get_up_and_go</span> <br>
-        <span class="courier_indent3">if @purpose == "nothing"</span> <br>
-          <span class="courier_indent4">p "Slow down and rest at #{@location}!"</span> <br>
-       <span class="courier_indent3">elsif @purpose == "business"</span> <br>
-          <span class="courier_indent4">p "Get up early go to #{@location}!"</span> <br>
-       <span class="courier_indent3">elsif @purpose == "pleasure"</span> <br>
-          <span class="courier_indent4">p "Have fun at the #{@location}."</span> <br>
-       <span class="courier_indent3">end</span> <br>
-      <span class="courier_indent2">end</span> <br>
-      <span class="courier_indent">end</span>
-     </p>
-  <p>So we can create our instance of the class <span class="courier">WhatToDoToday</span> and tell it what to do
-  by calling the method <span class="courier">get_up_and_go</span>. The <span class="courier">=></span> sign just
-  shows you what the computer will return:</p>
-  <p><span class="courier_indent";>work_hard = WhatToDoToday.new("business","work","train")</span><br>
-     <span class="courier_indent";>work_hard.get_up_and_go</span><br>
-     <span class="courier_indent";>=> "Get up early go to work!"</span></p>
-  <p>The other main topic when talking about Ruby Classes is attributes. Creating attribute readers <span class="courier">
-  (attr_reader)<span> allows you to access the attributes of your class, namely the instance variables,
-  from outside of the class. Attribute writers <span class="courier">(attr_writer)</span>can be set
-    from outside of the class, and attribute accessors <span class="courier">(attr_accessor)</span>can be read and set.
-    You create these at the beginning of your class, before the initalize method:
-  </p>
-   <p><span class="courier_indent";>class WhatToDoToday</span><br>
-     <span class="courier_indent2";>attr_reader :transportation</span><br>
-      <span class="courier_indent2";>def initialize(purpose, location, transportation=nil) <br>
-      <span class="courier_indent2";> ...</span>
-<p>So then we can read a particular attribute of the class by calling it like an instance method. In fact, creating
-  <span class="courier">attr_reader :transportation</span> is just shorthand for:</p>
-<p><span class="courier_indent2";>def transportation</span> <br>
-    <span class="courier_indent3">@transportation</span> <br>
-    <span class="courier_indent2";>end</span> <br></p>
-<p>Let's try it:</p>
-<p><span class="courier_indent";>rock_show = WhatToDoToday.new("pleasure","club", "taxi")</span><br>
-    <span class="courier_indent";>rock_show.transportation</span><br>
-    <span class="courier_indent";>=> "taxi"</span></p>
-</section>
-<section id="ninth_from_top">
-   <h2 id="posttitle">Pair Programming and Giving/Receiving Feedback</h2>
-    <h3 id="subtitle">Pairing is Caring</h3>
-    <h4 id="date">February 15, 2015</h4>
 
-    <p>Pair programming has played a central role in the DevBootcamp experience thus far. For software developers,
-    pair programming lets two or more team members catch bugs quickly by proofreading each other. It also provides an
-    efficient teaching structure, where one person can "navigate" and guide the other person in real time. This technique has
-    proved to be very valuable.</p>
-    <p>When you pair with someone, it forces you to articulate yourself clearly and effectively review your technical
-    knowlege in real time. It's one thing to feel your way through a challenge, arriving at the right answer by trial-and-error.
-    It's another thing entirely to clearly spell out your steps to yourself or to someone else in a logical, clear manner.
-    Pairing forces you to do that, and allows you to learn from someone else's techniques and explanations.</p>
-    <p>Sometimes it's frustrating when you're up against a road-block and you can't just "try anything." You need to
-    patiently communicate your intentions and make sure you're on the same page with your partner before trying something
-    blindly.</p>
+      <p>Like in education, the tech sector needs to foster a culture of trust to alleviate some of the instances of stereotype threat.
+      We need to stress a path of shared growth and learning rather than a competition and exhibition of ability/intelligence. I've already noticed
+      this in paired programming exercises. Someone can always "show you want they know," whereas their nerves, or in many cases stereotype
+      threat, can derail them when they are tested to perform.
 
-<p>Receiving feedback has been a positive experience thus far. It's helping me organize my thoughts and communicate
-them more effectively. I've been able to create a level of comfort and trust with pairs. From some of the feedback I've
-received, I need to speak up and share a little more, to assert my technical knowledge.</p>
-<p>Writing feedback is obviously more effective if you do it immediately after a session, so you don't lose track of
-who you were working with and how you worked together. It's a little bit touchy trying to give people actionable feedback, while remaining
-kind on a personal level. It is definitely empowering though, knowing you can help someone grow on a personal or technical level
-by giving them actionable, kind and specific annonymous feedback.
-    </p>
-</section>
-<section id="tenth_from_top">
-    <h2 id="posttitle">Ruby Enumerables</h2>
-    <h3 id="subtitle">Iterating through a data structure</h3>
-    <h4 id="date">February 6, 2015</h4>
-    <p>Enumerables operate on data collections like hashes and arrays. They are all based on the #each method, iterating through each element of an array or hash.</p>
-    <h3>Cycle</h3>
-    <p>
-      Here's the pseudocode for the Cycle Enumerable:
-    </p>
-    <p class="courier_indent";>
-      array.cycle(n) {|element| code block}
-    </p>
-    <p>
-      Just like the "each" method, cycle will run your code block on every element of your array. In addition to functioning like #each,
-      it will iterate through your array n amount of times, or forever in an infinite loop if you do not specify an n value.
-    </p>
-    <p>
-      For example, let's create an array. <span class="courier">my array = ["apples","oranges","pears"]</span>
-    </p>
-    <p class="courier_indent";>
-      my_array.cycle(2) {|fruit| p fruit}
-    </p>
-    <p>This will return:</p>
-     <p class="courier_indent";>
-      apples <br>
-      oranges <br>
-      pears <br>
-      apples <br>
-      oranges <br>
-      pears
-    </p>
-    <p>If you do not assign a code block to your cycle method, it will return an Enumerator, which basically catalogs the contents of your array or hash.</p>
-    <p>Let's give this enumeator a name:</p>
-    <p class="courier_indent";>
-      my_enumerator = my_array.cycle
-    </p>
-    <p>Check this out:</p>
-    <p class="courier_indent";>
-       my_enumerator <br>
-       my_enumerator.next <br>
-       my_enumerator.next <br>
-       my_enumerator.next
-    </p>
-    <p>This will return:</p>
-    <p class="courier_indent";>
-     #&ltEnumerator: ["apples", "oranges", "pears"]:cycle&gt <br>
-      apples <br>
-      oranges <br>
-      pears
       </p>
-  </section>
+    </section>
+  <section id="eighth_from_top">
 
-  <section id="eleventh_from_top">
-    <h2 id="posttitle">Issues in Tech</h2>
-    <h3 id="subtitle">Access, availability and scope</h3>
-    <h4 id="date">February 7, 2015</h4>
-
-    <p>
-      It's common knowledge that the tech sector suffers from a lack of diversity. Women and minorities are severely underrepresented
-      in the tech workplace. Companies that make an extra effort to hire from these groups will often pad their admin and business
-      development staffs to make up for the lack of developer/programmer representation. Beyond this statistcal sleight-of-hand,
-      when women and minorities are represented they are often victims of tacit descrimination or outright harassment.
-    </p>
-    <p>
-      Beyond the elephant issues of inequality and desrimination, the bro culture in tech perpetuates a lack of vision. This translates
-      to limitations of scale and market-share. For example, most of the hottest startups, laregely lead by young, hetero white males, address
-      the needs of their demographic. While one could argue everyone stands to gain from travelling, eating, dating, doing chores and being entertained
-      efficiently and cheaply, the panoply of apps that address these issues suffer greatly from a marketting problem.
-    </p>
-    <p>
-      The universe of these consumer-centered "utopia" apps has come to synonify tech in the 21st century, but neither the producers
-      nor the intended consumers are representative of contemporary America (or a global market for that matter). Beyond issues of equality
-      and ethics, the tech sector stands to gain signficantly financially from designing products and marketting them to a pluralist society
-      hungry for the hacks and and savings available to the elite. To put this in a hopeful if simplistic light, a diversity of perspective in
-      the workplace leads to a diversity of products and public image, larger more diverse markets and more revenue.
-    </p>
-    <p>
-     Of course, before everyone of all locations, races, ages, genders and sexual identities can take advantage of the collaborative, app-driven
-     consumption of the 21st century, internet providers and government agencies need to promote cheap, fast, widespread internet
-     as a public utility.
-    </p>
-
-  </section>
-  <section id="twelfth_from_top">
-    <h2 id="posttitle">Ruby Arrays and Hashes</h2>
-    <h3 id="subtitle">Storing information in lists</h3>
-    <h4 id="date">January 30, 2015</h4>
-
-    <h3 id="subtitle">Arrays</h3>
-    <p>
-      Arrays allow you to store lists of information in Ruby. You can name your array any one word and write it like this:
-    </p>
-    <p class="courier_indent";>
-      my_array = [1, 2, 3, 4, 5]
-      <br>
-      another_array = ["tree","dog","cat"]
-    </p>
-    <p>
-      Arrays are very useful because you can run specific functions or methods that will act on or "iterate" over every element in the array. You only need to call these methods on your array name, rather than writing out all the information you've saved within it.
-    </p>
-    <p
-      For example, you can add 1 to every number stored in your my_array variable by using the Array method "each".
-    </p>
-    <p class="courier_indent";>
-      my_array.each do |number|
-      <br>
-        &nbsp&nbsp number + 1
-      <br>
-      end
-    </p>
-    <p>I use "number" here to name the element, which identifies the individual list items your method will be acting on within the array </p>
-    <p>The result of this Ruby code will be <span class="courier">[2,3,4,5,6]</span>.</p>
-
-    <h3 id="subtitle">Hashes</h3>
-    <p>
-     A hash is similar to an array of arrays. Each element in a hash has a key and a corresponding value. The hash is the list of these key-value pairs.
-    </p>
-    <p>Hashes look like this:</p>
-    <p class="courier_indent">
-           my_hash = {"cat" => "feline", "dog" => "canine"}
-    </p>
-    <p>Or like this:</p>
-    <p class="courier_indent">
-           another_hash = {
-           "New_York": 8000000,
-           "Chicago": 3000000
-           }
-    </p>
-    <p>
-     Here, the <span class="courier">New York</span> key has corresponding value of <span class="courier">8000000</span>.
-    </p>
-    <p>
-       Here's how I would add another key-value pair to <span class="courier">my_hash</span>:
-    </p>
-    <p class="courier_indent">my_hash["fish"] = "piscine"</p>
-    <p>I've assigned the value <span class="courier">"piscine" </span>to the key<span class="courier"> "fish"</span>.</p>
-    <p>Now, <span class="courier">my_hash = {"cat" => "feline", "dog" => "canine", "fish" => "piscine"}</span></p>
-  </section>
-
-  <section id="thirteenth_from_top">
-    <h2 id="posttitle">Thinking Style</h2>
-    <h3 id="subtitle">Mindsets and learning styles</h3>
-    <h4 id="date">January 30, 2015</h4>
-    <p>
-      According to the Gregoric model, I am a "concrete random" thinker. This means I enjoy learning by trial-and-error, taking risks and experimenting. DevBootcamp allows me to dig in to the material individually, mess around with coding right away at the beginning of each week, before the material really has set in. Since I enjoy experimenting right away, my early solutions have not been very elegant and many times I have to redo hours of work simply because I began tinkering too early. Review has been both helpful and essential.
-    </p>
-    <p>
-      Outwardly, I subscribe to a growth mindset, where I am not afraid to take risks and make a sustained effort to learn new skills and concepts. In the back of my mind, however, I sense a fixed mindset firmly entrenched, mortified of failure. Even if I can grow my intelligence and skillset, I fear it will not be enough, that I will fall short. Ultimately, immersing myself in the vast knowledge pool of computer programming and web developing is the goal unto itself, not some abstract validation somewhere in the future.
-    </p>
-  </section>
-
-  <section id="fourteenth_from_top">
-     <h2 id="posttitle">CSS</h2>
-    <h3 id="subtitle">Style</h3>
-    <h4 id="date">January 25, 2015</h4>
-
-   <h3>Margin > Border > Padding</h3>
-   <p>
-       Margin is the distance your text, block, or photo will be from an adjacent element, or the edge of the page. Use margin-left, margin-right, margin-top, margin-bottom to adjust the position.
-  </p>
-  <p class="courier_indent">margin-top: 10px;</p>
-   <p>
-      Border creates a border around your element. It can be any width, any color, dashed or solid.
-  </p>
-  <p class="courier_indent">border: 2px solid black;</p>
-  <p>
-     Padding is the distance between your element and the border.
-  </p>
-  <p class="courier_indent">padding: 20 px;</p>
-
-  <h3>Class vs. Id</h3>
-  <p>
-    CLASS. A class is category. You will assign many things to this category. Style the category once, don't style each individual element.
- </p>
- <p>Make it centered using class</p>
-  <p class="courier_indent">.class_name {text-align:center}</p>
-  <p>
-    ID. An id is a nickname. You will assign one thing to this nickname. Name your id something logical so it stands out clearly on your CSS stylesheet.
- </p>
- <p>Make it red using id.</p>
-  <p class="courier_indent">#id_name {color:red}</p>
-  <h3>Position: absolute vs. relative vs. fixed</h3>
-  <p>
-    A relative block will take position attributes like margin, padding, left, right, top or bottom _in relation an another element with an absolute position.
-  </p>
-  <p>
-    A fixed block will stay glued to its position on the browser, even if you scroll up or down. Think of an old-school video game, where the background moves but the car you are driving stays put in the center of the screen, simulating movement.
-  </p>
-   <h3>Display: inline vs. display: inline-block</h3>
-  <p>
-    Inline will place an item directly adjacent to another, "in line" with it.
-  </p>
-  <p>
-    Inline block will also place it on the same line, but you can specificy the height, width, position, and additional margins to "block it off" from the adjacent element.
-  </p>
-</section>
-
-<section id="fifteenth_from_top">
-    <h2 id="posttitle">Week 1</h2>
-    <h3 id="subtitle">Version Control and Git</h3>
-    <h4 id="date">January 19, 2015 </h4>
-    <p>
-      • What are the benefits of version control?
-    </p>
+      <h2 id="posttitle">Ruby Classes</h2>
+      <h3 id="subtitle">Orient Your Objects</h3>
+      <h4 id="date">February 14, 2015</h4>
+      <h3></h3>
       <p>
-        Version Control allows you to keep track of changes in your work. This way, you can always go back to previous saved versions of document, file or project. If you make errors or are simply curious, you can "go back in time" to view a snapshot of your work or continue from a different point.
-       </p>
+        Classes are objects in Ruby that are essential to organizing your programs. They give you a way to assign variables and
+        methods to each individual subset of a program. It's essential to compartmentalize your Ruby programs using classes to prevent
+        creating confusing mess of variables and methods that apply to some parts of the program but not others.
       <p>
-        • How does git help you keep track of changes?
-       </p>
-       <p>
-       Once you make changes to a file or piece of code, you can stage the changes to be saved using git add <FILENAME>. Then you can save or commit these changes using git commit <FILENAME> -m "Type your reference message here."
+      <p>Create your class using All Caps like this:</p>
+      <p class="courier_indent";>
+        class WhatToDoToday
+        <br>
+        end
+      </p>
+      <p>Later on, we will create an instance of our class like this:<p>
+      <p class="courier_indent">relax = WhatToDoToday.new</p>
+      <p>Next we initialize by creating the initialize method in your class. Later on, every time we create an instance of
+      the class, we'll need to initialize it using the same number of arguments as you set for your initialize method.
+      For example, the top of your program will look like this:
+      </p>
+      <p class="courier_indent";>class WhatToDoToday</p>
+      <p><span class="courier_indent2";>def initialize(purpose, location, transportation=nil)<span> <br>
+          <span class="courier_indent3";>  @purpose = purpose</span> <br>
+          <span class="courier_indent3";>  @transportation = transportation</span> <br>
+          <span class="courier_indent3";>  @location = location </span> <br>
+          <span class="courier_indent2";>end</span></p>
+       <p class="courier_indent";>end</p>
+       <p>Later on when you create an instance of the class, it will look something like this:</p>
+       <p class="courier_indent";>work_hard = WhatToDoToday.new("business","work","train")
+       <p>Or like this, if you take advantange of the defaualt value of <span class="courier">transportation</span>
+         being <span class="courier">nil</span> or "nothing":
+      <p class="courier_indent";> relax = WhatToDoToday.new("nothing","home")</p>
+      <p>Within the initialize method, we create instance variables which you can reference from anywhere in the
+        class. We create them by using the <span class="courier">@</span> sign, so now we have three instance variables, which
+        take their values from whatever you give them when you you create an instance of the class and initialize it.</p>
+     <p>So in our instance <span class="courier">relax</span>, the instance variable <span class="courier">@purpose = "nothing"</span>.</p>
+      <p>After the initialize method in your class, you'll want to give it some logic. In this case, we'll define an
+        instance method which you will be able to call on any instance of the class. Let's continue with our class
+        <span class="courier">WhatToDoToday</span> by defining an instance method <span class="courier">get_up_and_go</span>:</p>
+     <p class="courier_indent";>class WhatToDoToday</p>
+        <p class="courier_indent2";>def initialize(purpose, location, transportation=nil) <br>
+          <span class="courier_indent">...</span> <br>
+        end
         </p>
-      <p>
-        • Why use GitHub to store your code?
+        <p>
+        <span class="courier_indent2";>def get_up_and_go</span> <br>
+          <span class="courier_indent3">if @purpose == "nothing"</span> <br>
+            <span class="courier_indent4">p "Slow down and rest at #{@location}!"</span> <br>
+         <span class="courier_indent3">elsif @purpose == "business"</span> <br>
+            <span class="courier_indent4">p "Get up early go to #{@location}!"</span> <br>
+         <span class="courier_indent3">elsif @purpose == "pleasure"</span> <br>
+            <span class="courier_indent4">p "Have fun at the #{@location}."</span> <br>
+         <span class="courier_indent3">end</span> <br>
+        <span class="courier_indent2">end</span> <br>
+        <span class="courier_indent">end</span>
        </p>
-       <p>
-        Once you push your committed changes to a GitHub repository, they are saved on the internet remotely. Additionally, using GitHub your collaborators can see and edit your work without overwriting or potentially ruining it. Just like locally when you make branches using git, your collaborators can make branches from your work and eventually merge all these changes back to one master copy.
-      </p>
- </section>
+    <p>So we can create our instance of the class <span class="courier">WhatToDoToday</span> and tell it what to do
+    by calling the method <span class="courier">get_up_and_go</span>. The <span class="courier">=></span> sign just
+    shows you what the computer will return:</p>
+    <p><span class="courier_indent";>work_hard = WhatToDoToday.new("business","work","train")</span><br>
+       <span class="courier_indent";>work_hard.get_up_and_go</span><br>
+       <span class="courier_indent";>=> "Get up early go to work!"</span></p>
+    <p>The other main topic when talking about Ruby Classes is attributes. Creating attribute readers <span class="courier">
+    (attr_reader)<span> allows you to access the attributes of your class, namely the instance variables,
+    from outside of the class. Attribute writers <span class="courier">(attr_writer)</span>can be set
+      from outside of the class, and attribute accessors <span class="courier">(attr_accessor)</span>can be read and set.
+      You create these at the beginning of your class, before the initalize method:
+    </p>
+     <p><span class="courier_indent";>class WhatToDoToday</span><br>
+       <span class="courier_indent2";>attr_reader :transportation</span><br>
+        <span class="courier_indent2";>def initialize(purpose, location, transportation=nil) <br>
+        <span class="courier_indent2";> ...</span>
+  <p>So then we can read a particular attribute of the class by calling it like an instance method. In fact, creating
+    <span class="courier">attr_reader :transportation</span> is just shorthand for:</p>
+  <p><span class="courier_indent2";>def transportation</span> <br>
+      <span class="courier_indent3">@transportation</span> <br>
+      <span class="courier_indent2";>end</span> <br></p>
+  <p>Let's try it:</p>
+  <p><span class="courier_indent";>rock_show = WhatToDoToday.new("pleasure","club", "taxi")</span><br>
+      <span class="courier_indent";>rock_show.transportation</span><br>
+      <span class="courier_indent";>=> "taxi"</span></p>
+  </section>
+  <section id="ninth_from_top">
+     <h2 id="posttitle">Pair Programming and Giving/Receiving Feedback</h2>
+      <h3 id="subtitle">Pairing is Caring</h3>
+      <h4 id="date">February 15, 2015</h4>
 
-  <section id="sixteenth_from_top">
-    <h2 id="posttitle">Week 1</h2>
-    <h3 id="subtitle">Introduction</h3>
-    <h4 id="date">January 19, 2014</h4>
-   <p>
-   This is a challenge. I'm not talking about the material, or the workload or the the looming insecurities of getting a job, paying off the $12K, etc. I'm not talking about feeling little and hopelessly ineffectual as a novice jumping into this ocean of developers- as a single foot traveler on a 1000 mile journey.
-  </p>
-  <p>
-    It's a personal challenge. DBC challenges you to challenge yourself, to dive in and dig deeper, past satisfactory competencies to a playful, creative flow, like musicians jamming or soccer players entering the zone of fast-paced intuitive collaboration. The Brazilians have their "beautiful game" and the Dutch have their "total football," where they relentlessly combine skill, speed, elegance and collaboration. This is exciting! The challenge is to not hold back, from your self, from your peers, from your instructors, from the community at large.
-  </p>
-  <p>
-    It would be much easier to just do the homework and learn the required material. That's what I've always done. It's time to step it up and focus more on this journey and not any one intended end goal!
-  </p>
- </section>
+      <p>Pair programming has played a central role in the DevBootcamp experience thus far. For software developers,
+      pair programming lets two or more team members catch bugs quickly by proofreading each other. It also provides an
+      efficient teaching structure, where one person can "navigate" and guide the other person in real time. This technique has
+      proved to be very valuable.</p>
+      <p>When you pair with someone, it forces you to articulate yourself clearly and effectively review your technical
+      knowlege in real time. It's one thing to feel your way through a challenge, arriving at the right answer by trial-and-error.
+      It's another thing entirely to clearly spell out your steps to yourself or to someone else in a logical, clear manner.
+      Pairing forces you to do that, and allows you to learn from someone else's techniques and explanations.</p>
+      <p>Sometimes it's frustrating when you're up against a road-block and you can't just "try anything." You need to
+      patiently communicate your intentions and make sure you're on the same page with your partner before trying something
+      blindly.</p>
+
+  <p>Receiving feedback has been a positive experience thus far. It's helping me organize my thoughts and communicate
+  them more effectively. I've been able to create a level of comfort and trust with pairs. From some of the feedback I've
+  received, I need to speak up and share a little more, to assert my technical knowledge.</p>
+  <p>Writing feedback is obviously more effective if you do it immediately after a session, so you don't lose track of
+  who you were working with and how you worked together. It's a little bit touchy trying to give people actionable feedback, while remaining
+  kind on a personal level. It is definitely empowering though, knowing you can help someone grow on a personal or technical level
+  by giving them actionable, kind and specific annonymous feedback.
+      </p>
+  </section>
+  <section id="tenth_from_top">
+      <h2 id="posttitle">Ruby Enumerables</h2>
+      <h3 id="subtitle">Iterating through a data structure</h3>
+      <h4 id="date">February 6, 2015</h4>
+      <p>Enumerables operate on data collections like hashes and arrays. They are all based on the #each method, iterating through each element of an array or hash.</p>
+      <h3>Cycle</h3>
+      <p>
+        Here's the pseudocode for the Cycle Enumerable:
+      </p>
+      <p class="courier_indent";>
+        array.cycle(n) {|element| code block}
+      </p>
+      <p>
+        Just like the "each" method, cycle will run your code block on every element of your array. In addition to functioning like #each,
+        it will iterate through your array n amount of times, or forever in an infinite loop if you do not specify an n value.
+      </p>
+      <p>
+        For example, let's create an array. <span class="courier">my array = ["apples","oranges","pears"]</span>
+      </p>
+      <p class="courier_indent";>
+        my_array.cycle(2) {|fruit| p fruit}
+      </p>
+      <p>This will return:</p>
+       <p class="courier_indent";>
+        apples <br>
+        oranges <br>
+        pears <br>
+        apples <br>
+        oranges <br>
+        pears
+      </p>
+      <p>If you do not assign a code block to your cycle method, it will return an Enumerator, which basically catalogs the contents of your array or hash.</p>
+      <p>Let's give this enumeator a name:</p>
+      <p class="courier_indent";>
+        my_enumerator = my_array.cycle
+      </p>
+      <p>Check this out:</p>
+      <p class="courier_indent";>
+         my_enumerator <br>
+         my_enumerator.next <br>
+         my_enumerator.next <br>
+         my_enumerator.next
+      </p>
+      <p>This will return:</p>
+      <p class="courier_indent";>
+       #&ltEnumerator: ["apples", "oranges", "pears"]:cycle&gt <br>
+        apples <br>
+        oranges <br>
+        pears
+        </p>
+    </section>
+
+    <section id="eleventh_from_top">
+      <h2 id="posttitle">Issues in Tech</h2>
+      <h3 id="subtitle">Access, availability and scope</h3>
+      <h4 id="date">February 7, 2015</h4>
+
+      <p>
+        It's common knowledge that the tech sector suffers from a lack of diversity. Women and minorities are severely underrepresented
+        in the tech workplace. Companies that make an extra effort to hire from these groups will often pad their admin and business
+        development staffs to make up for the lack of developer/programmer representation. Beyond this statistcal sleight-of-hand,
+        when women and minorities are represented they are often victims of tacit descrimination or outright harassment.
+      </p>
+      <p>
+        Beyond the elephant issues of inequality and desrimination, the bro culture in tech perpetuates a lack of vision. This translates
+        to limitations of scale and market-share. For example, most of the hottest startups, laregely lead by young, hetero white males, address
+        the needs of their demographic. While one could argue everyone stands to gain from travelling, eating, dating, doing chores and being entertained
+        efficiently and cheaply, the panoply of apps that address these issues suffer greatly from a marketting problem.
+      </p>
+      <p>
+        The universe of these consumer-centered "utopia" apps has come to synonify tech in the 21st century, but neither the producers
+        nor the intended consumers are representative of contemporary America (or a global market for that matter). Beyond issues of equality
+        and ethics, the tech sector stands to gain signficantly financially from designing products and marketting them to a pluralist society
+        hungry for the hacks and and savings available to the elite. To put this in a hopeful if simplistic light, a diversity of perspective in
+        the workplace leads to a diversity of products and public image, larger more diverse markets and more revenue.
+      </p>
+      <p>
+       Of course, before everyone of all locations, races, ages, genders and sexual identities can take advantage of the collaborative, app-driven
+       consumption of the 21st century, internet providers and government agencies need to promote cheap, fast, widespread internet
+       as a public utility.
+      </p>
+
+    </section>
+    <section id="twelfth_from_top">
+      <h2 id="posttitle">Ruby Arrays and Hashes</h2>
+      <h3 id="subtitle">Storing information in lists</h3>
+      <h4 id="date">January 30, 2015</h4>
+
+      <h3 id="subtitle">Arrays</h3>
+      <p>
+        Arrays allow you to store lists of information in Ruby. You can name your array any one word and write it like this:
+      </p>
+      <p class="courier_indent";>
+        my_array = [1, 2, 3, 4, 5]
+        <br>
+        another_array = ["tree","dog","cat"]
+      </p>
+      <p>
+        Arrays are very useful because you can run specific functions or methods that will act on or "iterate" over every element in the array. You only need to call these methods on your array name, rather than writing out all the information you've saved within it.
+      </p>
+      <p
+        For example, you can add 1 to every number stored in your my_array variable by using the Array method "each".
+      </p>
+      <p class="courier_indent";>
+        my_array.each do |number|
+        <br>
+          &nbsp&nbsp number + 1
+        <br>
+        end
+      </p>
+      <p>I use "number" here to name the element, which identifies the individual list items your method will be acting on within the array </p>
+      <p>The result of this Ruby code will be <span class="courier">[2,3,4,5,6]</span>.</p>
+
+      <h3 id="subtitle">Hashes</h3>
+      <p>
+       A hash is similar to an array of arrays. Each element in a hash has a key and a corresponding value. The hash is the list of these key-value pairs.
+      </p>
+      <p>Hashes look like this:</p>
+      <p class="courier_indent">
+             my_hash = {"cat" => "feline", "dog" => "canine"}
+      </p>
+      <p>Or like this:</p>
+      <p class="courier_indent">
+             another_hash = {
+             "New_York": 8000000,
+             "Chicago": 3000000
+             }
+      </p>
+      <p>
+       Here, the <span class="courier">New York</span> key has corresponding value of <span class="courier">8000000</span>.
+      </p>
+      <p>
+         Here's how I would add another key-value pair to <span class="courier">my_hash</span>:
+      </p>
+      <p class="courier_indent">my_hash["fish"] = "piscine"</p>
+      <p>I've assigned the value <span class="courier">"piscine" </span>to the key<span class="courier"> "fish"</span>.</p>
+      <p>Now, <span class="courier">my_hash = {"cat" => "feline", "dog" => "canine", "fish" => "piscine"}</span></p>
+    </section>
+
+    <section id="thirteenth_from_top">
+      <h2 id="posttitle">Thinking Style</h2>
+      <h3 id="subtitle">Mindsets and learning styles</h3>
+      <h4 id="date">January 30, 2015</h4>
+      <p>
+        According to the Gregoric model, I am a "concrete random" thinker. This means I enjoy learning by trial-and-error, taking risks and experimenting. DevBootcamp allows me to dig in to the material individually, mess around with coding right away at the beginning of each week, before the material really has set in. Since I enjoy experimenting right away, my early solutions have not been very elegant and many times I have to redo hours of work simply because I began tinkering too early. Review has been both helpful and essential.
+      </p>
+      <p>
+        Outwardly, I subscribe to a growth mindset, where I am not afraid to take risks and make a sustained effort to learn new skills and concepts. In the back of my mind, however, I sense a fixed mindset firmly entrenched, mortified of failure. Even if I can grow my intelligence and skillset, I fear it will not be enough, that I will fall short. Ultimately, immersing myself in the vast knowledge pool of computer programming and web developing is the goal unto itself, not some abstract validation somewhere in the future.
+      </p>
+    </section>
+
+    <section id="fourteenth_from_top">
+       <h2 id="posttitle">CSS</h2>
+      <h3 id="subtitle">Style</h3>
+      <h4 id="date">January 25, 2015</h4>
+
+     <h3>Margin > Border > Padding</h3>
+     <p>
+         Margin is the distance your text, block, or photo will be from an adjacent element, or the edge of the page. Use margin-left, margin-right, margin-top, margin-bottom to adjust the position.
+    </p>
+    <p class="courier_indent">margin-top: 10px;</p>
+     <p>
+        Border creates a border around your element. It can be any width, any color, dashed or solid.
+    </p>
+    <p class="courier_indent">border: 2px solid black;</p>
+    <p>
+       Padding is the distance between your element and the border.
+    </p>
+    <p class="courier_indent">padding: 20 px;</p>
+
+    <h3>Class vs. Id</h3>
+    <p>
+      CLASS. A class is category. You will assign many things to this category. Style the category once, don't style each individual element.
+   </p>
+   <p>Make it centered using class</p>
+    <p class="courier_indent">.class_name {text-align:center}</p>
+    <p>
+      ID. An id is a nickname. You will assign one thing to this nickname. Name your id something logical so it stands out clearly on your CSS stylesheet.
+   </p>
+   <p>Make it red using id.</p>
+    <p class="courier_indent">#id_name {color:red}</p>
+    <h3>Position: absolute vs. relative vs. fixed</h3>
+    <p>
+      A relative block will take position attributes like margin, padding, left, right, top or bottom _in relation an another element with an absolute position.
+    </p>
+    <p>
+      A fixed block will stay glued to its position on the browser, even if you scroll up or down. Think of an old-school video game, where the background moves but the car you are driving stays put in the center of the screen, simulating movement.
+    </p>
+     <h3>Display: inline vs. display: inline-block</h3>
+    <p>
+      Inline will place an item directly adjacent to another, "in line" with it.
+    </p>
+    <p>
+      Inline block will also place it on the same line, but you can specificy the height, width, position, and additional margins to "block it off" from the adjacent element.
+    </p>
+  </section>
+
+  <section id="fifteenth_from_top">
+      <h2 id="posttitle">Week 1</h2>
+      <h3 id="subtitle">Version Control and Git</h3>
+      <h4 id="date">January 19, 2015 </h4>
+      <p>
+        • What are the benefits of version control?
+      </p>
+        <p>
+          Version Control allows you to keep track of changes in your work. This way, you can always go back to previous saved versions of document, file or project. If you make errors or are simply curious, you can "go back in time" to view a snapshot of your work or continue from a different point.
+         </p>
+        <p>
+          • How does git help you keep track of changes?
+         </p>
+         <p>
+         Once you make changes to a file or piece of code, you can stage the changes to be saved using  <span class="courier">git add &ltfilename&gt </span>. Then you can save or commit these changes using <span class="courier">git commit &ltfilename&gt -m "Type your reference message here."</span>
+          </p>
+        <p>
+          • Why use GitHub to store your code?
+         </p>
+         <p>
+          Once you push your committed changes to a GitHub repository, they are saved on the internet remotely. Additionally, using GitHub your collaborators can see and edit your work without overwriting or potentially ruining it. Just like locally when you make branches using git, your collaborators can make branches from your work and eventually merge all these changes back to one master copy.
+        </p>
+   </section>
+
+    <section id="sixteenth_from_top">
+      <h2 id="posttitle">Week 1</h2>
+      <h3 id="subtitle">Introduction</h3>
+      <h4 id="date">January 19, 2014</h4>
+     <p>
+     This is a challenge. I'm not talking about the material, or the workload or the the looming insecurities of getting a job, paying off the $12K, etc. I'm not talking about feeling little and hopelessly ineffectual as a novice jumping into this ocean of developers- as a single foot traveler on a 1000 mile journey.
+    </p>
+    <p>
+      It's a personal challenge. DBC challenges you to challenge yourself, to dive in and dig deeper, past satisfactory competencies to a playful, creative flow, like musicians jamming or soccer players entering the zone of fast-paced intuitive collaboration. The Brazilians have their "beautiful game" and the Dutch have their "total football," where they relentlessly combine skill, speed, elegance and collaboration. This is exciting! The challenge is to not hold back, from your self, from your peers, from your instructors, from the community at large.
+    </p>
+    <p>
+      It would be much easier to just do the homework and learn the required material. That's what I've always done. It's time to step it up and focus more on this journey and not any one intended end goal!
+    </p>
+   </section>
+  </div>
  </main>
  <footer id="footer">
    <a href="index.html">Top</a>
