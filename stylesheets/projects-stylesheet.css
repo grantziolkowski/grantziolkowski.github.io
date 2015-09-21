@@ -1,3 +1,13 @@
+nav a {
+  position: absolute;
+  padding: 2px;
+  z-index: 1;
+  left: 10px;
+  top: 10px;
+  float: left;
+}
+
+
 .projects {
   display: block;
   position: relative;
