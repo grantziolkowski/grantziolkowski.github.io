@@ -1,5 +1,6 @@
 #container {
 	display: block;
+  width: 100%;
 	min-height: 100%;
 	position: relative;
 }
@@ -66,8 +67,25 @@ h1{
   top: 210px
 }
 
+section {
+  display: block;
+  position:relative;
+  width: 50%;
+  text-align:left;
+  left: 11%;
+  margin-right: 100px;
+  font-style: sans-serif;
+  line-height: 1.1em
+}
+
 @media (max-width: 1200px) {
   #sidebar {
+    visibility: hidden;
+  }
+  section {
+    width: 80%;
+  }
+  .previous_next {
     visibility: hidden;
   }
 }
@@ -105,17 +123,6 @@ h1{
 
 .center {
   text-align:center;
-}
-
-section {
-  display: block;
-  position:relative;
-  width: 600px;
-  text-align:left;
-  left: 110px;
-  margin-right: 100px;
-  font-style: sans-serif;
-  line-height: 1.1em
 }
 
 .courier {
