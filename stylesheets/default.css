@@ -1,6 +1,7 @@
 * {
     font-family: sans-serif;
     background-color: #ff10;
+    width: 1000px;
 }
 #coverphoto {
     padding-left: 14px;
@@ -45,6 +46,9 @@ nav a:active {
 }
 
 @media (max-width: 500px) {
+  * {
+    width: 400px;
+  }
   h1 {
     font-size: 45px;
     margin-left: 150px;
@@ -52,6 +56,7 @@ nav a:active {
 
   nav a {
     top: -30px;
+    left: 100px;
   }
 
   #coverphoto {
@@ -72,11 +77,10 @@ table a {
     text-align: center;
     display: block;
     position: relative;
-    width: 675px;
-    left: 210px;
 }
 #homepage_subtitle {
-    margin-top: -50px;
+    margin-top: -40px;
+    text-align: center;
     font-family: 'Lora', serif;
     color: gray;
 }
