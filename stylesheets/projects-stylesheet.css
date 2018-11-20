@@ -1,7 +1,7 @@
 nav a {
   padding: 2px;
   z-index: 1;
-  left: 50%;
+  left: 43%;
   top: 10px;
 }
 
@@ -65,6 +65,12 @@ nav a {
   right: -35%;
 }
 
+#footer {
+  display: block;
+  position: relative;
+  width: 100%;
+  text-align: center;
+}
 
 @keyframes fadein {
     from { opacity: 0; }

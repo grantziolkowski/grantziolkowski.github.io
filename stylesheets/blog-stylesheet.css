@@ -4,6 +4,9 @@
 	min-height: 100%;
 	position: relative;
 }
+body {
+  width: initial;
+}
 a {
   text-decoration: none;
   color: black;
@@ -62,6 +65,7 @@ h1{
   color: gray;
   list-style-type: none;
   right: 25%;
+  z-index: 10;
   line-height: 40px;
   font-style: bold;
   top: 210px
@@ -100,21 +104,21 @@ section {
    color:white;
 }
 
-#posttitle {
+.posttitle {
   display: block;
   position: static;
   width: 700px;
   height: 15px;
 }
 
-#subtitle {
+.subtitle {
   display:block;
   position: relative;
   height: 10px;
   width: 400px;
 }
 
-#date {
+.date {
   display:block;
   position: relative;
   height: 10px;
@@ -152,24 +156,10 @@ section {
 .indent {
 	margin-left:30px;
 }
-/*#search_field {
-	display: block;
-	border: 1px solid black;
-	padding: 5px;
-	margin-right:450px;
-	background-color:white;
-}*/
 
-#pseudo_example:hover{
-   background-color: green;
-   color: white;
+.logo {
+  width: 25px;
 }
-
-#pseudo_example:active{
-   background-color: red;
-   color: white;
-   }
-
 #footer {
    display: block;
    position: absolute;
@@ -178,13 +168,17 @@ section {
    bottom: 5px;
 }
 
-#footer a:hover {
+#footer a {
+  display: inline-block;
+}
+
+#footer .to-top:hover {
    border: 1px solid black;
    padding: 1px;
    border-radius: 5px;
 }
 
-#footer a:active {
+#footer .to-top:active {
    border: 1px solid black;
    padding: 2px;
    border-radius: 5px;
