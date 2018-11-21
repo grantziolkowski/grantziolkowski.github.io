@@ -25,13 +25,13 @@ nav a {
 
 .summary {
   color: white;
-  background-color: black;
+  background-color:  #1a538f!important;
   position: absolute;
   opacity: 0;
   width: 13%;
-  padding: 2% 2% 2% 3%;
+  padding: 3%;
   border: #d3d3d3 1px solid;
-  border-radius: 2px;
+  border-radius: 50%;
   -webkit-transition: width 1s, height 1s, -webkit-transform 1s;
   transition: width 1s, height 1s, transform 1s;
 }
